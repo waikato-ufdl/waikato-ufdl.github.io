@@ -33,3 +33,5 @@ data will be required in this phase. In the second phase, semi-supervised active
 applied to enable the expert to interactively improve the accuracy of this initial model. To achieve
 this algorithmically, semi-supervised model selection and robust semi-supervised active learning
 are the main research problems to be tackled.
+
+![UFDL Logo](https://raw.githubusercontent.com/waikato-ufdl/ufdl-logos/master/ufdl-logo.png)
