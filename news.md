@@ -1,3 +1,9 @@
+---
+layout: page
+title: "News"
+permalink: /news/
+---
+
 ## December 4, 2019
 First release of our opens-source Python library [wai.annotations](https://github.com/waikato-ufdl/wai-annotations) for converting various image annotation formats (licensed under Apache 2.0).
 
