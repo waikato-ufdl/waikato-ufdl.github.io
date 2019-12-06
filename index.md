@@ -42,3 +42,4 @@ are the main research problems to be tackled.
 * [Dr Te Taka Keegan](https://www.cms.waikato.ac.nz/people/tetaka)
 * [Peter Reutemann](https://www.cms.waikato.ac.nz/people/fracpete)
 * [Dale Fletcher](https://www.cms.waikato.ac.nz/people/dale)
+* Corey Sterling
