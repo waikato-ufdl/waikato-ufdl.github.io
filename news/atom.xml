@@ -6,8 +6,8 @@ layout: none
 <feed xmlns="http://www.w3.org/2005/Atom">
 
 	<title>User-friendly Deep-learning News</title>
-	<link href="https://waikato-ufdl.github.io//news/atom.xml" rel="self"/>
-	<link href="https://waikato-ufdl.github.io//news"/>
+	<link href="https://waikato-ufdl.github.io/news/atom.xml" rel="self"/>
+	<link href="https://waikato-ufdl.github.io/news"/>
 	<updated>{{ site.time | date_to_xmlschema }}</updated>
 	<id>https://waikato-ufdl.github.io/news</id>
 	<author>
