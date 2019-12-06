@@ -34,4 +34,11 @@ applied to enable the expert to interactively improve the accuracy of this initi
 this algorithmically, semi-supervised model selection and robust semi-supervised active learning
 are the main research problems to be tackled.
 
-![UFDL Logo](https://raw.githubusercontent.com/waikato-ufdl/ufdl-logos/master/ufdl-logo.png)
+## People
+
+* [Professor Geoffrey Holmes](https://www.cms.waikato.ac.nz/people/geoff)
+* [Professor Eibe Frank](https://www.cms.waikato.ac.nz/people/eibe)
+* [Professor Mark Apperley](https://www.cms.waikato.ac.nz/people/mapperle)
+* [Dr Te Taka Keegan](https://www.cms.waikato.ac.nz/people/tetaka)
+* [Peter Reutemann](https://www.cms.waikato.ac.nz/people/fracpete)
+* [Dale Fletcher](https://www.cms.waikato.ac.nz/people/dale)
