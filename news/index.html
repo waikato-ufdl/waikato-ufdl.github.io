@@ -72,14 +72,158 @@ navbar-dark bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2019-12-04-first-releases/" class="u-url">First Releases</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-07-03-deepspeech-docker/" class="u-url">DeepSpeech Docker image available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-07-03-deepspeech-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-03T16:26:00+12:00" itemprop="datePublished" title="2020-07-03 16:26">2020-07-03 16:26</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A new Docker image is available for training <a class="reference external" href="https://github.com/mozilla/DeepSpeech">DeepSpeech</a> models using a GPU backend.
+The image is based on Mozilla's DeepSpeech 0.7.4 one for training models, adding more functionality to it:</p>
+<ul class="simple">
+<li><p>support for MP3 and OGG files, not just WAV</p></li>
+<li><p>automatic alphabet generation from the transcripts</p></li>
+<li><p>split sound files into chunks based on detected pauses</p></li>
+<li><p>batch process audio files (can be continuous)</p></li>
+<li><p>many Python utilities have been sym-linked</p></li>
+</ul>
+<p>More information on the Docker image is available from Github:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/tensorflow/tree/master/deepspeech">github.com/waikato-datamining/tensorflow/tree/master/deepspeech</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-07-02-waiannotations-release-0-4-0/" class="u-url">wai.annotations release 0.4.0</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-07-02-waiannotations-release-0-4-0/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-02T11:57:00+12:00" itemprop="datePublished" title="2020-07-02 11:57">2020-07-02 11:57</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.4.0">0.4.0</a></p>
+<p>This release represents a major refactoring, introducing domains other than object-detection in images.
+Another notable change is being able to add filters into the conversion pipeline. This will, e.g., allow the
+augmentation of datasets while converting them. In terms of object detection datasets, these augmentations can be
+rotation, cropping, brightening/darkening, etc. Though a lot of frameworks already support basic augmentation
+transformations, trying to automatically augment bounding boxes rather than object shapes can lead to strange
+and undesirable artifacts (e.g., overly large boxes, overlapping annotations).</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-06-17-mmdetection-docker-cuda10/" class="u-url">MMDetection Docker image using CUDA 10</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-06-17-mmdetection-docker-cuda10/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-06-17T10:09:00+12:00" itemprop="datePublished" title="2020-06-17 10:09">2020-06-17 10:09</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The previously release Docker images for MMDetection only worked with PyTorch 1.3 on CUDA 10.1, which only worked on NVIDIA 2080 Ti cards, but not 1080 Ti ones. Today, we released a new Docker image which is based on PyTorch 1.2 and CUDA 10.0, which allows 1080 Ti cards to be used again:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/mmdetection/tree/master/2020-03-01_cuda10">github.com/waikato-datamining/mmdetection/tree/master/2020-03-01_cuda10</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-06-02-mmdetection-docker/" class="u-url">MMDetection Docker image available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-06-02-mmdetection-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-06-02T16:21:00+12:00" itemprop="datePublished" title="2020-06-02 16:21">2020-06-02 16:21</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>New Docker images are available for the <a class="reference external" href="https://github.com/open-mmlab/mmdetection">MMDetection</a> object detection framework, using the 1.2.0 (code base as of 2020-03-01) release of MMDetection:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/mmdetection/tree/master/2020-03-01">github.com/waikato-datamining/mmdetection/tree/master/2020-03-01</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-04-03-yolact-docker/" class="u-url">YOLACT/YOLACT++ Docker images available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-04-03-yolact-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-04-03T11:38:00+13:00" itemprop="datePublished" title="2020-04-03 11:38">2020-04-03 11:38</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The first Docker images are available for the <a class="reference external" href="https://github.com/dbolya/yolact/">YOLACT</a> (You Only Look At CoefficienTs) image segmentation model, using the 1.2 release:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/yolact">github.com/waikato-datamining/yolact</a></p>
+<p>YOLACT/YOLACT++, like MMDetection, is based on <a class="reference external" href="https://pytorch.org/">PyTorch</a>. In contrast to MMDetection it is not a divers framework, but just a single model, which can make use of various base models (e.g., ResNet50). Similar to Mask R-CNN, it generates a mask with probabilities for each identified object, which requires post-processing to determine a <a class="reference external" href="https://scikit-image.org/docs/0.17.x/auto_examples/edges/plot_contours.html">polygon</a> or <a class="reference external" href="https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=minarearect#minarearect">minimal rectangle</a>. However, it is much faster than the Mask R-CNN implementation that TensorFlow's Object Detection API offers (roughly 3x faster on 1000x300 images).</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-03-18-waiannotations-release-0-3-0/" class="u-url">wai.annotations release 0.3.0</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-03-18-waiannotations-release-0-3-0/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-18T15:23:00+13:00" itemprop="datePublished" title="2020-03-18 15:23">2020-03-18 15:23</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.3.0">0.3.0</a></p>
+<p>Formats are now based on a plugin framework, to allow other libraries define their own formats and still take advantage of existing wai.annotations formats for converting datasets.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-03-06-mmdetection-docker/" class="u-url">MMDetection Docker image available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-03-06-mmdetection-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-06T17:14:00+13:00" itemprop="datePublished" title="2020-03-06 17:14">2020-03-06 17:14</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The first Docker images are available for the <a class="reference external" href="https://github.com/open-mmlab/mmdetection">MMDetection</a> object detection framework, using the 2019-11-30 code base (close to 1.0rc1) of MMDetection:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/mmdetection/tree/master/2019-11-30">github.com/waikato-datamining/mmdetection/tree/master/2019-11-30</a></p>
+<p>MMDetection is based on <a class="reference external" href="https://pytorch.org/">PyTorch</a> rather than TensorFlow and offers a larger number of pre-trained models and example configurations than TensorFlow's Object Detection API. It is developed by the Multimedia Laboratory of the Chinese University of Hong Kong.</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-01-22-wai-tfutils/" class="u-url">wai.tfutils released</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-01-22-wai-tfutils/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T17:14:00+13:00" itemprop="datePublished" title="2020-01-22 17:14">2020-01-22 17:14</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>The <strong>wai.tfutils</strong> library simply centralizes a bunch of TensorFlow related operations to code duplication:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/tensorflow/tree/master/tfutils">github.com/waikato-datamining/tensorflow/tree/master/tfutils</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2019-12-04-first-releases/" class="u-url">First Releases</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
             <a href="2019-12-04-first-releases/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-12-04T16:00:00Z" itemprop="datePublished" title="2019-12-04 16:00">2019-12-04 16:00</time></a>
+            <time class="published dt-published" datetime="2019-12-04T16:00:00+13:00" itemprop="datePublished" title="2019-12-04 16:00">2019-12-04 16:00</time></a>
             </p>
         </div>
     </header><div class="e-content entry-content">
@@ -95,7 +239,7 @@ navbar-dark bg-dark
             </span></p>
             <p class="dateline">
             <a href="2019-10-01-funding-secured/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-10-01T10:00:00Z" itemprop="datePublished" title="2019-10-01 10:00">2019-10-01 10:00</time></a>
+            <time class="published dt-published" datetime="2019-10-01T10:00:00+13:00" itemprop="datePublished" title="2019-10-01 10:00">2019-10-01 10:00</time></a>
             </p>
         </div>
     </header><div class="e-content entry-content">
@@ -116,7 +260,7 @@ navbar-dark bg-dark
         <!--End of body content-->
 
         <footer id="footer">
-            Contents © 2019         <a href="mailto:fracpete@waikato.ac.nz">University of Waikato</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            Contents © 2020         <a href="mailto:fracpete@waikato.ac.nz">University of Waikato</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
         </footer>

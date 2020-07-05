@@ -7,50 +7,98 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://waikato-ufdl.github.io/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/2019/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/2020/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/archive.html</loc>
-  <lastmod>2019-12-09T20:25:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/categories/cat_data/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/categories/cat_docker/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/categories/cat_library/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/release/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/galleries/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/listings/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/listings/.gitignore.html</loc>
-  <lastmod>2019-12-09T20:25:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-10-01-funding-secured/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-12-04-first-releases/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-01-22-wai-tfutils/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-03-06-mmdetection-docker/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-03-18-waiannotations-release-0-3-0/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-04-03-yolact-docker/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-06-02-mmdetection-docker/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-06-17-mmdetection-docker-cuda10/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-07-02-waiannotations-release-0-4-0/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-07-03-deepspeech-docker/</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/people/</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
 </urlset>

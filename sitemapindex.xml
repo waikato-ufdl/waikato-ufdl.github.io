@@ -6,19 +6,31 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://waikato-ufdl.github.io/categories/cat_data.xml</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://waikato-ufdl.github.io/categories/cat_docker.xml</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://waikato-ufdl.github.io/categories/cat_library.xml</loc>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/release.xml</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/galleries/rss.xml</loc>
-  <lastmod>2019-12-09T20:25:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/rss.xml</loc>
-  <lastmod>2019-12-09T20:21:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/sitemap.xml</loc>
-  <lastmod>2019-12-09T20:25:00Z</lastmod>
+  <lastmod>2020-07-05T23:36:00Z</lastmod>
  </sitemap>
 </sitemapindex>

@@ -1,6 +1,6 @@
 .. title: Funding secured
 .. slug: 2019-10-01-funding-secured
-.. date: 2019-10-01 10:00:00 UTC
+.. date: 2019-10-01 10:00:00 UTC+13:00
 .. tags: 
 .. category: 
 .. link: 
