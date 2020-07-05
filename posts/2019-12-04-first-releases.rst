@@ -1,8 +1,8 @@
 .. title: First Releases
 .. slug: 2019-12-04-first-releases
-.. date: 2019-12-04 16:00:00 UTC
+.. date: 2019-12-04 16:00:00 UTC+13:00
 .. tags: release
-.. category: 
+.. category: data
 .. link: 
 .. description: 
 .. type: text
