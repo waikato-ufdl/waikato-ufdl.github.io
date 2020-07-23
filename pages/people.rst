@@ -13,5 +13,5 @@
 * `Dr Te Taka Keegan <https://www.cms.waikato.ac.nz/people/tetaka>`__
 * `Peter Reutemann <https://www.cms.waikato.ac.nz/people/fracpete>`__
 * `Dale Fletcher <https://www.cms.waikato.ac.nz/people/dale>`__
-* Corey Sterling
+* `Corey Sterling <https://www.waikato.ac.nz/staff-profiles/people/csterlin>`__
 
