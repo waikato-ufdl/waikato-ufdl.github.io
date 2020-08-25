@@ -156,8 +156,11 @@ NAVIGATION_LINKS = {
         ((
           ("https://aml-repo.cms.waikato.ac.nz/", "Registry"),
           ("https://github.com/waikato-datamining/mmdetection", "MMDetection"),
+          ("https://github.com/waikato-datamining/pytorch/tree/master/crnn-audio-classification", "Pytorch CRNN Audio Classification"),
+          ("https://github.com/waikato-datamining/pytorch/tree/master/deepspeech2", "Pytorch Deepspeech2"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/deepspeech", "Tensorflow DeepSpeech"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/image_classification", "Tensorflow Image Classification"),
+          ("https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras", "Tensorflow Image Segmentation"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/object_detection", "Tensorflow Object Detection"),
           ("https://github.com/waikato-datamining/yolact", "YOLACT"),
           ), "Docker"),
