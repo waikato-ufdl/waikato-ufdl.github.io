@@ -1,4 +1,4 @@
-.. title: New Pytoch Docker images available
+.. title: New Pytorch Docker images available
 .. slug: 2020-08-14-pytorch-docker
 .. date: 2020-08-14 11:50:00 UTC+12:00
 .. tags: release
