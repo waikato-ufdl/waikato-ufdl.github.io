@@ -91,7 +91,47 @@ navbar-dark bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-07-29-wailazypip-release/" class="u-url">wai.lazypip release</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-08-25-keras-image-segmentation-docker/" class="u-url">Keras image segmentation Docker image available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-08-25-keras-image-segmentation-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-25T14:35:00+12:00" itemprop="datePublished" title="2020-08-25 14:35">2020-08-25 14:35</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A new Docker image is available for training <em>Keras image segmentation</em> models using a GPU backend.
+The image is based on TensorFlow 1.14 and Divam Gupta's <a class="reference external" href="https://github.com/divamgupta/image-segmentation-keras">code</a>,
+plus additional tools for converting indexed PNGs into RGB ones and continuously processing images with a model.</p>
+<p>More information on the Docker image is available from Github:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras">github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-08-14-pytorch-docker/" class="u-url">New Pytoch Docker images available</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2020-08-14-pytorch-docker/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-14T11:50:00+12:00" itemprop="datePublished" title="2020-08-14 11:50">2020-08-14 11:50</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <div>
+<p>A couple of Docker images using <a class="reference external" href="https://pytorch.org/">Pytorch</a> are now available:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/crnn-audio-classification">Audio classification using CRNNs</a>
+(code by <a class="reference external" href="https://github.com/ksanjeevan/crnn-audio-classification">Kiran Sanjeevan</a>)</p></li>
+<li><p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/deepspeech2">DeepSpeech2</a>
+(code by <a class="reference external" href="https://github.com/SeanNaren/deepspeech.pytorch">Sean Naren</a>)</p></li>
+</ul>
+</div>
+    </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-07-29-wailazypip-release/" class="u-url">wai.lazypip release</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
@@ -252,39 +292,6 @@ and undesirable artifacts (e.g., overly large boxes, overlapping annotations).</
 <p>The first Docker images are available for the <a class="reference external" href="https://github.com/dbolya/yolact/">YOLACT</a> (You Only Look At CoefficienTs) image segmentation model, using the 1.2 release:</p>
 <p><a class="reference external" href="https://github.com/waikato-datamining/yolact">github.com/waikato-datamining/yolact</a></p>
 <p>YOLACT/YOLACT++, like MMDetection, is based on <a class="reference external" href="https://pytorch.org/">PyTorch</a>. In contrast to MMDetection it is not a divers framework, but just a single model, which can make use of various base models (e.g., ResNet50). Similar to Mask R-CNN, it generates a mask with probabilities for each identified object, which requires post-processing to determine a <a class="reference external" href="https://scikit-image.org/docs/0.17.x/auto_examples/edges/plot_contours.html">polygon</a> or <a class="reference external" href="https://docs.opencv.org/2.4/modules/imgproc/doc/structural_analysis_and_shape_descriptors.html?highlight=minarearect#minarearect">minimal rectangle</a>. However, it is much faster than the Mask R-CNN implementation that TensorFlow's Object Detection API offers (roughly 3x faster on 1000x300 images).</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-03-18-waiannotations-release-0-3-0/" class="u-url">wai.annotations release 0.3.0</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2020-03-18-waiannotations-release-0-3-0/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-03-18T15:23:00+13:00" itemprop="datePublished" title="2020-03-18 15:23">2020-03-18 15:23</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.3.0">0.3.0</a></p>
-<p>Formats are now based on a plugin framework, to allow other libraries define their own formats and still take advantage of existing wai.annotations formats for converting datasets.</p>
-</div>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-03-06-mmdetection-docker/" class="u-url">MMDetection Docker image available</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2020-03-06-mmdetection-docker/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-03-06T17:14:00+13:00" itemprop="datePublished" title="2020-03-06 17:14">2020-03-06 17:14</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <div>
-<p>The first Docker images are available for the <a class="reference external" href="https://github.com/open-mmlab/mmdetection">MMDetection</a> object detection framework, using the 2019-11-30 code base (close to 1.0rc1) of MMDetection:</p>
-<p><a class="reference external" href="https://github.com/waikato-datamining/mmdetection/tree/master/2019-11-30">github.com/waikato-datamining/mmdetection/tree/master/2019-11-30</a></p>
-<p>MMDetection is based on <a class="reference external" href="https://pytorch.org/">PyTorch</a> rather than TensorFlow and offers a larger number of pre-trained models and example configurations than TensorFlow's Object Detection API. It is developed by the Multimedia Laboratory of the Chinese University of Hong Kong.</p>
 </div>
     </div>
     </article>
