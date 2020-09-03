@@ -150,6 +150,8 @@ NAVIGATION_LINKS = {
           ("https://github.com/waikato-ufdl/ufdl-python-client", "ufdl-python-client"),
           ("https://github.com/waikato-ufdl/ufdl-java-client", "ufdl-java-client"),
           ("https://github.com/waikato-ufdl/ufdl-frontend-adams", "ufdl-frontend-adams"),
+          ("https://github.com/waikato-ufdl/ufdl-job-launcher", "ufdl-job-launcher"),
+          ("https://github.com/waikato-ufdl/ufdl-job-launcher-plugins", "ufdl-job-launcher-plugins"),
           ("https://github.com/waikato-ufdl/wai-lazypip", "wai.lazypip"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/tfutils", "wai.tfutils"),
           ), "Code"),
