@@ -19,11 +19,15 @@
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/archive.html</loc>
-  <lastmod>2020-09-03T22:33:00Z</lastmod>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/categories/api/</loc>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_data/</loc>
@@ -34,8 +38,16 @@
   <lastmod>2020-07-05T23:36:00Z</lastmod>
  </url>
  <url>
+  <loc>https://waikato-ufdl.github.io/categories/cat_documentation/</loc>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_library/</loc>
   <lastmod>2020-07-05T23:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/categories/documentation/</loc>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/release/</loc>
@@ -55,7 +67,7 @@
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/</loc>
-  <lastmod>2020-08-25T02:49:00Z</lastmod>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-10-01-funding-secured/</loc>
@@ -118,8 +130,12 @@
   <lastmod>2020-08-25T02:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://waikato-ufdl.github.io/news/2020-09-11-api-documentation/</loc>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://waikato-ufdl.github.io/news/index-1.html</loc>
-  <lastmod>2020-09-03T22:33:00Z</lastmod>
+  <lastmod>2020-09-11T05:11:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/people/</loc>
