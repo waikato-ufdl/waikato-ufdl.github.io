@@ -9,5 +9,5 @@
 
 The following documentation has been added today:
 
-`Architecture <link://slug/architecture>`__ - a high-level overview of the system
-`Getting started <link://slug/architecture>`__ - if you want to test drive the framework on your own infrastructure
+* `Architecture <link://slug/architecture>`__ - a high-level overview of the system
+* `Getting started <link://slug/architecture>`__ - if you want to test drive the framework on your own infrastructure
