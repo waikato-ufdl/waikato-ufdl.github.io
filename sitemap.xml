@@ -7,138 +7,146 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://waikato-ufdl.github.io/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/2019/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/2020/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/architecture/</loc>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/archive.html</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/api/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_data/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_docker/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_documentation/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/cat_library/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/documentation/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/release/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/galleries/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://waikato-ufdl.github.io/getting-started/</loc>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/listings/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/listings/.gitignore.html</loc>
-  <lastmod>2020-09-03T22:33:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-10-01-funding-secured/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-12-04-first-releases/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-01-22-wai-tfutils/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-03-06-mmdetection-docker/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-03-18-waiannotations-release-0-3-0/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-04-03-yolact-docker/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-06-02-mmdetection-docker/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-06-17-mmdetection-docker-cuda10/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-07-02-waiannotations-release-0-4-0/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-07-03-deepspeech-docker/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-07-22-repos-public/</loc>
-  <lastmod>2020-07-21T21:43:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-07-24-adams-snapshots/</loc>
-  <lastmod>2020-07-23T21:52:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-07-29-wailazypip-release/</loc>
-  <lastmod>2020-07-28T22:44:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-08-14-pytorch-docker/</loc>
-  <lastmod>2020-08-25T02:49:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-08-25-keras-image-segmentation-docker/</loc>
-  <lastmod>2020-08-25T02:49:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2020-09-11-api-documentation/</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/index-1.html</loc>
-  <lastmod>2020-09-11T05:11:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/people/</loc>
-  <lastmod>2020-07-05T23:36:00Z</lastmod>
+  <lastmod>2020-09-15T04:06:00Z</lastmod>
  </url>
 </urlset>
