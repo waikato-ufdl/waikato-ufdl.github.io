@@ -140,7 +140,11 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/news/", "News"),
-        ("https://waikato-ufdl.github.io/ufdl-api/", "API"),
+        ((
+          ("/architecture/", "Architecture"),
+          ("/getting-started/", "Getting started"),
+          ("https://waikato-ufdl.github.io/ufdl-api/", "REST API"),
+          ), "Documentation"),
         ((
           ("https://github.com/waikato-ufdl/", "Project"),
           ("https://github.com/waikato-ufdl/simple-django-teams", "simple-django-teams"),
