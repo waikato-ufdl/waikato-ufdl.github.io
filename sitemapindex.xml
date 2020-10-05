@@ -7,42 +7,50 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/api.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_data.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_docker.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_documentation.xml</loc>
-  <lastmod>2020-09-15T04:18:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_library.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://waikato-ufdl.github.io/categories/cat_publication.xml</loc>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/documentation.xml</loc>
-  <lastmod>2020-09-15T04:18:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://waikato-ufdl.github.io/categories/publication.xml</loc>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/release.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/galleries/rss.xml</loc>
-  <lastmod>2020-09-15T04:06:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/rss.xml</loc>
-  <lastmod>2020-09-15T04:18:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/sitemap.xml</loc>
-  <lastmod>2020-09-15T04:18:00Z</lastmod>
+  <lastmod>2020-10-05T23:55:00Z</lastmod>
  </sitemap>
 </sitemapindex>

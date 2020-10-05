@@ -89,6 +89,9 @@ navbar-dark bg-dark
             </div>
                 </li>
 <li class="nav-item">
+<a href="../publications/" class="nav-link">Publications</a>
+                </li>
+<li class="nav-item">
 <a href="../people/" class="nav-link">People</a>
                 </li>
 <li class="nav-item">
@@ -136,15 +139,15 @@ e.g., when using ADAMS can be Linux, Windows or Mac.</p>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-backend">ufdl-backend</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-json-messages">ufdl-json-messages</a></p></li>
 </ul>
-<pre class="code bash"><a name="rest_code_140aabd6099b48dc86282f70d28c04ff-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
-<a name="rest_code_140aabd6099b48dc86282f70d28c04ff-2"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
+<pre class="code bash"><a name="rest_code_348d99fdc9b642709320d79200d7785e-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
+<a name="rest_code_348d99fdc9b642709320d79200d7785e-2"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
 </pre>
 <p>Change into the directory of the cloned <em>ufdl-backend</em> repository and run the following script to set up
 the virtual environment for the server (<strong>CAUTION:</strong> it will delete any previously stored data and the database):</p>
-<pre class="code bash"><a name="rest_code_ac6908c3a7954b3f96e3657d23002106-1"></a>./dev_init.sh
+<pre class="code bash"><a name="rest_code_fdae28b5581f4259801907cbadb471fd-1"></a>./dev_init.sh
 </pre>
 <p>Once this has completed, you can start up the REST API on <code class="docutils literal">127.0.0.1</code> as follows:</p>
-<pre class="code bash"><a name="rest_code_a058c74008fe416e8d0423ce522a3406-1"></a>./dev_start.sh
+<pre class="code bash"><a name="rest_code_81f3976015dd482fb339ab1ade8f3cad-1"></a>./dev_start.sh
 </pre>
 <p>Use <code class="docutils literal">0.0.0.0:8000</code> as argument if you want to make the server available to the outside world on port 8000.
 Ensure that your firewall allows that port to be accessed from the outside.</p>
@@ -166,18 +169,18 @@ basic environment (users, teams, projects).</p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-python-client">ufdl-python-client</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-job-launcher">ufdl-job-launcher</a></p></li>
 </ul>
-<pre class="code bash"><a name="rest_code_7df5b63c7ef84e898512ccfef6dc85e7-1"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
-<a name="rest_code_7df5b63c7ef84e898512ccfef6dc85e7-2"></a>git clone https://github.com/waikato-ufdl/ufdl-python-client
-<a name="rest_code_7df5b63c7ef84e898512ccfef6dc85e7-3"></a>git clone https://github.com/waikato-ufdl/ufdl-job-launcher
+<pre class="code bash"><a name="rest_code_ce8ee1bf4c9748219bf56104619e0666-1"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
+<a name="rest_code_ce8ee1bf4c9748219bf56104619e0666-2"></a>git clone https://github.com/waikato-ufdl/ufdl-python-client
+<a name="rest_code_ce8ee1bf4c9748219bf56104619e0666-3"></a>git clone https://github.com/waikato-ufdl/ufdl-job-launcher
 </pre>
 <p>Change into the directory of the cloned <em>ufdl-job-launcher</em> repository and run the following script to set up
 the virtual environment:</p>
-<pre class="code bash"><a name="rest_code_ec11a210e18741c483ba1006ae30f2d7-1"></a>./dev_init.sh
+<pre class="code bash"><a name="rest_code_86e80f2edd3e4532846cf046742f7524-1"></a>./dev_init.sh
 </pre>
 <p>In the <code class="docutils literal">examples</code> directory, you can copy the <code class="docutils literal"><span class="pre">job-launcher-example.conf</span></code> configuration to <code class="docutils literal"><span class="pre">job-launcher.conf</span></code>
 and then update the required parameters (if anything, should be only the <code class="docutils literal">url</code>).</p>
 <p>Once this suits your system, you can start the job-launcher like this (from within the <code class="docutils literal"><span class="pre">ufdl-job-launcher</span></code> directory):</p>
-<pre class="code bash"><a name="rest_code_557edd70fd9b4d94aa58ac0888b17a53-1"></a>./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
+<pre class="code bash"><a name="rest_code_642e785fd2c8470c9956a88a8a619d2b-1"></a>./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
 </pre>
 </div>
 <div class="section" id="use-the-system">
