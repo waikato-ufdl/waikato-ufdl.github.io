@@ -170,7 +170,7 @@ NAVIGATION_LINKS = {
           ("https://github.com/waikato-datamining/tensorflow/tree/master/object_detection", "Tensorflow Object Detection"),
           ("https://github.com/waikato-datamining/yolact", "YOLACT"),
           ), "Docker"),
-#        ("/publications/", "Publications"),
+        ("/publications/", "Publications"),
         ("/people/", "People"),
         ("/rss.xml", "RSS"),
     ),
