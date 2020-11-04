@@ -11,7 +11,7 @@
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_data.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-11-04T21:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_docker.xml</loc>
@@ -27,7 +27,7 @@
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/cat_publication.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-10-05T23:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/documentation.xml</loc>
@@ -35,11 +35,11 @@
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/publication.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-10-05T23:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/categories/release.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-11-04T21:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/galleries/rss.xml</loc>
@@ -47,10 +47,10 @@
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/rss.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-11-04T21:21:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://waikato-ufdl.github.io/sitemap.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2020-11-04T21:21:00Z</lastmod>
  </sitemap>
 </sitemapindex>
