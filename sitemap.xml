@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://waikato-ufdl.github.io/</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/2019/</loc>
@@ -18,12 +18,16 @@
   <lastmod>2020-10-05T23:55:00Z</lastmod>
  </url>
  <url>
+  <loc>https://waikato-ufdl.github.io/2021/</loc>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://waikato-ufdl.github.io/architecture/</loc>
   <lastmod>2020-10-05T23:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/archive.html</loc>
-  <lastmod>2020-11-04T21:21:00Z</lastmod>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/categories/</loc>
@@ -79,11 +83,11 @@
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/listings/.gitignore.html</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/</loc>
-  <lastmod>2020-11-04T21:21:00Z</lastmod>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/news/2019-10-01-funding-secured/</loc>
@@ -162,8 +166,12 @@
   <lastmod>2020-11-04T21:21:00Z</lastmod>
  </url>
  <url>
+  <loc>https://waikato-ufdl.github.io/news/2021-01-11-pytorch-image-classification/</loc>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://waikato-ufdl.github.io/news/index-1.html</loc>
-  <lastmod>2020-11-04T21:21:00Z</lastmod>
+  <lastmod>2021-01-11T03:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://waikato-ufdl.github.io/people/</loc>
