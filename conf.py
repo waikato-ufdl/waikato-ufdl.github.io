@@ -164,6 +164,7 @@ NAVIGATION_LINKS = {
           ("https://github.com/waikato-datamining/mmdetection", "MMDetection"),
           ("https://github.com/waikato-datamining/pytorch/tree/master/crnn-audio-classification", "Pytorch CRNN Audio Classification"),
           ("https://github.com/waikato-datamining/pytorch/tree/master/deepspeech2", "Pytorch Deepspeech2"),
+          ("https://github.com/waikato-datamining/pytorch/tree/master/image-classification", "Pytorch Image Classification"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/deepspeech", "Tensorflow DeepSpeech"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/image_classification", "Tensorflow Image Classification"),
           ("https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras", "Tensorflow Image Segmentation"),
