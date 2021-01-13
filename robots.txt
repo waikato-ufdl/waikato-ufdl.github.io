@@ -1,4 +1,4 @@
-Sitemap: https://waikato-ufdl.github.io/sitemapindex.xml
+Sitemap: https://ufdl.cms.waikato.ac.nz/sitemapindex.xml
 
 User-Agent: *
-Host: waikato-ufdl.github.io
+Host: ufdl.cms.waikato.ac.nz

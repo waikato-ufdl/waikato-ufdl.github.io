@@ -6,51 +6,51 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/api.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/api.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/cat_data.xml</loc>
-  <lastmod>2020-11-04T21:21:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/cat_data.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/cat_docker.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/cat_docker.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/cat_documentation.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/cat_documentation.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/cat_library.xml</loc>
-  <lastmod>2021-01-11T03:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/cat_library.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/cat_publication.xml</loc>
-  <lastmod>2020-10-05T23:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/cat_publication.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/documentation.xml</loc>
-  <lastmod>2020-10-05T23:55:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/documentation.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/publication.xml</loc>
-  <lastmod>2020-10-05T23:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/publication.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/categories/release.xml</loc>
-  <lastmod>2021-01-11T03:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/categories/release.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/galleries/rss.xml</loc>
-  <lastmod>2021-01-11T03:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/galleries/rss.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/rss.xml</loc>
-  <lastmod>2021-01-11T03:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/rss.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://waikato-ufdl.github.io/sitemap.xml</loc>
-  <lastmod>2021-01-11T03:57:00Z</lastmod>
+  <loc>https://ufdl.cms.waikato.ac.nz/sitemap.xml</loc>
+  <lastmod>2021-01-13T02:26:00Z</lastmod>
  </sitemap>
 </sitemapindex>
