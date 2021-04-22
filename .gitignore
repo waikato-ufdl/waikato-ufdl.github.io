@@ -6,3 +6,4 @@ output
 *.swp
 *.iml
 .idea/
+./venv/*
