@@ -8,7 +8,7 @@
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
 <link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/publications/">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="University of Waikato">
 <meta property="og:site_name" content="User-friendly Deep Learning">
@@ -25,10 +25,11 @@ Hongyu Wang, Henry Gouk, Eibe Frank, Bernhard Pfahringer, and Michael Mayo. A co
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://ufdl.cms.waikato.ac.nz/">
+        <a class="navbar-brand" href="../">
 
             <span id="blog-title">User-friendly Deep Learning</span>
         </a>
@@ -109,11 +110,10 @@ navbar-dark bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div class="section" id="id1">
-<h2>2020</h2>
+    <section id="id1"><h2>2020</h2>
 <p>Hongyu Wang, Henry Gouk, Eibe Frank, Bernhard Pfahringer, and Michael Mayo. A comparison of machine learning methods for cross-domain few-shot learning. In <em>Proc 33rd Australasian Joint Conference on Artificial Intelligence</em>, Canberra, Australia. Springer, 2020. [ <a class="reference external" href="https://www.cs.waikato.ac.nz/~eibe/eibe_publications_bib.html#wang20:_compar_machin_learn_method_cross">bib</a> | <a class="reference external" href="http://www.cs.waikato.ac.nz/~eibe/pubs/AJCAI.pdf">pdf</a> ]</p>
+</section>
 </div>
-    </div>
     
 
 </article><!--End of body content--><footer id="footer">
@@ -128,9 +128,7 @@ navbar-dark bg-dark
         <script src="../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

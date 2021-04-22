@@ -8,7 +8,7 @@
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
 <link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/architecture/">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]--><meta name="author" content="University of Waikato">
 <meta property="og:site_name" content="User-friendly Deep Learning">
@@ -40,10 +40,11 @@ The backend provides the REST A">
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://ufdl.cms.waikato.ac.nz/">
+        <a class="navbar-brand" href="../">
 
             <span id="blog-title">User-friendly Deep Learning</span>
         </a>
@@ -126,7 +127,7 @@ navbar-dark bg-dark
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <div class="contents topic" id="contents">
-<p class="topic-title first">Contents</p>
+<p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#backend" id="id1">Backend</a></p></li>
 <li><p><a class="reference internal" href="#worker-node-s" id="id2">Worker Node(s)</a></p></li>
@@ -139,35 +140,31 @@ navbar-dark bg-dark
 <li><p>worker node(s)</p></li>
 <li><p>client(s)</p></li>
 </ul>
-<img alt="../images/architecture.png" src="../images/architecture.png"><div class="section" id="backend">
-<h2><a class="toc-backref" href="#id1">Backend</a></h2>
+<img alt="../images/architecture.png" src="../images/architecture.png"><section id="backend"><h2><a class="toc-backref" href="#id1">Backend</a></h2>
 <p>The backend provides the <a class="reference external" href="https://waikato-ufdl.github.io/ufdl-api/">REST API</a> for managing datasets,
-job templates, jobs (and there output) and in general the configuration of the system.</p>
+job templates, jobs (and their output) and in general the configuration of the system.</p>
 <p>By default, the backend stores data files on disk. But thanks to abstraction, the storage
 system can be easily swapped out.</p>
 <p>All other system related information (job templates, etc) is stored in a database.
-Currently, sqlite and MySQL are supported.</p>
-</div>
-<div class="section" id="worker-node-s">
-<h2><a class="toc-backref" href="#id2">Worker Node(s)</a></h2>
+Currently, only PostgreSQL is supported.</p>
+</section><section id="worker-node-s"><h2><a class="toc-backref" href="#id2">Worker Node(s)</a></h2>
 <p>Nodes can be dynamically added to the pool of available workers, by simply starting up the <a class="reference external" href="https://github.com/waikato-ufdl/ufdl-job-launcher">job-launcher</a>.
 A worker node polls for available jobs using its hardware environment (GPU? Hardware generation? etc) to only
 attempt to execute jobs that will succeed.</p>
 <p>Each job execution will result in a log file being stored back in the backend. This log can be used to determine
 potential error causes in case a job terminates unexpectedly.</p>
-</div>
-<div class="section" id="client-s">
-<h2><a class="toc-backref" href="#id3">Client(s)</a></h2>
-<p>At the time of writing, two low-level client libraries are available that fully encapsulate the <a class="reference external" href="https://waikato-ufdl.github.io/ufdl-api/">REST API</a>:</p>
+</section><section id="client-s"><h2><a class="toc-backref" href="#id3">Client(s)</a></h2>
+<p>At the time of writing, three low-level client libraries are available that fully encapsulate the <a class="reference external" href="https://waikato-ufdl.github.io/ufdl-api/">REST API</a>:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-python-client">Python</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-java-client">Java</a></p></li>
+<li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-ts-client">TypeScript</a></p></li>
 </ul>
 <p>These client libraries can be used to build user-facing applications:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-frontend-adams">UFDL ADAMS Frontend</a></p></li>
-</ul>
-</div>
+<li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-frontend-ts">UFDL HTML Frontend</a></p></li>
+</ul></section>
 </div>
     </div>
     
@@ -184,9 +181,7 @@ potential error causes in case a job terminates unexpectedly.</p>
         <script src="../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

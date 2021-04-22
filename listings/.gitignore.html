@@ -9,7 +9,7 @@
 <link href="../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
-<link rel="alternate" type="application/rss+xml" title="RSS" href="../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../rss.xml">
 <link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/listings/.gitignore.html">
 <!--[if lt IE 9]><script src="../assets/js/html5.js"></script><![endif]-->
 </head>
@@ -19,10 +19,11 @@
 <!-- Menubar -->
 
 <nav class="navbar navbar-expand-md static-top mb-4
-navbar-dark bg-dark
+navbar-dark
+bg-dark
 "><div class="container">
 <!-- This keeps the margins nice -->
-        <a class="navbar-brand" href="https://ufdl.cms.waikato.ac.nz/">
+        <a class="navbar-brand" href="../">
 
             <span id="blog-title">User-friendly Deep Learning</span>
         </a>
@@ -105,12 +106,15 @@ navbar-dark bg-dark
 </ul></nav><h1>.gitignore
         <small><a href=".gitignore">(Source)</a></small>
     </h1>
-    <table class="codetable"><tr>
-<td class="linenos"><div class="linenodiv"><pre><a href="#listingsgitignore-1">1</a></pre></div></td>
-<td class="code"><pre class="code literal-block"><a name="listingsgitignore-1"></a>
-</pre></td>
-</tr></table>
-<!--End of body content--><footer id="footer">
+    <div class="code"><table class="codetable"><tr>
+<td class="linenos linenodiv"><a href="#listingsgitignore-1"><code data-line-number="1"></code></a></td>
+<td class="code"><code><a name="listingsgitignore-1"></a>
+</code></td>
+</tr></table></div>
+
+        <!--End of body content-->
+
+        <footer id="footer">
             Contents © 2019-2021         <a href="mailto:fracpete@waikato.ac.nz">University of Waikato</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
@@ -122,9 +126,7 @@ navbar-dark bg-dark
         <script src="../assets/js/all-nocdn.js"></script><script>
     baguetteBox.run('div#content', {
         ignoreClass: 'islink',
-        captions: function(element) {
-            return element.getElementsByTagName('img')[0].alt;
-    }});
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
     </script>
 </body>
 </html>

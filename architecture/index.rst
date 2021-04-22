@@ -22,13 +22,13 @@ Backend
 =======
 
 The backend provides the `REST API <API_>`__ for managing datasets,
-job templates, jobs (and there output) and in general the configuration of the system.
+job templates, jobs (and their output) and in general the configuration of the system.
 
 By default, the backend stores data files on disk. But thanks to abstraction, the storage
 system can be easily swapped out.
 
 All other system related information (job templates, etc) is stored in a database.
-Currently, sqlite and MySQL are supported.
+Currently, only PostgreSQL is supported.
 
 
 Worker Node(s)
@@ -45,18 +45,22 @@ potential error causes in case a job terminates unexpectedly.
 Client(s)
 =========
 
-At the time of writing, two low-level client libraries are available that fully encapsulate the `REST API <API_>`__:
+At the time of writing, three low-level client libraries are available that fully encapsulate the `REST API <API_>`__:
 
 * `Python <PythonClient_>`__
 * `Java <JavaClient_>`__
+* `TypeScript <TypeScriptClient_>`__
 
 These client libraries can be used to build user-facing applications:
 
 * `UFDL ADAMS Frontend <ADAMSFrontend_>`__
+* `UFDL HTML Frontend <HTMLFrontend_>`__
 
 
 .. _API: https://waikato-ufdl.github.io/ufdl-api/
 .. _PythonClient: https://github.com/waikato-ufdl/ufdl-python-client
 .. _JavaClient: https://github.com/waikato-ufdl/ufdl-java-client
+.. _TypeScriptClient: https://github.com/waikato-ufdl/ufdl-ts-client
 .. _ADAMSFrontend: https://github.com/waikato-ufdl/ufdl-frontend-adams
+.. _HTMLFrontend: https://github.com/waikato-ufdl/ufdl-frontend-ts
 .. _JobLauncher: https://github.com/waikato-ufdl/ufdl-job-launcher
