@@ -201,7 +201,9 @@ HTML client ready-to-go. To obtain the image, with the Docker daemon running:
    docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
 
 The default environment in this image is set to connect to a database on the Docker **host** (localhost) with
-username/password both set to *ufdl*.
+username/password both set to *ufdl*. You can change these to match your database configuration via the ``--env``
+option to ``docker run`` (below) an providing the environment variables described above, e.g.
+``--env UFDL_POSTGRESQL_HOST=database.example.org``.
 
 So that file data will persist between executions, create a volume for storage:
 
