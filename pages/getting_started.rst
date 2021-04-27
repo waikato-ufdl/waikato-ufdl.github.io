@@ -72,6 +72,27 @@ Run the image as a container:
     ufdl_postgres
 
 
+Redis
+-----
+
+The backend requires access to a Redis server to enable the use of web-sockets. There is a publically-available image
+for a Redis server available:
+
+.. code:: bash
+
+   docker login public.aml-repo.cms.waikato.ac.nz:443
+   docker pull public.aml-repo.cms.waikato.ac.nz:443/redis
+   docker tag public.aml-repo.cms.waikato.ac.nz:443/redis:latest ufdl_redis
+
+To run the image, only the port needs exposing:
+
+.. code:: bash
+
+   docker run \
+    -p 6379:6379 \
+    ufdl_redis
+
+
 Backend
 -------
 
