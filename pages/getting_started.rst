@@ -15,46 +15,17 @@ on your own infrastructure. Of course, for most deep learning training or predic
 require a NVIDIA GPU.
 
 The server backend and worker nodes are expected to run Linux (tested with Ubuntu 18.04). The frontend,
-e.g., when using ADAMS can be Linux, Windows or Mac.
+e.g., when using ADAMS can be Linux, Windows or Mac. The HTML frontend has been tested with Chrome/Chromium and Firefox.
+
+You can either use pre-configured Docker images or set up the system manually. See the respective section below 
+for relevant instructions.
 
 
-Set up the PostgreSQL database
-==============================
+Docker setup
+============
 
-Make sure you have PostgreSQL installed and the server is running, and then add a database for the backend
-to use (e.g. by using psql -c COMMAND postgres) (**N.B.** the database name must be *ufdl*):
-
-.. code:: sql
-
-   CREATE DATABASE ufdl;
-
-Create a user for the backend to access the database with (replace the username/password with whatever you like):
-
-.. code:: sql
-
-   CREATE USER username WITH ENCRYPTED PASSWORD 'password';
-   GRANT ALL PRIVILEGES ON DATABASE ufdl TO username;
-
-Edit the Host-Based Authentication file for PostgreSQL (usually located at /etc/postgresql/{VERSION}/main/pg_hba.conf)
-to allow the user to authenticate with the database. If the backend server will be running on the same machine as the
-database, run:
-
-.. code:: bash
-
-   echo "local ufdl username md5" >> /path/to/pg_hba.conf
-
-otherwise:
-
-.. code:: bash
-
-   echo "host ufdl username all md5" >> /path/to/pg_hba.conf
-
-If the backend will not be running on the same machine as the database, the 'listen_addresses' setting in
-postgresql.conf also needs to be set to allow the backend to connect (e.g. by setting it to '*').
-
-
-Set up the PostgreSQL database (Docker)
-=======================================
+PostgreSQL database
+-------------------
 
 A Docker image which has a preconfigured PostgreSQL database is provided for convenience. To obtain the image, with
 the Docker daemon running:
@@ -101,8 +72,128 @@ Run the image as a container:
     ufdl_postgres
 
 
-Set up the backend
-==================
+Backend
+-------
+
+A Docker image with a preconfigured backend installation is also provided. This image also automatically includes the
+HTML client ready-to-go. To obtain the image, with the Docker daemon running:
+
+.. code:: bash
+
+   docker login public.aml-repo.cms.waikato.ac.nz:443
+   docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest
+   docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
+
+The default environment in this image is set to connect to a database on the Docker **host** (localhost) with
+username/password both set to *ufdl*. You can change these to match your database configuration via the ``--env``
+option to ``docker run`` (below) an providing the environment variables described above, e.g.
+``--env UFDL_POSTGRESQL_HOST=database.example.org``.
+
+So that file data will persist between executions, create a volume for storage:
+
+.. code:: bash
+
+   docker volume create ufdl-fs
+
+Before you can use the backend, you need to initialise the tables in the database:
+
+.. code:: bash
+
+   docker run \
+    -v ufdl-fs:/ufdl/ufdl-backend/fs \
+    --network=host \
+    ufdl_backend \
+    reset
+
+Now you can start the backend for normal operation as follows:
+
+.. code:: bash
+
+   docker run \
+    -v ufdl-fs:/ufdl/ufdl-backend/fs \
+    --network=host \
+    ufdl_backend
+
+**NB:** If the backend and the database are both running via Docker on the same machine, a private Docker network can
+be created to allow the two services to communicate.
+
+
+Initialize
+----------
+
+* Download the ZIP file of the `ADAMS frontend <ADAMSFrontend_>`__ and unzip it.
+* Start ADAMS with the ``bin/start_gui.sh`` script (Linux/Mac) or ``bin/start_gui.bat`` batch file (Windows).
+* Use the *Flow editor* (from the *Tools* menu) to run the ``adams-ufdl-all-basic_setup.flow`` flow for setting up a
+  basic environment (users, teams, projects).
+
+
+Worker node
+-----------
+
+A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
+daemon running:
+
+.. code:: bash
+
+   docker login public.aml-repo.cms.waikato.ac.nz:443
+   docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest
+   docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest ufdl_job_launcher
+
+Create a customised configuration file (as above) and then start the container with:
+
+.. code:: bash
+
+   docker run \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf \
+    -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher \
+    --network=host \
+    ufdl_job_launcher
+
+**NB:** If the backend and the database are both running via Docker on the same machine, a private Docker network can
+be created to allow the two services to communicate.
+
+
+Manual setup
+============
+
+PostgreSQL database
+-------------------
+
+Make sure you have PostgreSQL installed and the server is running, and then add a database for the backend
+to use (e.g. by using psql -c COMMAND postgres) (**N.B.** the database name must be *ufdl*):
+
+.. code:: sql
+
+   CREATE DATABASE ufdl;
+
+Create a user for the backend to access the database with (replace the username/password with whatever you like):
+
+.. code:: sql
+
+   CREATE USER username WITH ENCRYPTED PASSWORD 'password';
+   GRANT ALL PRIVILEGES ON DATABASE ufdl TO username;
+
+Edit the Host-Based Authentication file for PostgreSQL (usually located at /etc/postgresql/{VERSION}/main/pg_hba.conf)
+to allow the user to authenticate with the database. If the backend server will be running on the same machine as the
+database, run:
+
+.. code:: bash
+
+   echo "local ufdl username md5" >> /path/to/pg_hba.conf
+
+otherwise:
+
+.. code:: bash
+
+   echo "host ufdl username all md5" >> /path/to/pg_hba.conf
+
+If the backend will not be running on the same machine as the database, the 'listen_addresses' setting in
+postgresql.conf also needs to be set to allow the backend to connect (e.g. by setting it to '*').
+
+
+Backend
+-------
 
 The backend requires Redis to support web-socket connections to the server. Make sure a Redis server is installed
 and running on the backend host.
@@ -136,7 +227,7 @@ the virtual environment for the server (**CAUTION:** it will delete any previous
 
    ./dev_init.sh
 
-**N.B.**: *dev_init.sh* creates an admin user with username/password set to admin/admin respectively.
+**NB:**: *dev_init.sh* creates an admin user with username/password set to admin/admin respectively.
 
 Once this has completed, you can start up the REST API on ``127.0.0.1`` as follows:
 
@@ -148,8 +239,8 @@ Use ``0.0.0.0:8000`` as argument if you want to make the server available to the
 Ensure that your firewall allows that port to be accessed from the outside.
 
 
-(Optional) Set up HTML front-end
-================================
+HTML front-end (optional)
+-------------------------
 
 If you wish to use the HTML front-end with the UFDL system, it can be built and installed into the backend to be
 served as a single-page application. Ensure you have Node installed, and then clone the required repositories
@@ -188,47 +279,8 @@ Copy the built front-end into the backend for serving:
 The source clones for the client and front-end are no longer needed at this stage and can be safely deleted.
 
 
-Set up the backend (Docker)
-===========================
-
-A Docker image with a preconfigured backend installation is also provided. This image also automatically includes the
-HTML client ready-to-go. To obtain the image, with the Docker daemon running:
-
-.. code:: bash
-
-   docker login public.aml-repo.cms.waikato.ac.nz:443
-   docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest
-   docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
-
-The default environment in this image is set to connect to a database on the Docker **host** (localhost) with
-username/password both set to *ufdl*. You can change these to match your database configuration via the ``--env``
-option to ``docker run`` (below) an providing the environment variables described above, e.g.
-``--env UFDL_POSTGRESQL_HOST=database.example.org``.
-
-So that file data will persist between executions, create a volume for storage:
-
-.. code:: bash
-
-   docker volume create ufdl-fs
-
-Run the image as a container:
-
-.. code:: bash
-
-   docker run \
-    -v ufdl-fs:/ufdl/ufdl-backend/fs \
-    --network=host \
-    ufdl_backend
-
-**N.B.** If the backend and the database are both running via Docker on the same machine, a private Docker network can
-be created to allow the two services to communicate.
-
-**N.B.** On setting up the backend for the first time, add that ``reset`` argument to the ``docker run`` command to
-initialise the database with the requisite tables.
-
-
-Initialize the backend
-======================
+Initialize
+----------
 
 * Download the ZIP file of the `ADAMS frontend <ADAMSFrontend_>`__ and unzip it.
 * Start ADAMS with the ``bin/start_gui.sh`` script (Linux/Mac) or ``bin/start_gui.bat`` batch file (Windows).
@@ -236,8 +288,8 @@ Initialize the backend
   basic environment (users, teams, projects).
 
 
-Set up a worker node
-====================
+Worker node
+-----------
 
 On the worker node, clone the following repositories (within the same directory):
 
@@ -266,33 +318,6 @@ Once this suits your system, you can start the job-launcher like this (from with
 .. code:: bash
 
    ./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
-
-
-Set up a worker node (Docker)
-=============================
-
-A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
-daemon running:
-
-.. code:: bash
-
-   docker login public.aml-repo.cms.waikato.ac.nz:443
-   docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest
-   docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest ufdl_job_launcher
-
-Create a customised configuration file (as above) and then start the container with:
-
-.. code:: bash
-
-   docker run \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf \
-    -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher \
-    --network=host \
-    ufdl_job_launcher
-
-**N.B.** If the backend and the database are both running via Docker on the same machine, a private Docker network can
-be created to allow the two services to communicate.
 
 
 Use the system
