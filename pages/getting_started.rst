@@ -150,8 +150,14 @@ Create a customised configuration file (as above) and then start the container w
     --network=host \
     ufdl_job_launcher
 
-**NB:** If the backend and the database are both running via Docker on the same machine, a private Docker network can
-be created to allow the two services to communicate.
+**NB:** 
+
+* If the backend and the database are both running via Docker on the same machine, a private Docker network can be created to allow the two services to communicate.
+* Since you are supplying the job launcher configuration to the docker container, make sure that the following directories are set to these values:
+
+  * ``work_dir``: ``/tmp/ufdl-job-launcher``
+  * ``cache_dir``: ``/tmp/ufdl-job-launcher/cache``
+
 
 
 Manual setup
