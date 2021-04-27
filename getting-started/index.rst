@@ -227,7 +227,7 @@ the virtual environment for the server (**CAUTION:** it will delete any previous
 
    ./dev_init.sh
 
-**NB:**: *dev_init.sh* creates an admin user with username/password set to admin/admin respectively.
+**NB:** *dev_init.sh* creates an admin user with username/password set to admin/admin respectively.
 
 Once this has completed, you can start up the REST API on ``127.0.0.1`` as follows:
 
@@ -323,6 +323,9 @@ Once this suits your system, you can start the job-launcher like this (from with
 Use the system
 ==============
 
+ADAMS
+-----
+
 The following ADAMS flows are available to manage your datasets and run jobs (simply execute them with the *Flow editor*):
 
 * ``adams-ufdl-core-manage_backend.flow`` - for managing the backend, starting jobs, etc.
@@ -339,3 +342,13 @@ The following ADAMS flows are available to manage your datasets and run jobs (si
 .. _ADAMSFrontend: https://adams.cms.waikato.ac.nz/snapshots/ufdl/
 .. _HTMLFrontend: https://github.com/waikato-ufdl/ufdl-frontend-ts
 .. _JobLauncher: https://github.com/waikato-ufdl/ufdl-job-launcher
+
+
+HTML Frontend
+-------------
+
+Some of the functionality is available through a web-based frontend. 
+By default, the interface is being served on the following URL:
+
+`http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
+
