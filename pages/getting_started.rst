@@ -24,6 +24,36 @@ for relevant instructions.
 Docker setup
 ============
 
+Docker-Compose
+--------------
+
+If you have ``docker-compose``, the following 3 steps (PostgreSQL database, Redis, Backend) can be skipped in favour
+of a single composition. To get started with docker-compose, first clone the backend repo:
+
+.. code:: bash
+
+   git clone https://github.com/waikato-ufdl/ufdl-backend
+   cd ufdl-backend/docker/ufdl
+
+Pull the latest images for the services:
+
+.. code:: bash
+
+   docker-compose pull
+
+The first time running the system, the database will need to be initialised with the requisite tables:
+
+.. code:: bash
+
+   docker-compose run ufdl reset
+
+On-line the backend with the ``up`` command:
+
+.. code:: bash
+
+   docker-compose up
+
+
 PostgreSQL database
 -------------------
 
