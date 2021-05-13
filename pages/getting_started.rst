@@ -20,15 +20,14 @@ e.g., when using ADAMS can be Linux, Windows or Mac. The HTML frontend has been 
 You can either use pre-configured Docker images or set up the system manually. See the respective section below 
 for relevant instructions.
 
-
-Docker setup
-============
+Docker-Compose and Docker
++++++++++++++++++++++++++
 
 Docker-Compose
---------------
+==============
 
-If you have ``docker-compose``, the following 3 steps (PostgreSQL database, Redis, Backend) can be skipped in favour
-of a single composition. To get started with docker-compose, first clone the backend repo:
+The ``docker-compose`` script combines the three steps from the Docker section: **PostgreSQL**, **Redis**, **Backend**.
+To get started with docker-compose, first clone the backend repo:
 
 .. code:: bash
 
@@ -41,7 +40,7 @@ Pull the latest images for the services:
 
    docker-compose pull
 
-The first time running the system, the database will need to be initialised with the requisite tables:
+The **first time** running the system, the database will need to be initialised with the requisite tables:
 
 .. code:: bash
 
@@ -54,8 +53,13 @@ On-line the backend with the ``up`` command:
    docker-compose up
 
 
-PostgreSQL database
--------------------
+Docker
+======
+
+Instead of using ``docker-compose``, you can also execute the individual steps for setting up the backend.
+
+PostgreSQL
+----------
 
 A Docker image which has a preconfigured PostgreSQL database is provided for convenience. To obtain the image, with
 the Docker daemon running:
@@ -170,7 +174,7 @@ be created to allow the two services to communicate.
 
 
 Initialize
-----------
+==========
 
 * Download the ZIP file of the `ADAMS frontend <ADAMSFrontend_>`__ and unzip it.
 * Start ADAMS with the ``bin/start_gui.sh`` script (Linux/Mac) or ``bin/start_gui.bat`` batch file (Windows).
@@ -179,7 +183,7 @@ Initialize
 
 
 Worker node
------------
+===========
 
 A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
 daemon running:
@@ -212,10 +216,10 @@ Create a customised configuration file (as above) and then start the container w
 
 
 Manual setup
-============
+++++++++++++
 
-PostgreSQL database
--------------------
+PostgreSQL
+==========
 
 Make sure you have PostgreSQL installed and the server is running, and then add a database for the backend
 to use (e.g. by using psql -c COMMAND postgres) (**N.B.** the database name must be *ufdl*):
@@ -250,7 +254,7 @@ postgresql.conf also needs to be set to allow the backend to connect (e.g. by se
 
 
 Backend
--------
+=======
 
 The backend requires Redis to support web-socket connections to the server. Make sure a Redis server is installed
 and running on the backend host.
@@ -297,7 +301,7 @@ Ensure that your firewall allows that port to be accessed from the outside.
 
 
 HTML front-end (optional)
--------------------------
+=========================
 
 If you wish to use the HTML front-end with the UFDL system, it can be built and installed into the backend to be
 served as a single-page application. Ensure you have Node installed, and then clone the required repositories
@@ -337,7 +341,7 @@ The source clones for the client and front-end are no longer needed at this stag
 
 
 Initialize
-----------
+==========
 
 * Download the ZIP file of the `ADAMS frontend <ADAMSFrontend_>`__ and unzip it.
 * Start ADAMS with the ``bin/start_gui.sh`` script (Linux/Mac) or ``bin/start_gui.bat`` batch file (Windows).
@@ -346,7 +350,7 @@ Initialize
 
 
 Worker node
------------
+===========
 
 On the worker node, clone the following repositories (within the same directory):
 
@@ -378,10 +382,10 @@ Once this suits your system, you can start the job-launcher like this (from with
 
 
 Use the system
-==============
+++++++++++++++
 
 ADAMS
------
+=====
 
 The following ADAMS flows are available to manage your datasets and run jobs (simply execute them with the *Flow editor*):
 
@@ -402,7 +406,7 @@ The following ADAMS flows are available to manage your datasets and run jobs (si
 
 
 HTML Frontend
--------------
+=============
 
 Some of the functionality is available through a web-based frontend. 
 By default, the interface is being served on the following URL:
