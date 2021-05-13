@@ -17,17 +17,25 @@ require a NVIDIA GPU.
 The server backend and worker nodes are expected to run Linux (tested with Ubuntu 18.04). The frontend,
 e.g., when using ADAMS can be Linux, Windows or Mac. The HTML frontend has been tested with Chrome/Chromium and Firefox.
 
-You can either use pre-configured Docker images or set up the system manually. See the respective section below 
+You can either use pre-configured Docker images or set up the system manually. See the respective section below
 for relevant instructions.
 
-Docker-Compose and Docker
-+++++++++++++++++++++++++
+
+Docker-Compose / Docker
++++++++++++++++++++++++
+
+When using any of the public UFDL images, make sure to be logged into our registry:
+
+.. code:: bash
+
+   docker login public.aml-repo.cms.waikato.ac.nz:443
+
 
 Docker-Compose
 ==============
 
 The ``docker-compose`` script combines the three steps from the Docker section: **PostgreSQL**, **Redis**, **Backend**.
-To get started with docker-compose, first clone the backend repo:
+To get started with ``docker-compose``, first clone the backend repo:
 
 .. code:: bash
 
@@ -66,7 +74,6 @@ the Docker daemon running:
 
 .. code:: bash
 
-   docker login public.aml-repo.cms.waikato.ac.nz:443
    docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest
    docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest ufdl_postgres
 
@@ -114,7 +121,6 @@ for a Redis server available:
 
 .. code:: bash
 
-   docker login public.aml-repo.cms.waikato.ac.nz:443
    docker pull public.aml-repo.cms.waikato.ac.nz:443/redis
    docker tag public.aml-repo.cms.waikato.ac.nz:443/redis:latest ufdl_redis
 
@@ -135,7 +141,6 @@ HTML client ready-to-go. To obtain the image, with the Docker daemon running:
 
 .. code:: bash
 
-   docker login public.aml-repo.cms.waikato.ac.nz:443
    docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest
    docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
 
@@ -150,7 +155,7 @@ So that file data will persist between executions, create a volume for storage:
 
    docker volume create ufdl-fs
 
-Before you can use the backend, you need to initialise the tables in the database:
+Before you can use the backend for the **first time**, you need to initialise the tables in the database:
 
 .. code:: bash
 
@@ -160,7 +165,7 @@ Before you can use the backend, you need to initialise the tables in the databas
     ufdl_backend \
     reset
 
-Now you can start the backend for normal operation as follows:
+From now on. you can start the backend for normal operation as follows:
 
 .. code:: bash
 
@@ -190,11 +195,12 @@ daemon running:
 
 .. code:: bash
 
-   docker login public.aml-repo.cms.waikato.ac.nz:443
    docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest
    docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest ufdl_job_launcher
 
-Create a customised configuration file (as above) and then start the container with:
+Download the `job-launcher-docker.conf <https://raw.githubusercontent.com/waikato-ufdl/ufdl-job-launcher/master/examples/job-launcher-docker.conf>`__
+template and save it as something like ``/path/to/job-launcher.conf`` (you can adjust this path, of course).
+Then you can launch the worker node as follows:
 
 .. code:: bash
 
