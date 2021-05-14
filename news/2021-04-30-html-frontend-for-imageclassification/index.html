@@ -4,25 +4,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PyTorch image classification available | User-friendly Deep Learning</title>
+<title>HTML Frontend for image classification | User-friendly Deep Learning</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/news/2021-01-11-pytorch-image-classification/">
+<link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/news/2021-04-30-html-frontend-for-imageclassification/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="University of Waikato">
-<link rel="prev" href="../2020-11-05-waiannotations-release-0-5-4/" title="wai.annotations release 0.5.4" type="text/html">
-<link rel="next" href="../2021-01-28-detectron2-docker/" title="Detectron2 Docker image available" type="text/html">
+<link rel="prev" href="../2021-04-23-docker_for_backend/" title="Docker for backend" type="text/html">
+<link rel="next" href="../2021-05-14-docker-compose-for-backend/" title="Docker-Compose for Backend" type="text/html">
 <meta property="og:site_name" content="User-friendly Deep Learning">
-<meta property="og:title" content="PyTorch image classification available">
-<meta property="og:url" content="https://ufdl.cms.waikato.ac.nz/news/2021-01-11-pytorch-image-classification/">
-<meta property="og:description" content="Today, a new library for performing image classification has made its debut:
-wai.pytorchimageclass
-The library is based on the PyTorch example code for imagenet.
-For ResNet-based networks, you can fin">
+<meta property="og:title" content="HTML Frontend for image classification">
+<meta property="og:url" content="https://ufdl.cms.waikato.ac.nz/news/2021-04-30-html-frontend-for-imageclassification/">
+<meta property="og:description" content="An experimental user interface for image classification is now available:
+
+The interface is written in React and allows the
+user to incrementally improve their models until they are happy with the
+per">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2021-01-11T16:53:00+13:00">
-<meta property="article:tag" content="release">
+<meta property="article:published_time" content="2021-04-30T15:13:00+12:00">
+<meta property="article:tag" content="UI">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -110,7 +111,7 @@ bg-dark
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">PyTorch image classification available</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">HTML Frontend for image classification</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -118,7 +119,7 @@ bg-dark
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2021-01-11T16:53:00+13:00" itemprop="datePublished" title="2021-01-11 16:53">2021-01-11 16:53</time></a>
+            <time class="published dt-published" datetime="2021-04-30T15:13:00+12:00" itemprop="datePublished" title="2021-04-30 15:13">2021-04-30 15:13</time></a>
             </p>
             
 
@@ -127,26 +128,23 @@ bg-dark
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>Today, a new library for performing image classification has made its debut:</p>
-<p><strong>wai.pytorchimageclass</strong></p>
-<p>The library is based on the PyTorch example code for <a class="reference external" href="https://github.com/pytorch/examples/tree/master/imagenet">imagenet</a>.
-For ResNet-based networks, you can finetune pretrained models on your own data rather than
-just using the imagenet dataset. In addition, you can make predictions (single and batch/continuous), output information
-on built models, export trained models to <a class="reference external" href="https://pytorch.org/docs/stable/jit.html">TorchScript</a>.</p>
-<p>The library is also available via Docker images, one for <a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0">GPU-based</a> machines and one for <a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0_cpu">CPU-only ones</a>. However, the latter one should only be used for inference and not training, as it is simply too slow.</p>
-<p>More information on the library and the Docker images is available from Github:</p>
-<p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification">github.com/waikato-datamining/pytorch/tree/master/image-classification</a></p>
+<p>An experimental user interface for image classification is now available:</p>
+<a class="reference external image-reference" href="../../images/html_frontend_202104.png"><img alt="../../images/html_frontend_202104.thumbnail.png" src="../../images/html_frontend_202104.thumbnail.png"></a>
+<p>The interface is written in <a class="reference external" href="https://reactjs.org/">React</a> and allows the
+user to incrementally improve their models until they are happy with the
+performance (<strong>human in the loop</strong>).</p>
+<p>You can find out how to access this interface on the <a class="reference external" href="../../getting-started/">Getting started</a> page.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
-<li><a class="tag p-category" href="../../categories/release/" rel="tag">release</a></li>
+<li><a class="tag p-category" href="../../categories/ui/" rel="tag">UI</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../2020-11-05-waiannotations-release-0-5-4/" rel="prev" title="wai.annotations release 0.5.4">Previous post</a>
+                <a href="../2021-04-23-docker_for_backend/" rel="prev" title="Docker for backend">Previous post</a>
             </li>
             <li class="next">
-                <a href="../2021-01-28-detectron2-docker/" rel="next" title="Detectron2 Docker image available">Next post</a>
+                <a href="../2021-05-14-docker-compose-for-backend/" rel="next" title="Docker-Compose for Backend">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2019-2021         <a href="mailto:fracpete@waikato.ac.nz">University of Waikato</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
