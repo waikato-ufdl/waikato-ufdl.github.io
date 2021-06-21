@@ -1,6 +1,6 @@
 # Website for UFDL project
 
-Generates the website at [https://waikato-ufdl.github.io/](https://waikato-ufdl.github.io/)
+Generates the website at [https://ufdl.cms.waikato.ac.nz/](https://ufdl.cms.waikato.ac.nz/)
 using [Nikola](https://getnikola.com/).
 
 
