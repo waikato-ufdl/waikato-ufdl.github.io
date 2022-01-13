@@ -172,6 +172,7 @@ NAVIGATION_LINKS = {
           ("https://github.com/waikato-datamining/yolact", "YOLACT"),
           ), "Docker"),
         ("/publications/", "Publications"),
+        ("https://datasets.cms.waikato.ac.nz/ufdl/", "Datasets"),
         ("/people/", "People"),
         ("/rss.xml", "RSS"),
     ),
