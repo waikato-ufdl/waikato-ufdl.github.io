@@ -98,7 +98,9 @@ bg-dark
                     <a href="https://github.com/waikato-datamining/mmdetection" class="dropdown-item">MMDetection</a>
                     <a href="https://github.com/waikato-datamining/pytorch/tree/master/crnn-audio-classification" class="dropdown-item">Pytorch CRNN Audio Classification</a>
                     <a href="https://github.com/waikato-datamining/pytorch/tree/master/deepspeech2" class="dropdown-item">Pytorch Deepspeech2</a>
+                    <a href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2" class="dropdown-item">Pytorch Detectron2</a>
                     <a href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification" class="dropdown-item">Pytorch Image Classification</a>
+                    <a href="https://github.com/waikato-datamining/pytorch/tree/master/yolov5" class="dropdown-item">Pytorch Yolov5</a>
                     <a href="https://github.com/waikato-datamining/tensorflow/tree/master/deepspeech" class="dropdown-item">Tensorflow DeepSpeech</a>
                     <a href="https://github.com/waikato-datamining/tensorflow/tree/master/image_classification" class="dropdown-item">Tensorflow Image Classification</a>
                     <a href="https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras" class="dropdown-item">Tensorflow Image Segmentation</a>
@@ -182,86 +184,86 @@ e.g., when using ADAMS can be Linux, Windows or Mac. The HTML frontend has been 
 for relevant instructions.</p>
 <section id="docker-compose-docker"><h2><a class="toc-backref" href="#toc-entry-1" role="doc-backlink">Docker-Compose / Docker</a></h2>
 <p>When using any of the public UFDL images, make sure to be logged into our registry:</p>
-<pre class="code bash"><a id="rest_code_64ae0cb28322449c834596304fc56edb-1" name="rest_code_64ae0cb28322449c834596304fc56edb-1" href="#rest_code_64ae0cb28322449c834596304fc56edb-1"></a>docker login public.aml-repo.cms.waikato.ac.nz:443
+<pre class="code bash"><a id="rest_code_57557b17db4d4380bdc03640d2ff1282-1" name="rest_code_57557b17db4d4380bdc03640d2ff1282-1" href="#rest_code_57557b17db4d4380bdc03640d2ff1282-1"></a>docker login public.aml-repo.cms.waikato.ac.nz:443
 </pre>
 <section id="docker-compose"><h3><a class="toc-backref" href="#toc-entry-2" role="doc-backlink">Docker-Compose</a></h3>
 <p>The <code class="docutils literal"><span class="pre">docker-compose</span></code> script combines the three steps from the Docker section: <strong>PostgreSQL</strong>, <strong>Redis</strong>, <strong>Backend</strong>.
 To get started with <code class="docutils literal"><span class="pre">docker-compose</span></code>, first clone the backend repo:</p>
-<pre class="code bash"><a id="rest_code_c02f16cfa64449da97e89e1e499c47f9-1" name="rest_code_c02f16cfa64449da97e89e1e499c47f9-1" href="#rest_code_c02f16cfa64449da97e89e1e499c47f9-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
-<a id="rest_code_c02f16cfa64449da97e89e1e499c47f9-2" name="rest_code_c02f16cfa64449da97e89e1e499c47f9-2" href="#rest_code_c02f16cfa64449da97e89e1e499c47f9-2"></a><span class="nb">cd</span> ufdl-backend/docker/ufdl
+<pre class="code bash"><a id="rest_code_db2945faf55c4e108d1b910e42a06c0c-1" name="rest_code_db2945faf55c4e108d1b910e42a06c0c-1" href="#rest_code_db2945faf55c4e108d1b910e42a06c0c-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
+<a id="rest_code_db2945faf55c4e108d1b910e42a06c0c-2" name="rest_code_db2945faf55c4e108d1b910e42a06c0c-2" href="#rest_code_db2945faf55c4e108d1b910e42a06c0c-2"></a><span class="nb">cd</span> ufdl-backend/docker/ufdl
 </pre>
 <p>Pull the latest images for the services:</p>
-<pre class="code bash"><a id="rest_code_2e654f47771344ce97584ce7f021d532-1" name="rest_code_2e654f47771344ce97584ce7f021d532-1" href="#rest_code_2e654f47771344ce97584ce7f021d532-1"></a>docker-compose pull
+<pre class="code bash"><a id="rest_code_a08315282fcc4fc2907aa80ecc987e20-1" name="rest_code_a08315282fcc4fc2907aa80ecc987e20-1" href="#rest_code_a08315282fcc4fc2907aa80ecc987e20-1"></a>docker-compose pull
 </pre>
 <p>The <strong>first time</strong> running the system, the database will need to be initialised with the requisite tables:</p>
-<pre class="code bash"><a id="rest_code_5725b3634c6a40568ff9fe779f98dd8c-1" name="rest_code_5725b3634c6a40568ff9fe779f98dd8c-1" href="#rest_code_5725b3634c6a40568ff9fe779f98dd8c-1"></a>docker-compose run ufdl reset
+<pre class="code bash"><a id="rest_code_ade84bc11b974aa4870866611ac04c20-1" name="rest_code_ade84bc11b974aa4870866611ac04c20-1" href="#rest_code_ade84bc11b974aa4870866611ac04c20-1"></a>docker-compose run ufdl reset
 </pre>
 <p>On-line the backend with the <code class="docutils literal">up</code> command:</p>
-<pre class="code bash"><a id="rest_code_0beb6f2e75c44a938c124fbf0719442a-1" name="rest_code_0beb6f2e75c44a938c124fbf0719442a-1" href="#rest_code_0beb6f2e75c44a938c124fbf0719442a-1"></a>docker-compose up
+<pre class="code bash"><a id="rest_code_20806f6865e04c34b94002aa1bdf909c-1" name="rest_code_20806f6865e04c34b94002aa1bdf909c-1" href="#rest_code_20806f6865e04c34b94002aa1bdf909c-1"></a>docker-compose up
 </pre></section><section id="docker"><h3><a class="toc-backref" href="#toc-entry-3" role="doc-backlink">Docker</a></h3>
 <p>Instead of using <code class="docutils literal"><span class="pre">docker-compose</span></code>, you can also execute the individual steps for setting up the backend.</p>
 <section id="postgresql"><h4><a class="toc-backref" href="#toc-entry-4" role="doc-backlink">PostgreSQL</a></h4>
 <p>A Docker image which has a preconfigured PostgreSQL database is provided for convenience. To obtain the image, with
 the Docker daemon running:</p>
-<pre class="code bash"><a id="rest_code_735d7e2f48ba4a0b8e405324471f1aa2-1" name="rest_code_735d7e2f48ba4a0b8e405324471f1aa2-1" href="#rest_code_735d7e2f48ba4a0b8e405324471f1aa2-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest
-<a id="rest_code_735d7e2f48ba4a0b8e405324471f1aa2-2" name="rest_code_735d7e2f48ba4a0b8e405324471f1aa2-2" href="#rest_code_735d7e2f48ba4a0b8e405324471f1aa2-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest ufdl_postgres
+<pre class="code bash"><a id="rest_code_09bb9230ae174120a027728180aef528-1" name="rest_code_09bb9230ae174120a027728180aef528-1" href="#rest_code_09bb9230ae174120a027728180aef528-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest
+<a id="rest_code_09bb9230ae174120a027728180aef528-2" name="rest_code_09bb9230ae174120a027728180aef528-2" href="#rest_code_09bb9230ae174120a027728180aef528-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_postgres:latest ufdl_postgres
 </pre>
 <p>The username/password for the database user in this image is ufdl/ufdl respectively.</p>
 <p>Alternatively, the Dockerfile can be built to change the username/password. Firstly clone the backend repository and
 change to the database Docker directory:</p>
-<pre class="code bash"><a id="rest_code_c612b95d4aab4604bc221d1063e973a0-1" name="rest_code_c612b95d4aab4604bc221d1063e973a0-1" href="#rest_code_c612b95d4aab4604bc221d1063e973a0-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
-<a id="rest_code_c612b95d4aab4604bc221d1063e973a0-2" name="rest_code_c612b95d4aab4604bc221d1063e973a0-2" href="#rest_code_c612b95d4aab4604bc221d1063e973a0-2"></a><span class="nb">cd</span> ufdl-backend/docker/database
+<pre class="code bash"><a id="rest_code_845d3dace50c49a3876a167c2252c837-1" name="rest_code_845d3dace50c49a3876a167c2252c837-1" href="#rest_code_845d3dace50c49a3876a167c2252c837-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
+<a id="rest_code_845d3dace50c49a3876a167c2252c837-2" name="rest_code_845d3dace50c49a3876a167c2252c837-2" href="#rest_code_845d3dace50c49a3876a167c2252c837-2"></a><span class="nb">cd</span> ufdl-backend/docker/database
 </pre>
 <p>Then build the Dockerfile with custom username/password settings:</p>
-<pre class="code bash"><a id="rest_code_6d92b4ed6d59400887081c91b5526754-1" name="rest_code_6d92b4ed6d59400887081c91b5526754-1" href="#rest_code_6d92b4ed6d59400887081c91b5526754-1"></a>docker build <span class="se">\</span>
-<a id="rest_code_6d92b4ed6d59400887081c91b5526754-2" name="rest_code_6d92b4ed6d59400887081c91b5526754-2" href="#rest_code_6d92b4ed6d59400887081c91b5526754-2"></a>  -t ufdl_postgres <span class="se">\</span>
-<a id="rest_code_6d92b4ed6d59400887081c91b5526754-3" name="rest_code_6d92b4ed6d59400887081c91b5526754-3" href="#rest_code_6d92b4ed6d59400887081c91b5526754-3"></a>  --build-arg <span class="nv">UFDL_POSTGRESQL_USER</span><span class="o">=</span>username <span class="se">\</span>
-<a id="rest_code_6d92b4ed6d59400887081c91b5526754-4" name="rest_code_6d92b4ed6d59400887081c91b5526754-4" href="#rest_code_6d92b4ed6d59400887081c91b5526754-4"></a>  --build-arg <span class="nv">UFDL_POSTGRESQL_PASSWORD</span><span class="o">=</span>password <span class="se">\</span>
-<a id="rest_code_6d92b4ed6d59400887081c91b5526754-5" name="rest_code_6d92b4ed6d59400887081c91b5526754-5" href="#rest_code_6d92b4ed6d59400887081c91b5526754-5"></a>  .
+<pre class="code bash"><a id="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-1" name="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-1" href="#rest_code_1fdcd0b4c6ba41648a834603ff5a8289-1"></a>docker build <span class="se">\</span>
+<a id="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-2" name="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-2" href="#rest_code_1fdcd0b4c6ba41648a834603ff5a8289-2"></a>  -t ufdl_postgres <span class="se">\</span>
+<a id="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-3" name="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-3" href="#rest_code_1fdcd0b4c6ba41648a834603ff5a8289-3"></a>  --build-arg <span class="nv">UFDL_POSTGRESQL_USER</span><span class="o">=</span>username <span class="se">\</span>
+<a id="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-4" name="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-4" href="#rest_code_1fdcd0b4c6ba41648a834603ff5a8289-4"></a>  --build-arg <span class="nv">UFDL_POSTGRESQL_PASSWORD</span><span class="o">=</span>password <span class="se">\</span>
+<a id="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-5" name="rest_code_1fdcd0b4c6ba41648a834603ff5a8289-5" href="#rest_code_1fdcd0b4c6ba41648a834603ff5a8289-5"></a>  .
 </pre>
 <p>So that database data will persist between executions, create a volume for storage:</p>
-<pre class="code bash"><a id="rest_code_404e54c923d546eea0426b5fc18295c2-1" name="rest_code_404e54c923d546eea0426b5fc18295c2-1" href="#rest_code_404e54c923d546eea0426b5fc18295c2-1"></a>docker volume create ufdl-pg
+<pre class="code bash"><a id="rest_code_ffdda3118eb5466e9c69ec32206c9395-1" name="rest_code_ffdda3118eb5466e9c69ec32206c9395-1" href="#rest_code_ffdda3118eb5466e9c69ec32206c9395-1"></a>docker volume create ufdl-pg
 </pre>
 <p>Run the image as a container:</p>
-<pre class="code bash"><a id="rest_code_977fc24a44e6454ba13984d405cbc378-1" name="rest_code_977fc24a44e6454ba13984d405cbc378-1" href="#rest_code_977fc24a44e6454ba13984d405cbc378-1"></a>docker run <span class="se">\</span>
-<a id="rest_code_977fc24a44e6454ba13984d405cbc378-2" name="rest_code_977fc24a44e6454ba13984d405cbc378-2" href="#rest_code_977fc24a44e6454ba13984d405cbc378-2"></a> -p <span class="m">5432</span>:5432/tcp <span class="se">\</span>
-<a id="rest_code_977fc24a44e6454ba13984d405cbc378-3" name="rest_code_977fc24a44e6454ba13984d405cbc378-3" href="#rest_code_977fc24a44e6454ba13984d405cbc378-3"></a> -v ufdl-pg:/var/lib/postgresql/10/main <span class="se">\</span>
-<a id="rest_code_977fc24a44e6454ba13984d405cbc378-4" name="rest_code_977fc24a44e6454ba13984d405cbc378-4" href="#rest_code_977fc24a44e6454ba13984d405cbc378-4"></a> ufdl_postgres
+<pre class="code bash"><a id="rest_code_ea03d0456ad94832abfd22e6e81b3972-1" name="rest_code_ea03d0456ad94832abfd22e6e81b3972-1" href="#rest_code_ea03d0456ad94832abfd22e6e81b3972-1"></a>docker run <span class="se">\</span>
+<a id="rest_code_ea03d0456ad94832abfd22e6e81b3972-2" name="rest_code_ea03d0456ad94832abfd22e6e81b3972-2" href="#rest_code_ea03d0456ad94832abfd22e6e81b3972-2"></a> -p <span class="m">5432</span>:5432/tcp <span class="se">\</span>
+<a id="rest_code_ea03d0456ad94832abfd22e6e81b3972-3" name="rest_code_ea03d0456ad94832abfd22e6e81b3972-3" href="#rest_code_ea03d0456ad94832abfd22e6e81b3972-3"></a> -v ufdl-pg:/var/lib/postgresql/10/main <span class="se">\</span>
+<a id="rest_code_ea03d0456ad94832abfd22e6e81b3972-4" name="rest_code_ea03d0456ad94832abfd22e6e81b3972-4" href="#rest_code_ea03d0456ad94832abfd22e6e81b3972-4"></a> ufdl_postgres
 </pre></section><section id="redis"><h4><a class="toc-backref" href="#toc-entry-5" role="doc-backlink">Redis</a></h4>
 <p>The backend requires access to a Redis server to enable the use of web-sockets. There is a publically-available image
 for a Redis server available:</p>
-<pre class="code bash"><a id="rest_code_590a5c7c15e845c7be622cfd23d4f23b-1" name="rest_code_590a5c7c15e845c7be622cfd23d4f23b-1" href="#rest_code_590a5c7c15e845c7be622cfd23d4f23b-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/redis
-<a id="rest_code_590a5c7c15e845c7be622cfd23d4f23b-2" name="rest_code_590a5c7c15e845c7be622cfd23d4f23b-2" href="#rest_code_590a5c7c15e845c7be622cfd23d4f23b-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/redis:latest ufdl_redis
+<pre class="code bash"><a id="rest_code_4af1605c05644d858d302f2b132872aa-1" name="rest_code_4af1605c05644d858d302f2b132872aa-1" href="#rest_code_4af1605c05644d858d302f2b132872aa-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/redis
+<a id="rest_code_4af1605c05644d858d302f2b132872aa-2" name="rest_code_4af1605c05644d858d302f2b132872aa-2" href="#rest_code_4af1605c05644d858d302f2b132872aa-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/redis:latest ufdl_redis
 </pre>
 <p>To run the image, only the port needs exposing:</p>
-<pre class="code bash"><a id="rest_code_daddfbd971a54f9ba4132a159ce74ed1-1" name="rest_code_daddfbd971a54f9ba4132a159ce74ed1-1" href="#rest_code_daddfbd971a54f9ba4132a159ce74ed1-1"></a>docker run <span class="se">\</span>
-<a id="rest_code_daddfbd971a54f9ba4132a159ce74ed1-2" name="rest_code_daddfbd971a54f9ba4132a159ce74ed1-2" href="#rest_code_daddfbd971a54f9ba4132a159ce74ed1-2"></a> -p <span class="m">6379</span>:6379 <span class="se">\</span>
-<a id="rest_code_daddfbd971a54f9ba4132a159ce74ed1-3" name="rest_code_daddfbd971a54f9ba4132a159ce74ed1-3" href="#rest_code_daddfbd971a54f9ba4132a159ce74ed1-3"></a> ufdl_redis
+<pre class="code bash"><a id="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-1" name="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-1" href="#rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-1"></a>docker run <span class="se">\</span>
+<a id="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-2" name="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-2" href="#rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-2"></a> -p <span class="m">6379</span>:6379 <span class="se">\</span>
+<a id="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-3" name="rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-3" href="#rest_code_dce3e2e374aa421c9d13a0cc7bb9de28-3"></a> ufdl_redis
 </pre></section><section id="backend"><h4><a class="toc-backref" href="#toc-entry-6" role="doc-backlink">Backend</a></h4>
 <p>A Docker image with a preconfigured backend installation is also provided. This image also automatically includes the
 HTML client ready-to-go. To obtain the image, with the Docker daemon running:</p>
-<pre class="code bash"><a id="rest_code_670c19c3457d4b45aa64129263986ebb-1" name="rest_code_670c19c3457d4b45aa64129263986ebb-1" href="#rest_code_670c19c3457d4b45aa64129263986ebb-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest
-<a id="rest_code_670c19c3457d4b45aa64129263986ebb-2" name="rest_code_670c19c3457d4b45aa64129263986ebb-2" href="#rest_code_670c19c3457d4b45aa64129263986ebb-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
+<pre class="code bash"><a id="rest_code_144e3316a6fd45b995ca91214898328b-1" name="rest_code_144e3316a6fd45b995ca91214898328b-1" href="#rest_code_144e3316a6fd45b995ca91214898328b-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest
+<a id="rest_code_144e3316a6fd45b995ca91214898328b-2" name="rest_code_144e3316a6fd45b995ca91214898328b-2" href="#rest_code_144e3316a6fd45b995ca91214898328b-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_backend:latest ufdl_backend
 </pre>
 <p>The default environment in this image is set to connect to a database on the Docker <strong>host</strong> (localhost) with
 username/password both set to <em>ufdl</em>. You can change these to match your database configuration via the <code class="docutils literal"><span class="pre">--env</span></code>
 option to <code class="docutils literal">docker run</code> (below) an providing the environment variables described above, e.g.
 <code class="docutils literal"><span class="pre">--env</span> UFDL_POSTGRESQL_HOST=database.example.org</code>.</p>
 <p>So that file data will persist between executions, create a volume for storage:</p>
-<pre class="code bash"><a id="rest_code_23ab575330d34bdb84d87ff64e8fc627-1" name="rest_code_23ab575330d34bdb84d87ff64e8fc627-1" href="#rest_code_23ab575330d34bdb84d87ff64e8fc627-1"></a>docker volume create ufdl-fs
+<pre class="code bash"><a id="rest_code_c22b592f756742d28d4ebc636d56a113-1" name="rest_code_c22b592f756742d28d4ebc636d56a113-1" href="#rest_code_c22b592f756742d28d4ebc636d56a113-1"></a>docker volume create ufdl-fs
 </pre>
 <p>Before you can use the backend for the <strong>first time</strong>, you need to initialise the tables in the database:</p>
-<pre class="code bash"><a id="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-1" name="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-1" href="#rest_code_4f2700efcffa4ce3b4a55028ee4b3560-1"></a>docker run <span class="se">\</span>
-<a id="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-2" name="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-2" href="#rest_code_4f2700efcffa4ce3b4a55028ee4b3560-2"></a> -v ufdl-fs:/ufdl/ufdl-backend/fs <span class="se">\</span>
-<a id="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-3" name="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-3" href="#rest_code_4f2700efcffa4ce3b4a55028ee4b3560-3"></a> --network<span class="o">=</span>host <span class="se">\</span>
-<a id="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-4" name="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-4" href="#rest_code_4f2700efcffa4ce3b4a55028ee4b3560-4"></a> ufdl_backend <span class="se">\</span>
-<a id="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-5" name="rest_code_4f2700efcffa4ce3b4a55028ee4b3560-5" href="#rest_code_4f2700efcffa4ce3b4a55028ee4b3560-5"></a> reset
+<pre class="code bash"><a id="rest_code_9e4a2fc8de28453c83d911eb5e51b839-1" name="rest_code_9e4a2fc8de28453c83d911eb5e51b839-1" href="#rest_code_9e4a2fc8de28453c83d911eb5e51b839-1"></a>docker run <span class="se">\</span>
+<a id="rest_code_9e4a2fc8de28453c83d911eb5e51b839-2" name="rest_code_9e4a2fc8de28453c83d911eb5e51b839-2" href="#rest_code_9e4a2fc8de28453c83d911eb5e51b839-2"></a> -v ufdl-fs:/ufdl/ufdl-backend/fs <span class="se">\</span>
+<a id="rest_code_9e4a2fc8de28453c83d911eb5e51b839-3" name="rest_code_9e4a2fc8de28453c83d911eb5e51b839-3" href="#rest_code_9e4a2fc8de28453c83d911eb5e51b839-3"></a> --network<span class="o">=</span>host <span class="se">\</span>
+<a id="rest_code_9e4a2fc8de28453c83d911eb5e51b839-4" name="rest_code_9e4a2fc8de28453c83d911eb5e51b839-4" href="#rest_code_9e4a2fc8de28453c83d911eb5e51b839-4"></a> ufdl_backend <span class="se">\</span>
+<a id="rest_code_9e4a2fc8de28453c83d911eb5e51b839-5" name="rest_code_9e4a2fc8de28453c83d911eb5e51b839-5" href="#rest_code_9e4a2fc8de28453c83d911eb5e51b839-5"></a> reset
 </pre>
 <p>From now on. you can start the backend for normal operation as follows:</p>
-<pre class="code bash"><a id="rest_code_f214316be98e4e8999ffde377abbe578-1" name="rest_code_f214316be98e4e8999ffde377abbe578-1" href="#rest_code_f214316be98e4e8999ffde377abbe578-1"></a>docker run <span class="se">\</span>
-<a id="rest_code_f214316be98e4e8999ffde377abbe578-2" name="rest_code_f214316be98e4e8999ffde377abbe578-2" href="#rest_code_f214316be98e4e8999ffde377abbe578-2"></a> -v ufdl-fs:/ufdl/ufdl-backend/fs <span class="se">\</span>
-<a id="rest_code_f214316be98e4e8999ffde377abbe578-3" name="rest_code_f214316be98e4e8999ffde377abbe578-3" href="#rest_code_f214316be98e4e8999ffde377abbe578-3"></a> --network<span class="o">=</span>host <span class="se">\</span>
-<a id="rest_code_f214316be98e4e8999ffde377abbe578-4" name="rest_code_f214316be98e4e8999ffde377abbe578-4" href="#rest_code_f214316be98e4e8999ffde377abbe578-4"></a> ufdl_backend
+<pre class="code bash"><a id="rest_code_dfb6f0bba43743ccb38db31f518a73d3-1" name="rest_code_dfb6f0bba43743ccb38db31f518a73d3-1" href="#rest_code_dfb6f0bba43743ccb38db31f518a73d3-1"></a>docker run <span class="se">\</span>
+<a id="rest_code_dfb6f0bba43743ccb38db31f518a73d3-2" name="rest_code_dfb6f0bba43743ccb38db31f518a73d3-2" href="#rest_code_dfb6f0bba43743ccb38db31f518a73d3-2"></a> -v ufdl-fs:/ufdl/ufdl-backend/fs <span class="se">\</span>
+<a id="rest_code_dfb6f0bba43743ccb38db31f518a73d3-3" name="rest_code_dfb6f0bba43743ccb38db31f518a73d3-3" href="#rest_code_dfb6f0bba43743ccb38db31f518a73d3-3"></a> --network<span class="o">=</span>host <span class="se">\</span>
+<a id="rest_code_dfb6f0bba43743ccb38db31f518a73d3-4" name="rest_code_dfb6f0bba43743ccb38db31f518a73d3-4" href="#rest_code_dfb6f0bba43743ccb38db31f518a73d3-4"></a> ufdl_backend
 </pre>
 <p><strong>NB:</strong> If the backend and the database are both running via Docker on the same machine, a private Docker network can
 be created to allow the two services to communicate.</p>
@@ -274,18 +276,18 @@ basic environment (users, teams, projects).</p></li>
 </ul></section><section id="worker-node"><h3><a class="toc-backref" href="#toc-entry-8" role="doc-backlink">Worker node</a></h3>
 <p>A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
 daemon running:</p>
-<pre class="code bash"><a id="rest_code_3b7e1910cac54e18b454ff8b89c68271-1" name="rest_code_3b7e1910cac54e18b454ff8b89c68271-1" href="#rest_code_3b7e1910cac54e18b454ff8b89c68271-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest
-<a id="rest_code_3b7e1910cac54e18b454ff8b89c68271-2" name="rest_code_3b7e1910cac54e18b454ff8b89c68271-2" href="#rest_code_3b7e1910cac54e18b454ff8b89c68271-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest ufdl_job_launcher
+<pre class="code bash"><a id="rest_code_9db94bab36e0466988331cd9f573db76-1" name="rest_code_9db94bab36e0466988331cd9f573db76-1" href="#rest_code_9db94bab36e0466988331cd9f573db76-1"></a>docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest
+<a id="rest_code_9db94bab36e0466988331cd9f573db76-2" name="rest_code_9db94bab36e0466988331cd9f573db76-2" href="#rest_code_9db94bab36e0466988331cd9f573db76-2"></a>docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher:latest ufdl_job_launcher
 </pre>
 <p>Download the <a class="reference external" href="https://raw.githubusercontent.com/waikato-ufdl/ufdl-job-launcher/master/examples/job-launcher-docker.conf">job-launcher-docker.conf</a>
 template and save it as something like <code class="docutils literal"><span class="pre">/path/to/job-launcher.conf</span></code> (you can adjust this path, of course).
 Then you can launch the worker node as follows:</p>
-<pre class="code bash"><a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-1" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-1" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-1"></a>docker run <span class="se">\</span>
-<a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-2" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-2" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-2"></a> -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
-<a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-3" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-3" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-3"></a> -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf <span class="se">\</span>
-<a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-4" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-4" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-4"></a> -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher <span class="se">\</span>
-<a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-5" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-5" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-5"></a> --network<span class="o">=</span>host <span class="se">\</span>
-<a id="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-6" name="rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-6" href="#rest_code_e1fe5d609a9e4adcb8b76e38e72fb227-6"></a> ufdl_job_launcher
+<pre class="code bash"><a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-1" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-1" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-1"></a>docker run <span class="se">\</span>
+<a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-2" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-2" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-2"></a> -v /var/run/docker.sock:/var/run/docker.sock <span class="se">\</span>
+<a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-3" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-3" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-3"></a> -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf <span class="se">\</span>
+<a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-4" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-4" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-4"></a> -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher <span class="se">\</span>
+<a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-5" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-5" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-5"></a> --network<span class="o">=</span>host <span class="se">\</span>
+<a id="rest_code_de9a2385307a48aeacf7c93d0d880fd1-6" name="rest_code_de9a2385307a48aeacf7c93d0d880fd1-6" href="#rest_code_de9a2385307a48aeacf7c93d0d880fd1-6"></a> ufdl_job_launcher
 </pre>
 <p><strong>NB:</strong></p>
 <ul class="simple">
@@ -301,19 +303,19 @@ Then you can launch the worker node as follows:</p>
 <section id="postgresql-1"><h3><a class="toc-backref" href="#toc-entry-10" role="doc-backlink">PostgreSQL</a></h3>
 <p>Make sure you have PostgreSQL installed and the server is running, and then add a database for the backend
 to use (e.g. by using psql -c COMMAND postgres) (<strong>N.B.</strong> the database name must be <em>ufdl</em>):</p>
-<pre class="code sql"><a id="rest_code_64091a7be8b54c1b855567e29e983d67-1" name="rest_code_64091a7be8b54c1b855567e29e983d67-1" href="#rest_code_64091a7be8b54c1b855567e29e983d67-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ufdl</span><span class="p">;</span><span class="w"></span>
+<pre class="code sql"><a id="rest_code_2436cfd908bd4f14a7a49b48d9750888-1" name="rest_code_2436cfd908bd4f14a7a49b48d9750888-1" href="#rest_code_2436cfd908bd4f14a7a49b48d9750888-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ufdl</span><span class="p">;</span><span class="w"></span>
 </pre>
 <p>Create a user for the backend to access the database with (replace the username/password with whatever you like):</p>
-<pre class="code sql"><a id="rest_code_227cce9f44c840dfb0d7252190bcda9e-1" name="rest_code_227cce9f44c840dfb0d7252190bcda9e-1" href="#rest_code_227cce9f44c840dfb0d7252190bcda9e-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">ENCRYPTED</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">'password'</span><span class="p">;</span><span class="w"></span>
-<a id="rest_code_227cce9f44c840dfb0d7252190bcda9e-2" name="rest_code_227cce9f44c840dfb0d7252190bcda9e-2" href="#rest_code_227cce9f44c840dfb0d7252190bcda9e-2"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ufdl</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">username</span><span class="p">;</span><span class="w"></span>
+<pre class="code sql"><a id="rest_code_2ad9b1d1955c4239854ad913403160b5-1" name="rest_code_2ad9b1d1955c4239854ad913403160b5-1" href="#rest_code_2ad9b1d1955c4239854ad913403160b5-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="k">ENCRYPTED</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="s1">'password'</span><span class="p">;</span><span class="w"></span>
+<a id="rest_code_2ad9b1d1955c4239854ad913403160b5-2" name="rest_code_2ad9b1d1955c4239854ad913403160b5-2" href="#rest_code_2ad9b1d1955c4239854ad913403160b5-2"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">ufdl</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">username</span><span class="p">;</span><span class="w"></span>
 </pre>
 <p>Edit the Host-Based Authentication file for PostgreSQL (usually located at /etc/postgresql/{VERSION}/main/pg_hba.conf)
 to allow the user to authenticate with the database. If the backend server will be running on the same machine as the
 database, run:</p>
-<pre class="code bash"><a id="rest_code_2c2377a009594e409e0dbb4e553b9e16-1" name="rest_code_2c2377a009594e409e0dbb4e553b9e16-1" href="#rest_code_2c2377a009594e409e0dbb4e553b9e16-1"></a><span class="nb">echo</span> <span class="s2">"local ufdl username md5"</span> &gt;&gt; /path/to/pg_hba.conf
+<pre class="code bash"><a id="rest_code_6eac938d28fb4488b6b6b3ac5aea47b9-1" name="rest_code_6eac938d28fb4488b6b6b3ac5aea47b9-1" href="#rest_code_6eac938d28fb4488b6b6b3ac5aea47b9-1"></a><span class="nb">echo</span> <span class="s2">"local ufdl username md5"</span> &gt;&gt; /path/to/pg_hba.conf
 </pre>
 <p>otherwise:</p>
-<pre class="code bash"><a id="rest_code_b43c688ecbdf44498462eae39fde4f19-1" name="rest_code_b43c688ecbdf44498462eae39fde4f19-1" href="#rest_code_b43c688ecbdf44498462eae39fde4f19-1"></a><span class="nb">echo</span> <span class="s2">"host ufdl username all md5"</span> &gt;&gt; /path/to/pg_hba.conf
+<pre class="code bash"><a id="rest_code_f50095b7d7b1422294bc5f29c51a4e93-1" name="rest_code_f50095b7d7b1422294bc5f29c51a4e93-1" href="#rest_code_f50095b7d7b1422294bc5f29c51a4e93-1"></a><span class="nb">echo</span> <span class="s2">"host ufdl username all md5"</span> &gt;&gt; /path/to/pg_hba.conf
 </pre>
 <p>If the backend will not be running on the same machine as the database, the 'listen_addresses' setting in
 postgresql.conf also needs to be set to allow the backend to connect (e.g. by setting it to '*').</p>
@@ -325,24 +327,24 @@ and running on the backend host.</p>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-backend">ufdl-backend</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-json-messages">ufdl-json-messages</a></p></li>
 </ul>
-<pre class="code bash"><a id="rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-1" name="rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-1" href="#rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
-<a id="rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-2" name="rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-2" href="#rest_code_cf1e1abe7b6d4a6ca16f35a886f19a96-2"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
+<pre class="code bash"><a id="rest_code_5c61844f73a74c9cb6e54db377946b1c-1" name="rest_code_5c61844f73a74c9cb6e54db377946b1c-1" href="#rest_code_5c61844f73a74c9cb6e54db377946b1c-1"></a>git clone https://github.com/waikato-ufdl/ufdl-backend
+<a id="rest_code_5c61844f73a74c9cb6e54db377946b1c-2" name="rest_code_5c61844f73a74c9cb6e54db377946b1c-2" href="#rest_code_5c61844f73a74c9cb6e54db377946b1c-2"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
 </pre>
 <p>The backend requires instruction on how to connect to the PostgreSQL database, which is provided through environment
 variables:</p>
-<pre class="code bash"><a id="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-1" name="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-1" href="#rest_code_4b96e5ea227a41ecb6a0129459a5deb3-1"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_USER</span><span class="o">=</span>username
-<a id="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-2" name="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-2" href="#rest_code_4b96e5ea227a41ecb6a0129459a5deb3-2"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_PASSWORD</span><span class="o">=</span>password
-<a id="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-3" name="rest_code_4b96e5ea227a41ecb6a0129459a5deb3-3" href="#rest_code_4b96e5ea227a41ecb6a0129459a5deb3-3"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_HOST</span><span class="o">=</span>host.domain.name:port
+<pre class="code bash"><a id="rest_code_74e4d32e9e2448dea665acaa3d62fe29-1" name="rest_code_74e4d32e9e2448dea665acaa3d62fe29-1" href="#rest_code_74e4d32e9e2448dea665acaa3d62fe29-1"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_USER</span><span class="o">=</span>username
+<a id="rest_code_74e4d32e9e2448dea665acaa3d62fe29-2" name="rest_code_74e4d32e9e2448dea665acaa3d62fe29-2" href="#rest_code_74e4d32e9e2448dea665acaa3d62fe29-2"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_PASSWORD</span><span class="o">=</span>password
+<a id="rest_code_74e4d32e9e2448dea665acaa3d62fe29-3" name="rest_code_74e4d32e9e2448dea665acaa3d62fe29-3" href="#rest_code_74e4d32e9e2448dea665acaa3d62fe29-3"></a><span class="nb">export</span> <span class="nv">UFDL_POSTGRESQL_HOST</span><span class="o">=</span>host.domain.name:port
 </pre>
 <p>The host defaults to <em>localhost</em> and the user to <em>ufdl</em>, so if these match your database configuration they need not
 be supplied. The password has not default though and must be supplied.</p>
 <p>Change into the directory of the cloned <em>ufdl-backend</em> repository and run the following script to set up
 the virtual environment for the server (<strong>CAUTION:</strong> it will delete any previously stored data and the database):</p>
-<pre class="code bash"><a id="rest_code_aa9be7e404e64ebaabe37b8af63f9083-1" name="rest_code_aa9be7e404e64ebaabe37b8af63f9083-1" href="#rest_code_aa9be7e404e64ebaabe37b8af63f9083-1"></a>./dev_init.sh
+<pre class="code bash"><a id="rest_code_20e07c85d4f444bfaf47ba2495dd02db-1" name="rest_code_20e07c85d4f444bfaf47ba2495dd02db-1" href="#rest_code_20e07c85d4f444bfaf47ba2495dd02db-1"></a>./dev_init.sh
 </pre>
 <p><strong>NB:</strong> <em>dev_init.sh</em> creates an admin user with username/password set to admin/admin respectively.</p>
 <p>Once this has completed, you can start up the REST API on <code class="docutils literal">127.0.0.1</code> as follows:</p>
-<pre class="code bash"><a id="rest_code_20bbb68cb2cd430c963e7f06dc1e4423-1" name="rest_code_20bbb68cb2cd430c963e7f06dc1e4423-1" href="#rest_code_20bbb68cb2cd430c963e7f06dc1e4423-1"></a>./dev_start.sh
+<pre class="code bash"><a id="rest_code_bbcc3b80ad564f34b938613bf70659a1-1" name="rest_code_bbcc3b80ad564f34b938613bf70659a1-1" href="#rest_code_bbcc3b80ad564f34b938613bf70659a1-1"></a>./dev_start.sh
 </pre>
 <p>Use <code class="docutils literal">0.0.0.0:8000</code> as argument if you want to make the server available to the outside world on port 8000.
 Ensure that your firewall allows that port to be accessed from the outside.</p>
@@ -354,21 +356,21 @@ served as a single-page application. Ensure you have Node installed, and then cl
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-ts-client">ufdl-ts-client</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-frontend-ts">ufdl-frontend-ts</a></p></li>
 </ul>
-<pre class="code bash"><a id="rest_code_40b19fee87b848a09894110a46073292-1" name="rest_code_40b19fee87b848a09894110a46073292-1" href="#rest_code_40b19fee87b848a09894110a46073292-1"></a>git clone https://github.com/waikato-ufdl/ufdl-ts-client
-<a id="rest_code_40b19fee87b848a09894110a46073292-2" name="rest_code_40b19fee87b848a09894110a46073292-2" href="#rest_code_40b19fee87b848a09894110a46073292-2"></a>git clone https://github.com/waikato-ufdl/ufdl-frontend-ts
+<pre class="code bash"><a id="rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-1" name="rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-1" href="#rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-1"></a>git clone https://github.com/waikato-ufdl/ufdl-ts-client
+<a id="rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-2" name="rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-2" href="#rest_code_6c1a3a964c83416fa6be4a3faa8bb54e-2"></a>git clone https://github.com/waikato-ufdl/ufdl-frontend-ts
 </pre>
 <p>Build the client library:</p>
-<pre class="code bash"><a id="rest_code_4212bae55b5d481f956eaefac62d9af7-1" name="rest_code_4212bae55b5d481f956eaefac62d9af7-1" href="#rest_code_4212bae55b5d481f956eaefac62d9af7-1"></a><span class="nb">cd</span> ufdl-ts-client
-<a id="rest_code_4212bae55b5d481f956eaefac62d9af7-2" name="rest_code_4212bae55b5d481f956eaefac62d9af7-2" href="#rest_code_4212bae55b5d481f956eaefac62d9af7-2"></a>npm install .
-<a id="rest_code_4212bae55b5d481f956eaefac62d9af7-3" name="rest_code_4212bae55b5d481f956eaefac62d9af7-3" href="#rest_code_4212bae55b5d481f956eaefac62d9af7-3"></a>npm run rebuild
+<pre class="code bash"><a id="rest_code_811eabbfe46e4d0581eca972491cf5cf-1" name="rest_code_811eabbfe46e4d0581eca972491cf5cf-1" href="#rest_code_811eabbfe46e4d0581eca972491cf5cf-1"></a><span class="nb">cd</span> ufdl-ts-client
+<a id="rest_code_811eabbfe46e4d0581eca972491cf5cf-2" name="rest_code_811eabbfe46e4d0581eca972491cf5cf-2" href="#rest_code_811eabbfe46e4d0581eca972491cf5cf-2"></a>npm install .
+<a id="rest_code_811eabbfe46e4d0581eca972491cf5cf-3" name="rest_code_811eabbfe46e4d0581eca972491cf5cf-3" href="#rest_code_811eabbfe46e4d0581eca972491cf5cf-3"></a>npm run rebuild
 </pre>
 <p>Build the front-end:</p>
-<pre class="code bash"><a id="rest_code_a63454267dca4adf857e338c0307a5a5-1" name="rest_code_a63454267dca4adf857e338c0307a5a5-1" href="#rest_code_a63454267dca4adf857e338c0307a5a5-1"></a><span class="nb">cd</span> ../ufdl-frontend-ts
-<a id="rest_code_a63454267dca4adf857e338c0307a5a5-2" name="rest_code_a63454267dca4adf857e338c0307a5a5-2" href="#rest_code_a63454267dca4adf857e338c0307a5a5-2"></a>npm install .
-<a id="rest_code_a63454267dca4adf857e338c0307a5a5-3" name="rest_code_a63454267dca4adf857e338c0307a5a5-3" href="#rest_code_a63454267dca4adf857e338c0307a5a5-3"></a>npm run rebuild
+<pre class="code bash"><a id="rest_code_952205baa3c24ad5af20c48cc9187ede-1" name="rest_code_952205baa3c24ad5af20c48cc9187ede-1" href="#rest_code_952205baa3c24ad5af20c48cc9187ede-1"></a><span class="nb">cd</span> ../ufdl-frontend-ts
+<a id="rest_code_952205baa3c24ad5af20c48cc9187ede-2" name="rest_code_952205baa3c24ad5af20c48cc9187ede-2" href="#rest_code_952205baa3c24ad5af20c48cc9187ede-2"></a>npm install .
+<a id="rest_code_952205baa3c24ad5af20c48cc9187ede-3" name="rest_code_952205baa3c24ad5af20c48cc9187ede-3" href="#rest_code_952205baa3c24ad5af20c48cc9187ede-3"></a>npm run rebuild
 </pre>
 <p>Copy the built front-end into the backend for serving:</p>
-<pre class="code bash"><a id="rest_code_6cd57a6782e24ae086f8f700d6127e39-1" name="rest_code_6cd57a6782e24ae086f8f700d6127e39-1" href="#rest_code_6cd57a6782e24ae086f8f700d6127e39-1"></a>cp -rf build /path/to/backend/venv.dev/lib/python3.7/site-packages/ufdl/html_client_app/static
+<pre class="code bash"><a id="rest_code_534ae255c34844629f5e860775f6d1e9-1" name="rest_code_534ae255c34844629f5e860775f6d1e9-1" href="#rest_code_534ae255c34844629f5e860775f6d1e9-1"></a>cp -rf build /path/to/backend/venv.dev/lib/python3.7/site-packages/ufdl/html_client_app/static
 </pre>
 <p>The source clones for the client and front-end are no longer needed at this stage and can be safely deleted.</p>
 </section><section id="initialize-1"><h3><a class="toc-backref" href="#toc-entry-13" role="doc-backlink">Initialize</a></h3>
@@ -384,18 +386,18 @@ basic environment (users, teams, projects).</p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-python-client">ufdl-python-client</a></p></li>
 <li><p><a class="reference external" href="https://github.com/waikato-ufdl/ufdl-job-launcher">ufdl-job-launcher</a></p></li>
 </ul>
-<pre class="code bash"><a id="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-1" name="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-1" href="#rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-1"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
-<a id="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-2" name="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-2" href="#rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-2"></a>git clone https://github.com/waikato-ufdl/ufdl-python-client
-<a id="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-3" name="rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-3" href="#rest_code_d58a0b3da76e4a7aa81dc6e687e8b5d6-3"></a>git clone https://github.com/waikato-ufdl/ufdl-job-launcher
+<pre class="code bash"><a id="rest_code_569166f5051b4a08b0335f66e6cd96b2-1" name="rest_code_569166f5051b4a08b0335f66e6cd96b2-1" href="#rest_code_569166f5051b4a08b0335f66e6cd96b2-1"></a>git clone https://github.com/waikato-ufdl/ufdl-json-messages
+<a id="rest_code_569166f5051b4a08b0335f66e6cd96b2-2" name="rest_code_569166f5051b4a08b0335f66e6cd96b2-2" href="#rest_code_569166f5051b4a08b0335f66e6cd96b2-2"></a>git clone https://github.com/waikato-ufdl/ufdl-python-client
+<a id="rest_code_569166f5051b4a08b0335f66e6cd96b2-3" name="rest_code_569166f5051b4a08b0335f66e6cd96b2-3" href="#rest_code_569166f5051b4a08b0335f66e6cd96b2-3"></a>git clone https://github.com/waikato-ufdl/ufdl-job-launcher
 </pre>
 <p>Change into the directory of the cloned <em>ufdl-job-launcher</em> repository and run the following script to set up
 the virtual environment:</p>
-<pre class="code bash"><a id="rest_code_ad9efd5a2aa044e5bc219e53a5cc8008-1" name="rest_code_ad9efd5a2aa044e5bc219e53a5cc8008-1" href="#rest_code_ad9efd5a2aa044e5bc219e53a5cc8008-1"></a>./dev_init.sh
+<pre class="code bash"><a id="rest_code_8af05d1a63fd4f85bbca3aec9252baf6-1" name="rest_code_8af05d1a63fd4f85bbca3aec9252baf6-1" href="#rest_code_8af05d1a63fd4f85bbca3aec9252baf6-1"></a>./dev_init.sh
 </pre>
 <p>In the <code class="docutils literal">examples</code> directory, you can copy the <code class="docutils literal"><span class="pre">job-launcher-example.conf</span></code> configuration to <code class="docutils literal"><span class="pre">job-launcher.conf</span></code>
 and then update the required parameters (if anything, should be only the <code class="docutils literal">url</code>).</p>
 <p>Once this suits your system, you can start the job-launcher like this (from within the <code class="docutils literal"><span class="pre">ufdl-job-launcher</span></code> directory):</p>
-<pre class="code bash"><a id="rest_code_21937625b79142759de86c27ef0ee6be-1" name="rest_code_21937625b79142759de86c27ef0ee6be-1" href="#rest_code_21937625b79142759de86c27ef0ee6be-1"></a>./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
+<pre class="code bash"><a id="rest_code_d036c221f18e416f9cbb236d1bbf72c5-1" name="rest_code_d036c221f18e416f9cbb236d1bbf72c5-1" href="#rest_code_d036c221f18e416f9cbb236d1bbf72c5-1"></a>./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
 </pre></section></section><section id="use-the-system"><h2><a class="toc-backref" href="#toc-entry-15" role="doc-backlink">Use the system</a></h2>
 <section id="adams"><h3><a class="toc-backref" href="#toc-entry-16" role="doc-backlink">ADAMS</a></h3>
 <p>The following ADAMS flows are available to manage your datasets and run jobs (simply execute them with the <em>Flow editor</em>):</p>
