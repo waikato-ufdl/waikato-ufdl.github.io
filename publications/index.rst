@@ -11,6 +11,8 @@
 2022
 ====
 
+Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael Mayo & Geoffrey Holmes. Experiments in cross-domain few-shot learning for image classification, *Journal of the Royal Society of New Zealand*, 2022. [`doi <https://doi.org/10.1080/03036758.2022.2059767>`__] 
+
 G Holmes, E Frank, D Fletcher, C Sterling. Efficiently correcting machine learning: considering the role of example ordering in human-in-the-loop training of image classification models. In *27th International Conference on Intelligent User Interfaces*, 584-593. [`doi <https://dl.acm.org/doi/abs/10.1145/3490099.3511110>`__]
 
 
