@@ -112,21 +112,26 @@ bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-11-11-waiannotations-release-0-7.3/" class="u-url">wai.annotations release 0.7.3</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-01-11-pytorch-image-classification/" class="u-url">PyTorch image classification available</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
-            <a href="2020-11-11-waiannotations-release-0-7.3/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-11-11T10:05:00+13:00" itemprop="datePublished" title="2020-11-11 10:05">2020-11-11 10:05</time></a>
+            <a href="2021-01-11-pytorch-image-classification/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-01-11T16:53:00+13:00" itemprop="datePublished" title="2021-01-11 16:53">2021-01-11 16:53</time></a>
             </p>
         </div>
     </header><div class="e-content entry-content">
-    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.3">0.7.3</a></p>
-<p>This release includes:
-* Upgraded wai.annotations.tf version from 1.1.0 to 1.2.0
-* Included wai.annotations.voc (for Pascal VOC datasets)</p>
+    <p>Today, a new library for performing image classification has made its debut:</p>
+<p><strong>wai.pytorchimageclass</strong></p>
+<p>The library is based on the PyTorch example code for <a class="reference external" href="https://github.com/pytorch/examples/tree/master/imagenet">imagenet</a>.
+For ResNet-based networks, you can finetune pretrained models on your own data rather than
+just using the imagenet dataset. In addition, you can make predictions (single and batch/continuous), output information
+on built models, export trained models to <a class="reference external" href="https://pytorch.org/docs/stable/jit.html">TorchScript</a>.</p>
+<p>The library is also available via Docker images, one for <a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0">GPU-based</a> machines and one for <a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0_cpu">CPU-only ones</a>. However, the latter one should only be used for inference and not training, as it is simply too slow.</p>
+<p>More information on the library and the Docker images is available from Github:</p>
+<p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification">github.com/waikato-datamining/pytorch/tree/master/image-classification</a></p>
     </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2020-11-05-waiannotations-release-0-5-4/" class="u-url">wai.annotations release 0.5.4</a></h1>
         <div class="metadata">

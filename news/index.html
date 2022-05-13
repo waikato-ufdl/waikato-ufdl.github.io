@@ -111,7 +111,40 @@ bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-03-04-datasets-website/" class="u-url">Datasets website launched</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-05-13-waiannotations-release-0-7.6/" class="u-url">wai.annotations release 0.7.6</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2022-05-13-waiannotations-release-0-7.6/" rel="bookmark">
+            <time class="published dt-published" datetime="2022-05-13T13:15:00+12:00" itemprop="datePublished" title="2022-05-13 13:15">2022-05-13 13:15</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6">0.7.6</a></p>
+<p>Since the 0.7.3 release, the following changes occurred:</p>
+<ul class="simple">
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgaug">wai.annotations.imgaug</a> for performing image augmentations on the image stream (crop, flip, blur, grayscale, contrast, rotate, scale, )</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgstats">wai.annotations.imgstats</a> for generating label distributions</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgvis">wai.annotations.imgvis</a> for adding annotation overlays, viewing images, combining annotations into single overlay image</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-opex">wai.annotations.opex</a> for reading/writing the <a class="reference external" href="https://github.com/WaikatoLink2020/objdet-predictions-exchange-format">OPEX</a> object detection JSON format</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-redis-predictions">wai.annotations.redis.predictions</a> for making predictions via a Redis backend (e.g., image classification, object detection, image segmentation)</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-video">wai.annotations.video</a> for reading frames from video files/webcams, dropping frames, skipping similar frames, writing video files</p></li>
+<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo">wai.annotations.yolo</a> for reading/writing [YOLO txt files](<a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo/issues/1">https://github.com/waikato-ufdl/wai-annotations-yolo/issues/1</a>)</p></li>
+<li><p>Upgraded <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-core">wai.annotations.core</a> version, adding ISP for discarding polygons, I/O support for images (with empty annotations)</p></li>
+<li><p>Upgraded <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-tf">wai.annotations.tf</a> version to support tensorflow 2.7.x</p></li>
+</ul>
+<p>On top of that, the documentation available through <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/">ufdl.cms.waikato.ac.nz/wai-annotations-manual</a>
+has been overhauled and the example section expanded to include examples for some of the new modules/plugins.</p>
+<p>From now on, releases will be made available as <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/docker/">Docker images</a>
+under the following :</p>
+<p><a class="reference external" href="https://hub.docker.com/repository/docker/waikatoufdl/wai.annotations">hub.docker.com/repository/docker/waikatoufdl/wai.annotations</a></p>
+<p>Finally, a working example of using a pretrained Yolov5 network to annotated (and visualize) frames extracted
+from a dashcam video can be found in the <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/examples_redis_predictions/">example section</a>.</p>
+<img alt="../images/dashcam_annotated.png" src="images/dashcam_annotated.png">
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-03-04-datasets-website/" class="u-url">Datasets website launched</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
@@ -179,6 +212,22 @@ Under the hood, the excellent <a class="reference external" href="https://github
 <li><p>Image Object-Detection Domain</p></li>
 </ul>
 </div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-11-11-waiannotations-release-0-7.3/" class="u-url">wai.annotations release 0.7.3</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2021-11-11-waiannotations-release-0-7.3/" rel="bookmark">
+            <time class="published dt-published" datetime="2021-11-11T10:05:00+13:00" itemprop="datePublished" title="2021-11-11 10:05">2021-11-11 10:05</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.3">0.7.3</a></p>
+<p>This release includes:
+* Upgraded wai.annotations.tf version from 1.1.0 to 1.2.0
+* Included wai.annotations.voc (for Pascal VOC datasets)</p>
+    </div>
     </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-05-28-waiannotations-modularized/" class="u-url">wai.annotations modularized</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
@@ -243,36 +292,6 @@ performance (<strong>human in the loop</strong>).</p>
 the Redis server and the actual backend have been created. These images get rebuilt every night to always have
 the latest code-base available, making it easy to stay up-to-date.</p>
 <p>Head over to the <a class="reference external" href="../getting-started/">Getting started</a> page and have a look.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-04-12-detectron2-docker/" class="u-url">Detectron2 0.4 Docker image available</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2021-04-12-detectron2-docker/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-04-12T16:35:00+12:00" itemprop="datePublished" title="2021-04-12 16:35">2021-04-12 16:35</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>A new Docker image for building models with version 0.4 of <a class="reference external" href="https://github.com/facebookresearch/detectron2">Detectron2</a> is available:</p>
-<p>More information on the Docker image is available from Github:</p>
-<p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2/0.4">github.com/waikato-datamining/pytorch/tree/master/detectron2/0.4</a></p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-01-28-detectron2-docker/" class="u-url">Detectron2 Docker image available</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2021-01-28-detectron2-docker/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-01-28T17:35:00+13:00" itemprop="datePublished" title="2021-01-28 17:35">2021-01-28 17:35</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>A new Docker image for building models with <a class="reference external" href="https://github.com/facebookresearch/detectron2">Detectron2</a> is available:</p>
-<p>More information on the Docker image is available from Github:</p>
-<p><a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2">github.com/waikato-datamining/pytorch/tree/master/detectron2</a></p>
     </div>
     </article>
 </div>
