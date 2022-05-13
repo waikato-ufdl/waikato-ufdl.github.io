@@ -33,4 +33,4 @@ under the following :
 Finally, a working example of using a pretrained Yolov5 network to annotated (and visualize) frames extracted
 from a dashcam video can be found in the `example section <https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/examples_redis_predictions/>`__.
 
-.. image:: ../images/dashcam_annotated.png
+.. image:: /images/dashcam_annotated.png
