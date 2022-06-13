@@ -8,6 +8,8 @@ using [Nikola](https://getnikola.com/).
 
 * Nikola (>= 8.0.3)
 * ghp-import2
+* aiohttp
+* watchdog
 
 
 ## Installation
@@ -22,7 +24,7 @@ using [Nikola](https://getnikola.com/).
 
   ```
   . venv/bin/activate
-  pip install nikola ghp-import2
+  pip install nikola ghp-import2 aiohttp watchdog
   ```
 
 ## Adding content
@@ -33,7 +35,18 @@ using [Nikola](https://getnikola.com/).
 * News items (aka blog posts) are located in `posts`; should have a date prefix in the name
 
 
-## Deploy to Github
+## Testing
+
+You can test the changes locally by running:
+
+```
+./venv/bin/nikola auto
+```
+
+
+## Manually deploy to Github
+
+Site gets automatically generated via [action](.github/workflows/main.yml). But you can manually deployed as follows:
 
 * [general notes](https://pages.gitlab.io/nikola/stories/handbook/#deploying-to-github)
 * commit/push changes
