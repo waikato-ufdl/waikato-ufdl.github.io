@@ -111,7 +111,114 @@ bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-05-13-waiannotations-release-0-7.6/" class="u-url">wai.annotations release 0.7.6</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-13-waiannotations-release-0-7.7/" class="u-url">wai.annotations release 0.7.7</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2022-06-13-waiannotations-release-0-7.7/" rel="bookmark">
+            <time class="published dt-published" datetime="2022-06-13T16:42:00+12:00" itemprop="datePublished" title="2022-06-13 16:42">2022-06-13 16:42</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7">0.7.7</a></p>
+<p>Here is an overview of all the changes since the 0.7.6 release:</p>
+<ul class="simple">
+<li>
+<p>wai.annotations.bluechannel 1.0.2</p>
+<ul>
+<li><p><cite>FromBlueChannel</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.coco 1.0.2</p>
+<ul>
+<li><p>method <cite>located_object_to_annotation</cite> (module: <cite>wai.annotations.coco.util._located_object_to_annotation</cite>) skips
+invalid polygons now rather than stopping the conversion</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.core 0.1.7</p>
+<ul>
+<li><p>Added <cite>discard-invalid-images</cite> ISP for removing corrupt images or annotations with no image attached.</p></li>
+<li><p>Added <cite>batch-split</cite> sub-command for splitting individual batches of annotations into subsets like train/test/val.
+Supports grouping of files within batches (eg multiple images of the same object).</p></li>
+<li><p>Added <cite>filter-metadata</cite> ISP for filtering object detection.</p></li>
+<li><p>Restricted maximum characters per line in help output to 100 to avoid long help strings to become unreadable.</p></li>
+<li><p>The <cite>polygon-discarder</cite> now annotations that either have no polygon or invalid polygons.</p></li>
+<li><p>Added descriptions to the help screens of the main commands.</p></li>
+<li><p>The <cite>ImageSegmentationAnnotation</cite> class now outputs the unique values in its exception when there are
+more unique values than labels</p></li>
+<li><p>The <cite>Data</cite> class (module: <cite>wai.annotations.core.domain</cite>) now outputs a warning message if a file cannot
+be read; also added <cite>LoggingEnabled</cite> mixin.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.grayscale 1.0.1</p>
+<ul>
+<li><p><cite>FromGrayscale</cite> class now uses <cite>numpy.frombuffer</cite> instead of deprecated <cite>numpy.fromstring</cite> method.</p></li>
+<li><p><cite>FromGrayscale</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgaug 1.0.5</p>
+<ul>
+<li><p>Added <cite>sub-images</cite> plugin for extracting regions (including their annotations) based on
+one or more bounding box definitions from the images coming through and only forwarding
+these sub-images</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgstats 1.0.3</p>
+<ul>
+<li><p><cite>label-dist-od</cite> now has <cite>--label-key</cite> option to specify the meta-data key that stores the label</p></li>
+<li><p><cite>label-dist-XY</cite> now sort the labels in alphabetically order before outputting the statistics</p></li>
+<li><p>added <cite>area-histogram-is</cite> and <cite>area-histogram-od</cite></p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgvis 1.0.3</p>
+<ul>
+<li><p>added <cite>combine-annotations-od</cite> for combining overlapping annotations between images into single annotation</p></li>
+<li><p><cite>add-annotation-overlay-is/od</cite> now use <cite>narg='+'</cite> for <cite>--labels</cite> and <cite>--colors</cite> options instead of comma-separated single argument</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.indexedpng 1.0.1</p>
+<ul>
+<li><p><cite>FromIndexedPNG</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.anntations.redis.predictions 1.0.2</p>
+<ul>
+<li><p><cite>redis-predict-is</cite> now supports <cite>grayscale</cite> predictions as well</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.roi 1.0.1</p>
+<ul>
+<li><p><cite>FromROI.convert_roi_object</cite> now also adds <cite>label</cite>, <cite>score</cite>, <cite>minrect_w</cite> and <cite>minrect_h</cite> to the
+meta-data of a <cite>LocatedObject</cite> instance.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.video 1.0.1</p>
+<ul>
+<li><p>Fixed error message of DropFrames/SkipSimilarFrames in case data of wrong domain is coming through</p></li>
+<li><p>added: filter-frames-by-label-od</p></li>
+</ul>
+</li>
+</ul>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-05-13-waiannotations-release-0-7.6/" class="u-url">wai.annotations release 0.7.6</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
@@ -278,22 +385,6 @@ backend.</p>
 user to incrementally improve their models until they are happy with the
 performance (<strong>human in the loop</strong>).</p>
 <p>You can find out how to access this interface on the <a class="reference external" href="../getting-started/">Getting started</a> page.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-04-23-docker_for_backend/" class="u-url">Docker for backend</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2021-04-23-docker_for_backend/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-04-23T10:26:00+12:00" itemprop="datePublished" title="2021-04-23 10:26">2021-04-23 10:26</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>In order to simplify the steps necessary to set up the backend, Docker images for the PostgreSQL database,
-the Redis server and the actual backend have been created. These images get rebuilt every night to always have
-the latest code-base available, making it easy to stay up-to-date.</p>
-<p>Head over to the <a class="reference external" href="../getting-started/">Getting started</a> page and have a look.</p>
     </div>
     </article>
 </div>

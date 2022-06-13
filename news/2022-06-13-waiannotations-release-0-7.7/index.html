@@ -4,24 +4,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>wai.annotations release 0.7.6 | User-friendly Deep Learning</title>
+<title>wai.annotations release 0.7.7 | User-friendly Deep Learning</title>
 <link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <meta name="theme-color" content="#5670d4">
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" hreflang="en" href="../../rss.xml">
-<link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/">
+<link rel="canonical" href="https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/">
 <!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="University of Waikato">
-<link rel="prev" href="../2022-03-04-datasets-website/" title="Datasets website launched" type="text/html">
-<link rel="next" href="../2022-06-13-waiannotations-release-0-7.7/" title="wai.annotations release 0.7.7" type="text/html">
+<link rel="prev" href="../2022-05-13-waiannotations-release-0-7.6/" title="wai.annotations release 0.7.6" type="text/html">
 <meta property="og:site_name" content="User-friendly Deep Learning">
-<meta property="og:title" content="wai.annotations release 0.7.6">
-<meta property="og:url" content="https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/">
-<meta property="og:description" content="A new release of wai.annotations is out now: 0.7.6
-Since the 0.7.3 release, the following changes occurred:
+<meta property="og:title" content="wai.annotations release 0.7.7">
+<meta property="og:url" content="https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/">
+<meta property="og:description" content="A new release of wai.annotations is out now: 0.7.7
+Here is an overview of all the changes since the 0.7.6 release:
 
-Added wai.annotations.imgaug for performing image augmentations on the image stream (crop, ">
+wai.annotations.bluechannel 1.0.2
+
+FromBlueChannel class now outputs logging message">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2022-05-13T13:15:00+12:00">
+<meta property="article:published_time" content="2022-06-13T16:42:00+12:00">
 <meta property="article:tag" content="release">
 </head>
 <body>
@@ -115,7 +116,7 @@ bg-dark
         
         
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">wai.annotations release 0.7.6</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">wai.annotations release 0.7.7</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
@@ -123,7 +124,7 @@ bg-dark
             </span></p>
             <p class="dateline">
             <a href="." rel="bookmark">
-            <time class="published dt-published" datetime="2022-05-13T13:15:00+12:00" itemprop="datePublished" title="2022-05-13 13:15">2022-05-13 13:15</time></a>
+            <time class="published dt-published" datetime="2022-06-13T16:42:00+12:00" itemprop="datePublished" title="2022-06-13 16:42">2022-06-13 16:42</time></a>
             </p>
             
 
@@ -131,37 +132,108 @@ bg-dark
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6">0.7.6</a></p>
-<p>Since the 0.7.3 release, the following changes occurred:</p>
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7">0.7.7</a></p>
+<p>Here is an overview of all the changes since the 0.7.6 release:</p>
 <ul class="simple">
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgaug">wai.annotations.imgaug</a> for performing image augmentations on the image stream (crop, flip, blur, grayscale, contrast, rotate, scale, )</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgstats">wai.annotations.imgstats</a> for generating label distributions</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgvis">wai.annotations.imgvis</a> for adding annotation overlays, viewing images, combining annotations into single overlay image</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-opex">wai.annotations.opex</a> for reading/writing the <a class="reference external" href="https://github.com/WaikatoLink2020/objdet-predictions-exchange-format">OPEX</a> object detection JSON format</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-redis-predictions">wai.annotations.redis.predictions</a> for making predictions via a Redis backend (e.g., image classification, object detection, image segmentation)</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-video">wai.annotations.video</a> for reading frames from video files/webcams, dropping frames, skipping similar frames, writing video files</p></li>
-<li><p>Added <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo">wai.annotations.yolo</a> for reading/writing [YOLO txt files](<a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo/issues/1">https://github.com/waikato-ufdl/wai-annotations-yolo/issues/1</a>)</p></li>
-<li><p>Upgraded <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-core">wai.annotations.core</a> version, adding ISP for discarding polygons, I/O support for images (with empty annotations)</p></li>
-<li><p>Upgraded <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-tf">wai.annotations.tf</a> version to support tensorflow 2.7.x</p></li>
+<li>
+<p>wai.annotations.bluechannel 1.0.2</p>
+<ul>
+<li><p><cite>FromBlueChannel</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
 </ul>
-<p>On top of that, the documentation available through <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/">ufdl.cms.waikato.ac.nz/wai-annotations-manual</a>
-has been overhauled and the example section expanded to include examples for some of the new modules/plugins.</p>
-<p>From now on, releases will be made available as <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/docker/">Docker images</a>
-under the following :</p>
-<p><a class="reference external" href="https://hub.docker.com/repository/docker/waikatoufdl/wai.annotations">hub.docker.com/repository/docker/waikatoufdl/wai.annotations</a></p>
-<p>Finally, a working example of using a pretrained Yolov5 network to annotated (and visualize) frames extracted
-from a dashcam video can be found in the <a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/examples_redis_predictions/">example section</a>.</p>
-<img alt="/images/dashcam_annotated.png" src="../../images/dashcam_annotated.png">
+</li>
+<li>
+<p>wai.annotations.coco 1.0.2</p>
+<ul>
+<li><p>method <cite>located_object_to_annotation</cite> (module: <cite>wai.annotations.coco.util._located_object_to_annotation</cite>) skips
+invalid polygons now rather than stopping the conversion</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.core 0.1.7</p>
+<ul>
+<li><p>Added <cite>discard-invalid-images</cite> ISP for removing corrupt images or annotations with no image attached.</p></li>
+<li><p>Added <cite>batch-split</cite> sub-command for splitting individual batches of annotations into subsets like train/test/val.
+Supports grouping of files within batches (eg multiple images of the same object).</p></li>
+<li><p>Added <cite>filter-metadata</cite> ISP for filtering object detection.</p></li>
+<li><p>Restricted maximum characters per line in help output to 100 to avoid long help strings to become unreadable.</p></li>
+<li><p>The <cite>polygon-discarder</cite> now annotations that either have no polygon or invalid polygons.</p></li>
+<li><p>Added descriptions to the help screens of the main commands.</p></li>
+<li><p>The <cite>ImageSegmentationAnnotation</cite> class now outputs the unique values in its exception when there are
+more unique values than labels</p></li>
+<li><p>The <cite>Data</cite> class (module: <cite>wai.annotations.core.domain</cite>) now outputs a warning message if a file cannot
+be read; also added <cite>LoggingEnabled</cite> mixin.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.grayscale 1.0.1</p>
+<ul>
+<li><p><cite>FromGrayscale</cite> class now uses <cite>numpy.frombuffer</cite> instead of deprecated <cite>numpy.fromstring</cite> method.</p></li>
+<li><p><cite>FromGrayscale</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgaug 1.0.5</p>
+<ul>
+<li><p>Added <cite>sub-images</cite> plugin for extracting regions (including their annotations) based on
+one or more bounding box definitions from the images coming through and only forwarding
+these sub-images</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgstats 1.0.3</p>
+<ul>
+<li><p><cite>label-dist-od</cite> now has <cite>--label-key</cite> option to specify the meta-data key that stores the label</p></li>
+<li><p><cite>label-dist-XY</cite> now sort the labels in alphabetically order before outputting the statistics</p></li>
+<li><p>added <cite>area-histogram-is</cite> and <cite>area-histogram-od</cite></p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.imgvis 1.0.3</p>
+<ul>
+<li><p>added <cite>combine-annotations-od</cite> for combining overlapping annotations between images into single annotation</p></li>
+<li><p><cite>add-annotation-overlay-is/od</cite> now use <cite>narg='+'</cite> for <cite>--labels</cite> and <cite>--colors</cite> options instead of comma-separated single argument</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.indexedpng 1.0.1</p>
+<ul>
+<li><p><cite>FromIndexedPNG</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.anntations.redis.predictions 1.0.2</p>
+<ul>
+<li><p><cite>redis-predict-is</cite> now supports <cite>grayscale</cite> predictions as well</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.roi 1.0.1</p>
+<ul>
+<li><p><cite>FromROI.convert_roi_object</cite> now also adds <cite>label</cite>, <cite>score</cite>, <cite>minrect_w</cite> and <cite>minrect_h</cite> to the
+meta-data of a <cite>LocatedObject</cite> instance.</p></li>
+</ul>
+</li>
+<li>
+<p>wai.annotations.video 1.0.1</p>
+<ul>
+<li><p>Fixed error message of DropFrames/SkipSimilarFrames in case data of wrong domain is coming through</p></li>
+<li><p>added: filter-frames-by-label-od</p></li>
+</ul>
+</li>
+</ul>
 </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../categories/release/" rel="tag">release</a></li>
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../2022-03-04-datasets-website/" rel="prev" title="Datasets website launched">Previous post</a>
-            </li>
-            <li class="next">
-                <a href="../2022-06-13-waiannotations-release-0-7.7/" rel="next" title="wai.annotations release 0.7.7">Next post</a>
+                <a href="../2022-05-13-waiannotations-release-0-7.6/" rel="prev" title="wai.annotations release 0.7.6">Previous post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2019-2022         <a href="mailto:fracpete@waikato.ac.nz">University of Waikato</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

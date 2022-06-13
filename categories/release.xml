@@ -1,5 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning (Posts about release)</title><link>https://ufdl.cms.waikato.ac.nz/</link><description></description><atom:link href="https://ufdl.cms.waikato.ac.nz/categories/release.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 May 2022 07:41:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.7.6</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6"&gt;0.7.6&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning (Posts about release)</title><link>https://ufdl.cms.waikato.ac.nz/</link><description></description><atom:link href="https://ufdl.cms.waikato.ac.nz/categories/release.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Mon, 13 Jun 2022 04:46:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.7.7</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7"&gt;0.7.7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is an overview of all the changes since the 0.7.6 release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.bluechannel 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromBlueChannel&lt;/cite&gt; class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the &lt;cite&gt;wai.annotations - Sourced ...&lt;/cite&gt; logging message, making it possible to track the image
+causing the problem.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.coco 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;method &lt;cite&gt;located_object_to_annotation&lt;/cite&gt; (module: &lt;cite&gt;wai.annotations.coco.util._located_object_to_annotation&lt;/cite&gt;) skips
+invalid polygons now rather than stopping the conversion&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.core 0.1.7&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;discard-invalid-images&lt;/cite&gt; ISP for removing corrupt images or annotations with no image attached.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;batch-split&lt;/cite&gt; sub-command for splitting individual batches of annotations into subsets like train/test/val.
+Supports grouping of files within batches (eg multiple images of the same object).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;filter-metadata&lt;/cite&gt; ISP for filtering object detection.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Restricted maximum characters per line in help output to 100 to avoid long help strings to become unreadable.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;cite&gt;polygon-discarder&lt;/cite&gt; now annotations that either have no polygon or invalid polygons.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added descriptions to the help screens of the main commands.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;cite&gt;ImageSegmentationAnnotation&lt;/cite&gt; class now outputs the unique values in its exception when there are
+more unique values than labels&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;cite&gt;Data&lt;/cite&gt; class (module: &lt;cite&gt;wai.annotations.core.domain&lt;/cite&gt;) now outputs a warning message if a file cannot
+be read; also added &lt;cite&gt;LoggingEnabled&lt;/cite&gt; mixin.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.grayscale 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromGrayscale&lt;/cite&gt; class now uses &lt;cite&gt;numpy.frombuffer&lt;/cite&gt; instead of deprecated &lt;cite&gt;numpy.fromstring&lt;/cite&gt; method.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromGrayscale&lt;/cite&gt; class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the &lt;cite&gt;wai.annotations - Sourced ...&lt;/cite&gt; logging message, making it possible to track the image
+causing the problem.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.imgaug 1.0.5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;sub-images&lt;/cite&gt; plugin for extracting regions (including their annotations) based on
+one or more bounding box definitions from the images coming through and only forwarding
+these sub-images&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.imgstats 1.0.3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;label-dist-od&lt;/cite&gt; now has &lt;cite&gt;--label-key&lt;/cite&gt; option to specify the meta-data key that stores the label&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;label-dist-XY&lt;/cite&gt; now sort the labels in alphabetically order before outputting the statistics&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;added &lt;cite&gt;area-histogram-is&lt;/cite&gt; and &lt;cite&gt;area-histogram-od&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.imgvis 1.0.3&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;added &lt;cite&gt;combine-annotations-od&lt;/cite&gt; for combining overlapping annotations between images into single annotation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;add-annotation-overlay-is/od&lt;/cite&gt; now use &lt;cite&gt;narg='+'&lt;/cite&gt; for &lt;cite&gt;--labels&lt;/cite&gt; and &lt;cite&gt;--colors&lt;/cite&gt; options instead of comma-separated single argument&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.indexedpng 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromIndexedPNG&lt;/cite&gt; class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the &lt;cite&gt;wai.annotations - Sourced ...&lt;/cite&gt; logging message, making it possible to track the image
+causing the problem.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.anntations.redis.predictions 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;redis-predict-is&lt;/cite&gt; now supports &lt;cite&gt;grayscale&lt;/cite&gt; predictions as well&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.roi 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromROI.convert_roi_object&lt;/cite&gt; now also adds &lt;cite&gt;label&lt;/cite&gt;, &lt;cite&gt;score&lt;/cite&gt;, &lt;cite&gt;minrect_w&lt;/cite&gt; and &lt;cite&gt;minrect_h&lt;/cite&gt; to the
+meta-data of a &lt;cite&gt;LocatedObject&lt;/cite&gt; instance.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.video 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Fixed error message of DropFrames/SkipSimilarFrames in case data of wrong domain is coming through&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;added: filter-frames-by-label-od&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</guid><pubDate>Mon, 13 Jun 2022 04:42:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.6</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6"&gt;0.7.6&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Since the 0.7.3 release, the following changes occurred:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgaug"&gt;wai.annotations.imgaug&lt;/a&gt; for performing image augmentations on the image stream (crop, flip, blur, grayscale, contrast, rotate, scale, )&lt;/p&gt;&lt;/li&gt;
@@ -64,8 +147,4 @@ on built models, export trained models to &lt;a class="reference external" href=
 &lt;li&gt;&lt;p&gt;MS COCO/ROI/VGG object detection formats no longer write negative annotations&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;With the &lt;em&gt;strip-annotations&lt;/em&gt; plugin, all annotations can be stripped during the conversion (e.g., for generating a dataset only consisting of images)&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Image segmentation support: PNG with indexed palette for labels, PNG using blue channel for labels, &lt;em&gt;layer-segments&lt;/em&gt; format which separates each label into a separate PNG (makes it easier to create subsets of labels)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2020-11-05-waiannotations-release-0-5-4/</guid><pubDate>Wed, 04 Nov 2020 21:05:00 GMT</pubDate></item><item><title>Keras image segmentation Docker image available</title><link>https://ufdl.cms.waikato.ac.nz/news/2020-08-25-keras-image-segmentation-docker/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new Docker image is available for training &lt;em&gt;Keras image segmentation&lt;/em&gt; models using a GPU backend.
-The image is based on TensorFlow 1.14 and Divam Gupta's &lt;a class="reference external" href="https://github.com/divamgupta/image-segmentation-keras"&gt;code&lt;/a&gt;,
-plus additional tools for converting indexed PNGs into RGB ones and continuously processing images with a model.&lt;/p&gt;
-&lt;p&gt;More information on the Docker image is available from Github:&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras"&gt;github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras&lt;/a&gt;&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2020-08-25-keras-image-segmentation-docker/</guid><pubDate>Tue, 25 Aug 2020 02:35:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2020-11-05-waiannotations-release-0-5-4/</guid><pubDate>Wed, 04 Nov 2020 21:05:00 GMT</pubDate></item></channel></rss>
