@@ -141,31 +141,26 @@ from wai.annotations classes), as you don't have to write a lot of boiler-plate 
 it into the framework (the wrappers take care of that!) - check out the manual for examples</p></li>
 </ul>
 <p>Here is a detailed overview of all the changes since the 0.7.7 release:</p>
-<ul>
+<ul class="simple">
 <li>
 <p>wai.annotations.core updated to 0.1.8</p>
-<blockquote>
-<ul class="simple">
+<ul>
 <li><p>Added new audio domain for classification using suffix <cite>-ac</cite></p></li>
 <li><p>Added dataset reader for audio files: <cite>from-audio-files-sp</cite>, <cite>from-audio-files-ac</cite></p></li>
 <li><p>Added dataset writer for audio files: <cite>to-audio-files-sp</cite>, <cite>to-audio-files-ac</cite></p></li>
 <li><p>Added dummy sink for audio files: <cite>to-void-ac</cite></p></li>
 <li><p>Added ISP for selecting a sub-sample from the stream: <cite>sample</cite></p></li>
 </ul>
-</blockquote>
 </li>
 <li>
 <p>wai.annotations.subdir updated to 1.0.1</p>
-<blockquote>
-<ul class="simple">
+<ul>
 <li><p>added reader/writer for audio classification: <cite>from-subdir-ac</cite> and <cite>to-subdir-ac</cite></p></li>
 </ul>
-</blockquote>
 </li>
 <li>
 <p>wai.annotations.audio added for audio support (currently at 1.0.1)</p>
-<blockquote>
-<ul class="simple">
+<ul>
 <li><p><cite>audio-info-ac</cite>: sink for collating/outputting information on the audio classification files</p></li>
 <li><p><cite>audio-info-sp</cite>: sink for collating/outputting information on the speech files</p></li>
 <li><p><cite>convert-to-mono</cite>: ISP for converting MP3/OGG/FLAC/WAV to mono WAV</p></li>
@@ -178,12 +173,10 @@ it into the framework (the wrappers take care of that!) - check out the manual f
 <li><p><cite>time-stretch</cite>: augmentation ISP for time-stretching audio (speed up/slow down)</p></li>
 <li><p><cite>trim-audio</cite>: ISP for trimming silence from audio</p></li>
 </ul>
-</blockquote>
 </li>
 <li>
 <p>wai.annotations.generic added (currently at 1.0.0)</p>
-<blockquote>
-<ul class="simple">
+<ul>
 <li><p><cite>generic-source-ac</cite>: wrapper around a user-supplied source class for audio classification</p></li>
 <li><p><cite>generic-source-ic</cite>: wrapper around a user-supplied source class for image classification</p></li>
 <li><p><cite>generic-source-is</cite>: wrapper around a user-supplied source class for image segmentation</p></li>
@@ -200,7 +193,6 @@ it into the framework (the wrappers take care of that!) - check out the manual f
 <li><p><cite>generic-sink-od</cite>: wrapper around a user-supplied sink class for object detection</p></li>
 <li><p><cite>generic-sink-sp</cite>: wrapper around a user-supplied sinkclass for speech</p></li>
 </ul>
-</blockquote>
 </li>
 </ul>
 </div>
