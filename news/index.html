@@ -111,7 +111,91 @@ bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-13-waiannotations-release-0-7.7/" class="u-url">wai.annotations release 0.7.7</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-29-waiannotations-release-0-7.8/" class="u-url">wai.annotations release 0.7.8</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2022-06-29-waiannotations-release-0-7.8/" rel="bookmark">
+            <time class="published dt-published" datetime="2022-06-29T16:15:00+12:00" itemprop="datePublished" title="2022-06-29 16:15">2022-06-29 16:15</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.8">0.7.8</a></p>
+<p>This release contains three major updates:</p>
+<ul class="simple">
+<li><p>additional domain for audio classification, uses the <cite>-ac</cite> suffix for domain-specific plugins</p></li>
+<li><p><cite>wai.annotations.audio</cite> module added for processing and augmenting audio data</p></li>
+<li><p><cite>wai.annotations.generic</cite> module makes it easier for plugging in your own Python classes (derived
+from wai.annotations classes), as you don't have to write a lot of boiler-plate code to integrate
+it into the framework (the wrappers take care of that!) - check out the manual for examples</p></li>
+</ul>
+<p>Here is a detailed overview of all the changes since the 0.7.7 release:</p>
+<ul>
+<li>
+<p>wai.annotations.core updated to 0.1.8</p>
+<blockquote>
+<ul class="simple">
+<li><p>Added new audio domain for classification using suffix <cite>-ac</cite></p></li>
+<li><p>Added dataset reader for audio files: <cite>from-audio-files-sp</cite>, <cite>from-audio-files-ac</cite></p></li>
+<li><p>Added dataset writer for audio files: <cite>to-audio-files-sp</cite>, <cite>to-audio-files-ac</cite></p></li>
+<li><p>Added dummy sink for audio files: <cite>to-void-ac</cite></p></li>
+<li><p>Added ISP for selecting a sub-sample from the stream: <cite>sample</cite></p></li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>wai.annotations.subdir updated to 1.0.1</p>
+<blockquote>
+<ul class="simple">
+<li><p>added reader/writer for audio classification: <cite>from-subdir-ac</cite> and <cite>to-subdir-ac</cite></p></li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>wai.annotations.audio added for audio support (currently at 1.0.1)</p>
+<blockquote>
+<ul class="simple">
+<li><p><cite>audio-info-ac</cite>: sink for collating/outputting information on the audio classification files</p></li>
+<li><p><cite>audio-info-sp</cite>: sink for collating/outputting information on the speech files</p></li>
+<li><p><cite>convert-to-mono</cite>: ISP for converting MP3/OGG/FLAC/WAV to mono WAV</p></li>
+<li><p><cite>convert-to-wav</cite>: ISP for converting MP3/OGG/FLAC to WAV</p></li>
+<li><p><cite>mel-spectrogram</cite>: XDC for generating plot from a mel spectrogram (outputs image classification instance)</p></li>
+<li><p><cite>mfcc-spectrogram</cite>: XDC for generating plots from Mel-frequency cepstral coefficients (outputs image classification instance).</p></li>
+<li><p><cite>pitch-shift</cite>: augmentation ISP for shifting the pitch</p></li>
+<li><p><cite>resample-audio</cite>: ISP for resampling MP3/OGG/FLAC/WAV</p></li>
+<li><p><cite>stft-spectrogram</cite>: XDC for generating plot from a short-time fourier-transform spectrogram (outputs image classification instance)</p></li>
+<li><p><cite>time-stretch</cite>: augmentation ISP for time-stretching audio (speed up/slow down)</p></li>
+<li><p><cite>trim-audio</cite>: ISP for trimming silence from audio</p></li>
+</ul>
+</blockquote>
+</li>
+<li>
+<p>wai.annotations.generic added (currently at 1.0.0)</p>
+<blockquote>
+<ul class="simple">
+<li><p><cite>generic-source-ac</cite>: wrapper around a user-supplied source class for audio classification</p></li>
+<li><p><cite>generic-source-ic</cite>: wrapper around a user-supplied source class for image classification</p></li>
+<li><p><cite>generic-source-is</cite>: wrapper around a user-supplied source class for image segmentation</p></li>
+<li><p><cite>generic-source-od</cite>: wrapper around a user-supplied source class for object detection</p></li>
+<li><p><cite>generic-source-sp</cite>: wrapper around a user-supplied sourceclass for speech</p></li>
+<li><p><cite>generic-isp-ac</cite>: wrapper around a user-supplied ISP class for audio classification</p></li>
+<li><p><cite>generic-isp-ic</cite>: wrapper around a user-supplied ISP class for image classification</p></li>
+<li><p><cite>generic-isp-is</cite>: wrapper around a user-supplied ISP class for image segmentation</p></li>
+<li><p><cite>generic-isp-od</cite>: wrapper around a user-supplied ISP class for object detection</p></li>
+<li><p><cite>generic-isp-sp</cite>: wrapper around a user-supplied ISP class for speech</p></li>
+<li><p><cite>generic-sink-ac</cite>: wrapper around a user-supplied sink class for audio classification</p></li>
+<li><p><cite>generic-sink-ic</cite>: wrapper around a user-supplied sink class for image classification</p></li>
+<li><p><cite>generic-sink-is</cite>: wrapper around a user-supplied sink class for image segmentation</p></li>
+<li><p><cite>generic-sink-od</cite>: wrapper around a user-supplied sink class for object detection</p></li>
+<li><p><cite>generic-sink-sp</cite>: wrapper around a user-supplied sinkclass for speech</p></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-13-waiannotations-release-0-7.7/" class="u-url">wai.annotations release 0.7.7</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
@@ -367,24 +451,6 @@ This makes it much easier to only include the relevant dependencies in ones virt
 script now combines the Docker steps for setting up the PostgreSQL database, Redis and the actual
 backend.</p>
 <p>Check out the updated <a class="reference external" href="../getting-started/">Getting started</a> page.</p>
-    </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-04-30-html-frontend-for-imageclassification/" class="u-url">HTML Frontend for image classification</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2021-04-30-html-frontend-for-imageclassification/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-04-30T15:13:00+12:00" itemprop="datePublished" title="2021-04-30 15:13">2021-04-30 15:13</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>An experimental user interface for image classification is now available:</p>
-<a class="reference external image-reference" href="../images/html_frontend_202104.png"><img alt="../../images/html_frontend_202104.thumbnail.png" src="../images/html_frontend_202104.thumbnail.png"></a>
-<p>The interface is written in <a class="reference external" href="https://reactjs.org/">React</a> and allows the
-user to incrementally improve their models until they are happy with the
-performance (<strong>human in the loop</strong>).</p>
-<p>You can find out how to access this interface on the <a class="reference external" href="../getting-started/">Getting started</a> page.</p>
     </div>
     </article>
 </div>

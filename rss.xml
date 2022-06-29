@@ -1,5 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning</title><link>https://ufdl.cms.waikato.ac.nz/</link><description>Making deep learning accessible to domain experts without having to rely on machine learning experts</description><atom:link href="https://ufdl.cms.waikato.ac.nz/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Mon, 13 Jun 2022 04:46:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.7.7</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7"&gt;0.7.7&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning</title><link>https://ufdl.cms.waikato.ac.nz/</link><description>Making deep learning accessible to domain experts without having to rely on machine learning experts</description><atom:link href="https://ufdl.cms.waikato.ac.nz/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Wed, 29 Jun 2022 04:21:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.7.8</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7.8/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.8"&gt;0.7.8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This release contains three major updates:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;additional domain for audio classification, uses the &lt;cite&gt;-ac&lt;/cite&gt; suffix for domain-specific plugins&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;wai.annotations.audio&lt;/cite&gt; module added for processing and augmenting audio data&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;wai.annotations.generic&lt;/cite&gt; module makes it easier for plugging in your own Python classes (derived
+from wai.annotations classes), as you don't have to write a lot of boiler-plate code to integrate
+it into the framework (the wrappers take care of that!) - check out the manual for examples&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a detailed overview of all the changes since the 0.7.7 release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.core updated to 0.1.8&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Added new audio domain for classification using suffix &lt;cite&gt;-ac&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added dataset reader for audio files: &lt;cite&gt;from-audio-files-sp&lt;/cite&gt;, &lt;cite&gt;from-audio-files-ac&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added dataset writer for audio files: &lt;cite&gt;to-audio-files-sp&lt;/cite&gt;, &lt;cite&gt;to-audio-files-ac&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added dummy sink for audio files: &lt;cite&gt;to-void-ac&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added ISP for selecting a sub-sample from the stream: &lt;cite&gt;sample&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.subdir updated to 1.0.1&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;added reader/writer for audio classification: &lt;cite&gt;from-subdir-ac&lt;/cite&gt; and &lt;cite&gt;to-subdir-ac&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.audio added for audio support (currently at 1.0.1)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;audio-info-ac&lt;/cite&gt;: sink for collating/outputting information on the audio classification files&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;audio-info-sp&lt;/cite&gt;: sink for collating/outputting information on the speech files&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;convert-to-mono&lt;/cite&gt;: ISP for converting MP3/OGG/FLAC/WAV to mono WAV&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;convert-to-wav&lt;/cite&gt;: ISP for converting MP3/OGG/FLAC to WAV&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;mel-spectrogram&lt;/cite&gt;: XDC for generating plot from a mel spectrogram (outputs image classification instance)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;mfcc-spectrogram&lt;/cite&gt;: XDC for generating plots from Mel-frequency cepstral coefficients (outputs image classification instance).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;pitch-shift&lt;/cite&gt;: augmentation ISP for shifting the pitch&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;resample-audio&lt;/cite&gt;: ISP for resampling MP3/OGG/FLAC/WAV&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;stft-spectrogram&lt;/cite&gt;: XDC for generating plot from a short-time fourier-transform spectrogram (outputs image classification instance)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;time-stretch&lt;/cite&gt;: augmentation ISP for time-stretching audio (speed up/slow down)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;trim-audio&lt;/cite&gt;: ISP for trimming silence from audio&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.generic added (currently at 1.0.0)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-source-ac&lt;/cite&gt;: wrapper around a user-supplied source class for audio classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-source-ic&lt;/cite&gt;: wrapper around a user-supplied source class for image classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-source-is&lt;/cite&gt;: wrapper around a user-supplied source class for image segmentation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-source-od&lt;/cite&gt;: wrapper around a user-supplied source class for object detection&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-source-sp&lt;/cite&gt;: wrapper around a user-supplied sourceclass for speech&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-isp-ac&lt;/cite&gt;: wrapper around a user-supplied ISP class for audio classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-isp-ic&lt;/cite&gt;: wrapper around a user-supplied ISP class for image classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-isp-is&lt;/cite&gt;: wrapper around a user-supplied ISP class for image segmentation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-isp-od&lt;/cite&gt;: wrapper around a user-supplied ISP class for object detection&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-isp-sp&lt;/cite&gt;: wrapper around a user-supplied ISP class for speech&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-ac&lt;/cite&gt;: wrapper around a user-supplied sink class for audio classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-ic&lt;/cite&gt;: wrapper around a user-supplied sink class for image classification&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-is&lt;/cite&gt;: wrapper around a user-supplied sink class for image segmentation&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-od&lt;/cite&gt;: wrapper around a user-supplied sink class for object detection&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-sp&lt;/cite&gt;: wrapper around a user-supplied sinkclass for speech&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7.8/</guid><pubDate>Wed, 29 Jun 2022 04:15:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.7</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7"&gt;0.7.7&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Here is an overview of all the changes since the 0.7.6 release:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;wai.annotations.bluechannel 1.0.2&lt;/p&gt;
@@ -128,9 +195,4 @@ Under the hood, the excellent &lt;a class="reference external" href="https://git
 This makes it much easier to only include the relevant dependencies in ones virtual environment or docker image, keeping things as small as possible.&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-05-28-waiannotations-modularized/</guid><pubDate>Fri, 28 May 2021 04:05:00 GMT</pubDate></item><item><title>Docker-Compose for Backend</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-05-14-docker-compose-for-backend/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;To further simplify the installation process, a &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;docker-compose&lt;/span&gt;&lt;/code&gt; script has been compiled. This
 script now combines the Docker steps for setting up the PostgreSQL database, Redis and the actual
 backend.&lt;/p&gt;
-&lt;p&gt;Check out the updated &lt;a class="reference external" href="https://ufdl.cms.waikato.ac.nz/getting-started/"&gt;Getting started&lt;/a&gt; page.&lt;/p&gt;</description><category>backend</category><category>documentation</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-05-14-docker-compose-for-backend/</guid><pubDate>Thu, 13 May 2021 23:58:00 GMT</pubDate></item><item><title>HTML Frontend for image classification</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-04-30-html-frontend-for-imageclassification/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;An experimental user interface for image classification is now available:&lt;/p&gt;
-&lt;a class="reference external image-reference" href="https://ufdl.cms.waikato.ac.nz/images/html_frontend_202104.png"&gt;&lt;img alt="../../images/html_frontend_202104.thumbnail.png" src="https://ufdl.cms.waikato.ac.nz/images/html_frontend_202104.thumbnail.png"&gt;&lt;/a&gt;
-&lt;p&gt;The interface is written in &lt;a class="reference external" href="https://reactjs.org/"&gt;React&lt;/a&gt; and allows the
-user to incrementally improve their models until they are happy with the
-performance (&lt;strong&gt;human in the loop&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;You can find out how to access this interface on the &lt;a class="reference external" href="https://ufdl.cms.waikato.ac.nz/getting-started/"&gt;Getting started&lt;/a&gt; page.&lt;/p&gt;</description><category>UI</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-04-30-html-frontend-for-imageclassification/</guid><pubDate>Fri, 30 Apr 2021 03:13:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;Check out the updated &lt;a class="reference external" href="https://ufdl.cms.waikato.ac.nz/getting-started/"&gt;Getting started&lt;/a&gt; page.&lt;/p&gt;</description><category>backend</category><category>documentation</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-05-14-docker-compose-for-backend/</guid><pubDate>Thu, 13 May 2021 23:58:00 GMT</pubDate></item></channel></rss>
