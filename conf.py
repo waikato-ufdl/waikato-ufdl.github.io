@@ -143,7 +143,8 @@ NAVIGATION_LINKS = {
         ((
           ("/architecture/", "Architecture"),
           ("/getting-started/", "Getting started"),
-          ("https://waikato-ufdl.github.io/ufdl-api/", "REST API"),
+          ("/ufdl-api/", "REST API"),
+          ("/wai-annotations-manual/", "wai.annotations"),
           ), "Documentation"),
         ((
           ("https://github.com/waikato-ufdl/", "Project"),
