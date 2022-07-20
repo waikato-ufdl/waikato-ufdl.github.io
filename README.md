@@ -17,14 +17,14 @@ using [Nikola](https://getnikola.com/).
 * create virtual environment
 
   ```
-  virtualenv -p /usr/bin/python3.7 venv
+  virtualenv -p /usr/bin/python3 venv
   ```
 
 * install Nikola
 
   ```
   . venv/bin/activate
-  pip install nikola ghp-import2 aiohttp watchdog
+  pip install nikola -r requirements.txt
   ```
 
 ## Adding content
