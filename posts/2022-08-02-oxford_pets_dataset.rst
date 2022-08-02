@@ -1,6 +1,6 @@
 .. title: Oxford Pets datasets
 .. slug: 2022-08-02-datasets-website
-.. date: 2022-08-02 16:45:00 UTC+13:00
+.. date: 2022-08-02 16:45:00 UTC+12:00
 .. tags: dataset
 .. category: dataset
 .. link: 
