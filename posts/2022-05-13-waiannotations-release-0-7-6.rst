@@ -1,5 +1,5 @@
 .. title: wai.annotations release 0.7.6
-.. slug: 2022-05-13-waiannotations-release-0-7.6
+.. slug: 2022-05-13-waiannotations-release-0-7-6
 .. date: 2022-05-13 13:15:00 UTC+12:00
 .. tags: release
 .. category: data
