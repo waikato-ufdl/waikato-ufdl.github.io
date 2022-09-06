@@ -1,5 +1,5 @@
 .. title: wai.annotations release 0.7.3
-.. slug: 2021-11-11-waiannotations-release-0-7.3
+.. slug: 2021-11-11-waiannotations-release-0-7-3
 .. date: 2021-11-11 10:05:00 UTC+13:00
 .. tags: release
 .. category: data

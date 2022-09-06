@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning (Posts about release)</title><link>https://ufdl.cms.waikato.ac.nz/</link><description></description><atom:link href="https://ufdl.cms.waikato.ac.nz/categories/release.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Tue, 02 Aug 2022 04:57:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.7.8</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7.8/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.8"&gt;0.7.8&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>User-friendly Deep Learning (Posts about release)</title><link>https://ufdl.cms.waikato.ac.nz/</link><description></description><atom:link href="https://ufdl.cms.waikato.ac.nz/categories/release.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2019-2022 &lt;a href="mailto:fracpete@waikato.ac.nz"&gt;University of Waikato&lt;/a&gt; </copyright><lastBuildDate>Tue, 06 Sep 2022 03:49:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>wai.annotations release 0.8.0</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-09-06-waiannotations-release-0-8-0/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.8.0"&gt;0.8.0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This release contains two major updates:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;wai.annotations.coqui&lt;/cite&gt; module added for processing &lt;a class="reference external" href="https://github.com/coqui-ai"&gt;Coqui AI&lt;/a&gt; STT and TTS datasets&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;a bug-fix that applies to the dataset splitting (&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;--split-names&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;--split-ratios&lt;/span&gt;&lt;/code&gt;) breaks backwards compatibility;
+the new &lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;--no-interleaving&lt;/span&gt;&lt;/code&gt; flag enables the old behavior again&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a detailed overview of all the changes since the 0.7.8 release:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;wai.annotations.tf is now optional&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;install.sh now has -o flag to install optional modules when installing latest (-l)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.commonvoice to 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the expected header now uses &lt;em&gt;accents&lt;/em&gt; rather than &lt;em&gt;accent&lt;/em&gt; (but the reader accepts both)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.core to 0.2.0&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;FilterLabels ISP now treats elements as negative ones if no labels left after
+filtering (in order to use &lt;cite&gt;discard-negatives&lt;/cite&gt; in pipeline); also works on
+image classification domain now as well&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;FilterLabels ISP can filter out located objects that don't fall within a certain
+region (x,y,w,h - normalized or absolute) using a supplied IoU threshold; useful
+when concentrating on annotations in the center of an image, e.g., for images
+generated with the subimages ISP (object detection domain only)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;logging._LoggingEnabled&lt;/cite&gt; module now sets the &lt;em&gt;numba&lt;/em&gt; logging level to &lt;cite&gt;WARNING&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;logging._LoggingEnabled&lt;/cite&gt; module now sets the &lt;em&gt;shapely&lt;/em&gt; logging level to &lt;cite&gt;WARNING&lt;/cite&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;core.domain.Data&lt;/cite&gt; class now stores the path of the file as well&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rename ISP allows renaming of files, e.g., for disambiguating across batches&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;batch_split.Splitter&lt;/cite&gt; now handles cases when the regexp does not produce any matches
+(and outputs a warning when in verbose mode)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added LabelPresent ISP, which skips object detection images that do not have specified
+labels (or if annotations do not overlap with defined regions; can be inverted).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Using wai.common==0.0.40 now to avoid parse error output when accessing &lt;cite&gt;poly_x&lt;/cite&gt;/&lt;cite&gt;poly_y&lt;/cite&gt;
+meta-data in &lt;cite&gt;LocatedObject&lt;/cite&gt; instances when containing empty strings.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The CleanTranscript ISP can be used to clean up speech transcripts.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bug fix for splitting where split-scheduling was calculated with swapped iteration order,
+leading to runs of splits rather than desired interleaving. Added --no-interleave flag to
+re-enable bug for backwards compatibility.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.imgaug to 1.0.6&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;sub-images&lt;/cite&gt; plugin now has a &lt;cite&gt;--verbose&lt;/cite&gt; flag; only initializes the regions now once&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.layersegments to 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;cite&gt;FromLayerSegments&lt;/cite&gt; class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the &lt;cite&gt;wai.annotations - Sourced ...&lt;/cite&gt; logging message, making it possible to track the image
+causing the problem.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;--lenient&lt;/cite&gt; flag to &lt;cite&gt;FromLayerSegments&lt;/cite&gt; class which allows conversion of non-binary images with just
+two unique colors to binary ones instead of throwing an error.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added &lt;cite&gt;--invert&lt;/cite&gt; flag to &lt;cite&gt;FromLayerSegments&lt;/cite&gt; class which allows inverting the colors (b/w &amp;lt;-&amp;gt; w/b) of the
+binary annotation images.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.video to 1.0.2&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;VideoFileReader source now passes on a file path with the frames as well&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Upgraded wai.annotations.yolo to 1.0.1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the &lt;cite&gt;read_labels_file&lt;/cite&gt; method of &lt;cite&gt;FromYOLOOD&lt;/cite&gt; now strips leading/trailing whitespaces
+from the labels.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Added wai.annotations.coqui 1.0.0&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;from-coqui-stt-sp: reads speech transcriptions in the Coqui STT CSV-format&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;from-coqui-tts-sp: reads speech transcriptions in the Coqui TTS text-format&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;to-coqui-stt-sp: writes speech transcriptions in the Coqui STT CSV-format&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;to-coqui-tts-sp: writes speech transcriptions in the Coqui TTS text-format&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-09-06-waiannotations-release-0-8-0/</guid><pubDate>Tue, 06 Sep 2022 03:38:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.8</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7-8/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.8"&gt;0.7.8&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This release contains three major updates:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;additional domain for audio classification, uses the &lt;cite&gt;-ac&lt;/cite&gt; suffix for domain-specific plugins&lt;/p&gt;&lt;/li&gt;
@@ -58,7 +134,7 @@ it into the framework (the wrappers take care of that!) - check out the manual f
 &lt;li&gt;&lt;p&gt;&lt;cite&gt;generic-sink-sp&lt;/cite&gt;: wrapper around a user-supplied sinkclass for speech&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7.8/</guid><pubDate>Wed, 29 Jun 2022 04:15:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.7</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7"&gt;0.7.7&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-29-waiannotations-release-0-7-8/</guid><pubDate>Wed, 29 Jun 2022 04:15:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.7</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7-7/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.7"&gt;0.7.7&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Here is an overview of all the changes since the 0.7.6 release:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;wai.annotations.bluechannel 1.0.2&lt;/p&gt;
@@ -141,7 +217,7 @@ meta-data of a &lt;cite&gt;LocatedObject&lt;/cite&gt; instance.&lt;/p&gt;&lt;/li
 &lt;li&gt;&lt;p&gt;added: filter-frames-by-label-od&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7.7/</guid><pubDate>Mon, 13 Jun 2022 04:42:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.6</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6"&gt;0.7.6&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-06-13-waiannotations-release-0-7-7/</guid><pubDate>Mon, 13 Jun 2022 04:42:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.6</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7-6/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.6"&gt;0.7.6&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Since the 0.7.3 release, the following changes occurred:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Added &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-imgaug"&gt;wai.annotations.imgaug&lt;/a&gt; for performing image augmentations on the image stream (crop, flip, blur, grayscale, contrast, rotate, scale, )&lt;/p&gt;&lt;/li&gt;
@@ -161,7 +237,7 @@ under the following :&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://hub.docker.com/repository/docker/waikatoufdl/wai.annotations"&gt;hub.docker.com/repository/docker/waikatoufdl/wai.annotations&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Finally, a working example of using a pretrained Yolov5 network to annotated (and visualize) frames extracted
 from a dashcam video can be found in the &lt;a class="reference external" href="https://ufdl.cms.waikato.ac.nz/wai-annotations-manual/examples_redis_predictions/"&gt;example section&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt="/images/dashcam_annotated.png" src="https://ufdl.cms.waikato.ac.nz/images/dashcam_annotated.png"&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7.6/</guid><pubDate>Fri, 13 May 2022 01:15:00 GMT</pubDate></item><item><title>wai.annotations.yolo release</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-03-01-waiannotations-yolo-release/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;The newly released &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo"&gt;wai.annotations.yolo&lt;/a&gt; module for the
+&lt;img alt="/images/dashcam_annotated.png" src="https://ufdl.cms.waikato.ac.nz/images/dashcam_annotated.png"&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-05-13-waiannotations-release-0-7-6/</guid><pubDate>Fri, 13 May 2022 01:15:00 GMT</pubDate></item><item><title>wai.annotations.yolo release</title><link>https://ufdl.cms.waikato.ac.nz/news/2022-03-01-waiannotations-yolo-release/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;The newly released &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations-yolo"&gt;wai.annotations.yolo&lt;/a&gt; module for the
 &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; library allows the reading and writing of
 annotations in a format used by the popular YOLO network architectures.&lt;/p&gt;
 &lt;p&gt;The wai.annotations release &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.4"&gt;0.7.4&lt;/a&gt; has
@@ -174,23 +250,15 @@ Under the hood, the excellent &lt;a class="reference external" href="https://git
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Image Classification Domain&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Image Object-Detection Domain&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-02-23-waiannotations-imgaug-release/</guid><pubDate>Wed, 23 Feb 2022 03:40:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.3</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-11-11-waiannotations-release-0-7.3/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.3"&gt;0.7.3&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2022-02-23-waiannotations-imgaug-release/</guid><pubDate>Wed, 23 Feb 2022 03:40:00 GMT</pubDate></item><item><title>wai.annotations release 0.7.3</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-11-11-waiannotations-release-0-7-3/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out now: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.3"&gt;0.7.3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This release includes:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Upgraded wai.annotations.tf version from 1.1.0 to 1.2.0&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Included wai.annotations.voc (for Pascal VOC datasets)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-11-11-waiannotations-release-0-7.3/</guid><pubDate>Wed, 10 Nov 2021 21:05:00 GMT</pubDate></item><item><title>wai.annotations modularized</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-05-28-waiannotations-modularized/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.1"&gt;0.7.1&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-11-11-waiannotations-release-0-7-3/</guid><pubDate>Wed, 10 Nov 2021 21:05:00 GMT</pubDate></item><item><title>wai.annotations modularized</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-05-28-waiannotations-modularized/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new release of &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations"&gt;wai.annotations&lt;/a&gt; is out: &lt;a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.1"&gt;0.7.1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The 0.7.x series saw a modularization happening behind the scenes, with each file format now being a separate repository and Python package.
 This makes it much easier to only include the relevant dependencies in ones virtual environment or docker image, keeping things as small as possible.&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-05-28-waiannotations-modularized/</guid><pubDate>Fri, 28 May 2021 04:05:00 GMT</pubDate></item><item><title>Detectron2 0.4 Docker image available</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-04-12-detectron2-docker/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new Docker image for building models with version 0.4 of &lt;a class="reference external" href="https://github.com/facebookresearch/detectron2"&gt;Detectron2&lt;/a&gt; is available:&lt;/p&gt;
 &lt;p&gt;More information on the Docker image is available from Github:&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2/0.4"&gt;github.com/waikato-datamining/pytorch/tree/master/detectron2/0.4&lt;/a&gt;&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-04-12-detectron2-docker/</guid><pubDate>Mon, 12 Apr 2021 04:35:00 GMT</pubDate></item><item><title>Detectron2 Docker image available</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-01-28-detectron2-docker/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;A new Docker image for building models with &lt;a class="reference external" href="https://github.com/facebookresearch/detectron2"&gt;Detectron2&lt;/a&gt; is available:&lt;/p&gt;
 &lt;p&gt;More information on the Docker image is available from Github:&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2"&gt;github.com/waikato-datamining/pytorch/tree/master/detectron2&lt;/a&gt;&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-01-28-detectron2-docker/</guid><pubDate>Thu, 28 Jan 2021 04:35:00 GMT</pubDate></item><item><title>PyTorch image classification available</title><link>https://ufdl.cms.waikato.ac.nz/news/2021-01-11-pytorch-image-classification/</link><dc:creator>University of Waikato</dc:creator><description>&lt;p&gt;Today, a new library for performing image classification has made its debut:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;wai.pytorchimageclass&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The library is based on the PyTorch example code for &lt;a class="reference external" href="https://github.com/pytorch/examples/tree/master/imagenet"&gt;imagenet&lt;/a&gt;.
-For ResNet-based networks, you can finetune pretrained models on your own data rather than
-just using the imagenet dataset. In addition, you can make predictions (single and batch/continuous), output information
-on built models, export trained models to &lt;a class="reference external" href="https://pytorch.org/docs/stable/jit.html"&gt;TorchScript&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;The library is also available via Docker images, one for &lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0"&gt;GPU-based&lt;/a&gt; machines and one for &lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification/docker/1.6.0_cpu"&gt;CPU-only ones&lt;/a&gt;. However, the latter one should only be used for inference and not training, as it is simply too slow.&lt;/p&gt;
-&lt;p&gt;More information on the library and the Docker images is available from Github:&lt;/p&gt;
-&lt;p&gt;&lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/image-classification"&gt;github.com/waikato-datamining/pytorch/tree/master/image-classification&lt;/a&gt;&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-01-11-pytorch-image-classification/</guid><pubDate>Mon, 11 Jan 2021 03:53:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/waikato-datamining/pytorch/tree/master/detectron2"&gt;github.com/waikato-datamining/pytorch/tree/master/detectron2&lt;/a&gt;&lt;/p&gt;</description><category>release</category><guid>https://ufdl.cms.waikato.ac.nz/news/2021-01-28-detectron2-docker/</guid><pubDate>Thu, 28 Jan 2021 04:35:00 GMT</pubDate></item></channel></rss>

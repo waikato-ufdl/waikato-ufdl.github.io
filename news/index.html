@@ -112,14 +112,110 @@ bg-dark
 
     
 <div class="postindex">
-    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-08-02-datasets-website/" class="u-url">Oxford Pets datasets</a></h1>
+    <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-09-06-waiannotations-release-0-8-0/" class="u-url">wai.annotations release 0.8.0</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                University of Waikato
+            </span></p>
+            <p class="dateline">
+            <a href="2022-09-06-waiannotations-release-0-8-0/" rel="bookmark">
+            <time class="published dt-published" datetime="2022-09-06T15:38:00+12:00" itemprop="datePublished" title="2022-09-06 15:38">2022-09-06 15:38</time></a>
+            </p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out now: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.8.0">0.8.0</a></p>
+<p>This release contains two major updates:</p>
+<ul class="simple">
+<li><p><cite>wai.annotations.coqui</cite> module added for processing <a class="reference external" href="https://github.com/coqui-ai">Coqui AI</a> STT and TTS datasets</p></li>
+<li><p>a bug-fix that applies to the dataset splitting (<code class="docutils literal"><span class="pre">--split-names</span></code>/<code class="docutils literal"><span class="pre">--split-ratios</span></code>) breaks backwards compatibility;
+the new <code class="docutils literal"><span class="pre">--no-interleaving</span></code> flag enables the old behavior again</p></li>
+</ul>
+<p>Here is a detailed overview of all the changes since the 0.7.8 release:</p>
+<ul class="simple">
+<li><p>wai.annotations.tf is now optional</p></li>
+<li><p>install.sh now has -o flag to install optional modules when installing latest (-l)</p></li>
+<li>
+<p>Upgraded wai.annotations.commonvoice to 1.0.2</p>
+<ul>
+<li><p>the expected header now uses <em>accents</em> rather than <em>accent</em> (but the reader accepts both)</p></li>
+</ul>
+</li>
+<li>
+<p>Upgraded wai.annotations.core to 0.2.0</p>
+<ul>
+<li><p>FilterLabels ISP now treats elements as negative ones if no labels left after
+filtering (in order to use <cite>discard-negatives</cite> in pipeline); also works on
+image classification domain now as well</p></li>
+<li><p>FilterLabels ISP can filter out located objects that don't fall within a certain
+region (x,y,w,h - normalized or absolute) using a supplied IoU threshold; useful
+when concentrating on annotations in the center of an image, e.g., for images
+generated with the subimages ISP (object detection domain only)</p></li>
+<li><p><cite>logging._LoggingEnabled</cite> module now sets the <em>numba</em> logging level to <cite>WARNING</cite></p></li>
+<li><p><cite>logging._LoggingEnabled</cite> module now sets the <em>shapely</em> logging level to <cite>WARNING</cite></p></li>
+<li><p><cite>core.domain.Data</cite> class now stores the path of the file as well</p></li>
+<li><p>Rename ISP allows renaming of files, e.g., for disambiguating across batches</p></li>
+<li><p><cite>batch_split.Splitter</cite> now handles cases when the regexp does not produce any matches
+(and outputs a warning when in verbose mode)</p></li>
+<li><p>Added LabelPresent ISP, which skips object detection images that do not have specified
+labels (or if annotations do not overlap with defined regions; can be inverted).</p></li>
+<li><p>Using wai.common==0.0.40 now to avoid parse error output when accessing <cite>poly_x</cite>/<cite>poly_y</cite>
+meta-data in <cite>LocatedObject</cite> instances when containing empty strings.</p></li>
+<li><p>The CleanTranscript ISP can be used to clean up speech transcripts.</p></li>
+<li><p>Bug fix for splitting where split-scheduling was calculated with swapped iteration order,
+leading to runs of splits rather than desired interleaving. Added --no-interleave flag to
+re-enable bug for backwards compatibility.</p></li>
+</ul>
+</li>
+<li>
+<p>Upgraded wai.annotations.imgaug to 1.0.6</p>
+<ul>
+<li><p><cite>sub-images</cite> plugin now has a <cite>--verbose</cite> flag; only initializes the regions now once</p></li>
+</ul>
+</li>
+<li>
+<p>Upgraded wai.annotations.layersegments to 1.0.2</p>
+<ul>
+<li><p><cite>FromLayerSegments</cite> class now outputs logging message if setting of new annotation indices fails, as error
+occurs before the <cite>wai.annotations - Sourced ...</cite> logging message, making it possible to track the image
+causing the problem.</p></li>
+<li><p>Added <cite>--lenient</cite> flag to <cite>FromLayerSegments</cite> class which allows conversion of non-binary images with just
+two unique colors to binary ones instead of throwing an error.</p></li>
+<li><p>Added <cite>--invert</cite> flag to <cite>FromLayerSegments</cite> class which allows inverting the colors (b/w &lt;-&gt; w/b) of the
+binary annotation images.</p></li>
+</ul>
+</li>
+<li>
+<p>Upgraded wai.annotations.video to 1.0.2</p>
+<ul>
+<li><p>VideoFileReader source now passes on a file path with the frames as well</p></li>
+</ul>
+</li>
+<li>
+<p>Upgraded wai.annotations.yolo to 1.0.1</p>
+<ul>
+<li><p>the <cite>read_labels_file</cite> method of <cite>FromYOLOOD</cite> now strips leading/trailing whitespaces
+from the labels.</p></li>
+</ul>
+</li>
+<li>
+<p>Added wai.annotations.coqui 1.0.0</p>
+<ul>
+<li><p>from-coqui-stt-sp: reads speech transcriptions in the Coqui STT CSV-format</p></li>
+<li><p>from-coqui-tts-sp: reads speech transcriptions in the Coqui TTS text-format</p></li>
+<li><p>to-coqui-stt-sp: writes speech transcriptions in the Coqui STT CSV-format</p></li>
+<li><p>to-coqui-tts-sp: writes speech transcriptions in the Coqui TTS text-format</p></li>
+</ul>
+</li>
+</ul>
+</div>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-08-02-datasets-website/" class="u-url">Oxford Pets datasets</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
             <a href="2022-08-02-datasets-website/" rel="bookmark">
-            <time class="published dt-published" datetime="2022-08-02T16:45:00+13:00" itemprop="datePublished" title="2022-08-02 16:45">2022-08-02 16:45</time></a>
+            <time class="published dt-published" datetime="2022-08-02T16:45:00+12:00" itemprop="datePublished" title="2022-08-02 16:45">2022-08-02 16:45</time></a>
             </p>
         </div>
     </header><div class="e-content entry-content">
@@ -133,13 +229,13 @@ bg-dark
 <li><p>object detection (bbox; head or animal).</p></li>
 </ul>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-29-waiannotations-release-0-7.8/" class="u-url">wai.annotations release 0.7.8</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-29-waiannotations-release-0-7-8/" class="u-url">wai.annotations release 0.7.8</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
-            <a href="2022-06-29-waiannotations-release-0-7.8/" rel="bookmark">
+            <a href="2022-06-29-waiannotations-release-0-7-8/" rel="bookmark">
             <time class="published dt-published" datetime="2022-06-29T16:15:00+12:00" itemprop="datePublished" title="2022-06-29 16:15">2022-06-29 16:15</time></a>
             </p>
         </div>
@@ -209,13 +305,13 @@ it into the framework (the wrappers take care of that!) - check out the manual f
 </li>
 </ul>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-13-waiannotations-release-0-7.7/" class="u-url">wai.annotations release 0.7.7</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-06-13-waiannotations-release-0-7-7/" class="u-url">wai.annotations release 0.7.7</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
-            <a href="2022-06-13-waiannotations-release-0-7.7/" rel="bookmark">
+            <a href="2022-06-13-waiannotations-release-0-7-7/" rel="bookmark">
             <time class="published dt-published" datetime="2022-06-13T16:42:00+12:00" itemprop="datePublished" title="2022-06-13 16:42">2022-06-13 16:42</time></a>
             </p>
         </div>
@@ -316,13 +412,13 @@ meta-data of a <cite>LocatedObject</cite> instance.</p></li>
 </li>
 </ul>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-05-13-waiannotations-release-0-7.6/" class="u-url">wai.annotations release 0.7.6</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2022-05-13-waiannotations-release-0-7-6/" class="u-url">wai.annotations release 0.7.6</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
-            <a href="2022-05-13-waiannotations-release-0-7.6/" rel="bookmark">
+            <a href="2022-05-13-waiannotations-release-0-7-6/" rel="bookmark">
             <time class="published dt-published" datetime="2022-05-13T13:15:00+12:00" itemprop="datePublished" title="2022-05-13 13:15">2022-05-13 13:15</time></a>
             </p>
         </div>
@@ -417,13 +513,13 @@ Under the hood, the excellent <a class="reference external" href="https://github
 <li><p>Image Object-Detection Domain</p></li>
 </ul>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-11-11-waiannotations-release-0-7.3/" class="u-url">wai.annotations release 0.7.3</a></h1>
+    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-11-11-waiannotations-release-0-7-3/" class="u-url">wai.annotations release 0.7.3</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 University of Waikato
             </span></p>
             <p class="dateline">
-            <a href="2021-11-11-waiannotations-release-0-7.3/" rel="bookmark">
+            <a href="2021-11-11-waiannotations-release-0-7-3/" rel="bookmark">
             <time class="published dt-published" datetime="2021-11-11T10:05:00+13:00" itemprop="datePublished" title="2021-11-11 10:05">2021-11-11 10:05</time></a>
             </p>
         </div>
@@ -435,21 +531,6 @@ Under the hood, the excellent <a class="reference external" href="https://github
 <li><p>Included wai.annotations.voc (for Pascal VOC datasets)</p></li>
 </ul>
 </div>
-    </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="2021-05-28-waiannotations-modularized/" class="u-url">wai.annotations modularized</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                University of Waikato
-            </span></p>
-            <p class="dateline">
-            <a href="2021-05-28-waiannotations-modularized/" rel="bookmark">
-            <time class="published dt-published" datetime="2021-05-28T16:05:00+12:00" itemprop="datePublished" title="2021-05-28 16:05">2021-05-28 16:05</time></a>
-            </p>
-        </div>
-    </header><div class="e-content entry-content">
-    <p>A new release of <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations">wai.annotations</a> is out: <a class="reference external" href="https://github.com/waikato-ufdl/wai-annotations/releases/tag/v0.7.1">0.7.1</a></p>
-<p>The 0.7.x series saw a modularization happening behind the scenes, with each file format now being a separate repository and Python package.
-This makes it much easier to only include the relevant dependencies in ones virtual environment or docker image, keeping things as small as possible.</p>
-    </div>
     </article>
 </div>
 
