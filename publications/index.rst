@@ -17,6 +17,8 @@ G Holmes, E Frank, D Fletcher, C Sterling. Efficiently correcting machine learni
 
 Keegan, T. T., Apperley, M., & Reutemann, P. (2022) Indigenous Language Promotion in a Smart Home. In *Foundation for Endangered Languages FEL XXVI*, Conference Book, 124-130. [`pdf <https://vonweber.nl/fel/proceedings/202209231053311938.pdf>`__]
 
+Pullar-Strecker, Z., Dost, K., Frank, E. & Wicker, J. Hitting the target: stopping active learning at the cost-based optimum. *Machine Learning* (2022). [`doi <https://doi.org/10.1007/s10994-022-06253-1>`__ | `pdf <https://www.cs.waikato.ac.nz/~eibe/pubs/hitting_the_target_stopping_active_learning.pdf>`__]
+
 2021
 ====
 
