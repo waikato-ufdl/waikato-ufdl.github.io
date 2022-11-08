@@ -1,6 +1,6 @@
 .. title: Publications
 .. slug: publications
-.. date: 2022-02-24 09:00:00 UTC+13:00
+.. date: 2022-11-08 15:00:00 UTC+13:00
 .. tags: 
 .. category:
 .. link: 
@@ -15,6 +15,7 @@ Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael M
 
 G Holmes, E Frank, D Fletcher, C Sterling. Efficiently correcting machine learning: considering the role of example ordering in human-in-the-loop training of image classification models. In *27th International Conference on Intelligent User Interfaces*, 584-593. [`doi <https://dl.acm.org/doi/abs/10.1145/3490099.3511110>`__]
 
+Keegan, T. T., Apperley, M., & Reutemann, P. (2022) Indigenous Language Promotion in a Smart Home. In *Foundation for Endangered Languages FEL XXVI*, Conference Book, 124-130.
 
 2021
 ====
