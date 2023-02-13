@@ -2,13 +2,11 @@ on: [push]
 
 jobs:
   nikola_build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: 'Deploy Nikola to GitHub Pages'
     steps:
     - name: Check out
       uses: actions/checkout@v3
-      with:
-        set-safe-directory: '*'
     - name: Build and Deploy Nikola
       uses: getnikola/nikola-action@v3
       with:
