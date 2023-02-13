@@ -1,6 +1,6 @@
 .. title: Publications
 .. slug: publications
-.. date: 2022-11-08 15:00:00 UTC+13:00
+.. date: 2023-02-13 15:00:00 UTC+13:00
 .. tags: 
 .. category:
 .. link: 
@@ -8,10 +8,13 @@
 .. type: text
 .. status: 
 
-2022
+2023
 ====
 
-Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael Mayo & Geoffrey Holmes. Experiments in cross-domain few-shot learning for image classification, *Journal of the Royal Society of New Zealand*, 2022. [`doi <https://doi.org/10.1080/03036758.2022.2059767>`__] 
+Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael Mayo & Geoffrey Holmes. Experiments in cross-domain few-shot learning for image classification, *Journal of the Royal Society of New Zealand*, 2023, 169-191. [`doi <https://doi.org/10.1080/03036758.2022.2059767>`__ | `pdf <https://www.cs.waikato.ac.nz/~eibe/pubs/experiments_in_cdfsl_for_image_classification.pdf>`__]
+
+2022
+====
 
 G Holmes, E Frank, D Fletcher, C Sterling. Efficiently correcting machine learning: considering the role of example ordering in human-in-the-loop training of image classification models. In *27th International Conference on Intelligent User Interfaces*, 584-593. [`doi <https://dl.acm.org/doi/abs/10.1145/3490099.3511110>`__]
 
