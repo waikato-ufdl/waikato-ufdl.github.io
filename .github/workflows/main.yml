@@ -7,6 +7,7 @@ jobs:
     steps:
     - name: Check out
       uses: actions/checkout@v3
+    - run: git config --system --add safe.directory /github/workspace
     - name: Build and Deploy Nikola
       uses: getnikola/nikola-action@v3
       with:
