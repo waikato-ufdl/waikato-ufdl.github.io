@@ -11,7 +11,7 @@
 2023
 ====
 
-Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael Mayo & Geoffrey Holmes. Experiments in cross-domain few-shot learning for image classification, *Journal of the Royal Society of New Zealand*, 2022, 169-191. [`doi <https://doi.org/10.1080/03036758.2022.2059767>`__ | `pdf <https://www.cs.waikato.ac.nz/~eibe/pubs/experiments_in_cdfsl_for_image_classification.pdf>`__]
+Hongyu Wang, Henry Gouk, Huon Fraser, Eibe Frank, Bernhard Pfahringer, Michael Mayo & Geoffrey Holmes. Experiments in cross-domain few-shot learning for image classification, *Journal of the Royal Society of New Zealand*, 2023, 169-191. [`doi <https://doi.org/10.1080/03036758.2022.2059767>`__ | `pdf <https://www.cs.waikato.ac.nz/~eibe/pubs/experiments_in_cdfsl_for_image_classification.pdf>`__]
 
 2022
 ====
