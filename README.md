@@ -54,6 +54,9 @@ Site gets automatically generated via [action](.github/workflows/main.yml). But 
 
   ```
   . venv/bin/activate
+  git pull
+  nikola clean
+  nikola build
   nikola github_deploy
   ```
 
