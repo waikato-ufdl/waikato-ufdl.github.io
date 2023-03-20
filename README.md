@@ -24,7 +24,7 @@ using [Nikola](https://getnikola.com/).
 
   ```
   . venv/bin/activate
-  pip install nikola -r requirements.txt
+  pip install nikola -r local_requirements.txt
   ```
 
 ## Adding content
