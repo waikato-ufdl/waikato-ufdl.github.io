@@ -14,8 +14,14 @@ what the system is about, you can follow these instructions to set up a local de
 on your own infrastructure. Of course, for most deep learning training or prediction tasks you will
 require a NVIDIA GPU.
 
-The server backend and worker nodes are expected to run Linux (tested with Ubuntu 18.04). The frontend,
+The server backend and worker nodes are expected to run Linux (tested with Ubuntu 20.04). The frontend,
 e.g., when using ADAMS can be Linux, Windows or Mac. The HTML frontend has been tested with Chrome/Chromium and Firefox.
+
+If you are on **Windows**, you should be able to run the backend/worker nodes as well, as long as
+`WSL2 <https://learn.microsoft.com/en-us/windows/wsl/install>`__ is present.
+See `here <https://www.data-mining.co.nz/applied-deep-learning/windows/>`__ for detailed instructions on getting
+Docker configured (does not require the `Docker Desktop application <https://www.docker.com/products/docker-desktop/>`__,
+as that may require license fees). Once that is in place, you can follow the steps below.
 
 You can either use pre-configured Docker images or set up the system manually. See the respective section below
 for relevant instructions.
@@ -424,4 +430,3 @@ Some of the functionality is available through a web-based frontend.
 By default, the interface is being served on the following URL:
 
 `http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
-
