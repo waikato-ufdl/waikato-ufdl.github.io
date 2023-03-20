@@ -190,7 +190,7 @@ Worker node
 ===========
 
 If you are using the Docker-Compose setup, a worker node can be started alongside the server with the
-``with-job-launcher`` profile (requires `docker-compose 1.28 or later <https://stackoverflow.com/a/50454860/4698227>`__):
+``with-job-launcher`` profile (requires docker-compose 1.28 or later):
 
 .. code:: bash
 
