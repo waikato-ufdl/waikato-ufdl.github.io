@@ -52,9 +52,10 @@ The **first time** running the system, the database will need to be initialised 
 
 .. code:: bash
 
-   docker-compose run ufdl reset
+   UFDL_RESET_BACKEND_ON_RUN=1 docker-compose up
 
-On-line the backend with the ``up`` command:
+**WARNING** The ``UFDL_RESET_BACKEND_ON_RUN`` environment variable should be un-set on subsequent runs, or previous
+data will be erased! On subsequent runs, on-line the backend with the ``up`` command:
 
 .. code:: bash
 
@@ -155,24 +156,22 @@ So that file data will persist between executions, create a volume for storage:
 
    docker volume create ufdl-fs
 
+Start the backend for normal operation as follows:
+
+.. code:: bash
+
+   docker run \
+    -v ufdl-fs:/ufdl/ufdl-backend/fs \
+    --name=ufdl_backend \
+    --network=host \
+    ufdl_backend
+
 Before you can use the backend for the **first time**, you need to initialise the tables in the database:
 
 .. code:: bash
 
-   docker run \
-    -v ufdl-fs:/ufdl/ufdl-backend/fs \
-    --network=host \
-    ufdl_backend \
-    reset
+   docker exec ufdl_backend ./dev_reset.sh
 
-From now on. you can start the backend for normal operation as follows:
-
-.. code:: bash
-
-   docker run \
-    -v ufdl-fs:/ufdl/ufdl-backend/fs \
-    --network=host \
-    ufdl_backend
 
 **NB:** If the backend and the database are both running via Docker on the same machine, a private Docker network can
 be created to allow the two services to communicate.
@@ -189,6 +188,13 @@ Initialize
 
 Worker node
 ===========
+
+If you are using the Docker-Compose setup, a worker node can be started alongside the server with the
+``with-job-launcher`` profile:
+
+.. code:: bash
+
+   docker-compose --profile with-job-launcher up
 
 A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
 daemon running:
@@ -285,7 +291,7 @@ variables:
    export UFDL_POSTGRESQL_HOST=host.domain.name:port
 
 The host defaults to *localhost* and the user to *ufdl*, so if these match your database configuration they need not
-be supplied. The password has not default though and must be supplied.
+be supplied. The password has no default though and must be supplied.
 
 Change into the directory of the cloned *ufdl-backend* repository and run the following script to set up
 the virtual environment for the server (**CAUTION:** it will delete any previously stored data and the database):
