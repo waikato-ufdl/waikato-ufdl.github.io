@@ -236,6 +236,16 @@ Then you can launch the worker node as follows:
 Manual setup
 ++++++++++++
 
+Prerequisites
+=============
+
+Makes sure you have a valid development environment set up:
+
+.. code:: bash
+
+   sudo apt install build-essential python3-dev virtualenv
+
+
 PostgreSQL
 ==========
 
@@ -381,6 +391,9 @@ On the worker node, clone the following repositories (within the same directory)
    git clone https://github.com/waikato-ufdl/ufdl-json-messages
    git clone https://github.com/waikato-ufdl/ufdl-python-client
    git clone https://github.com/waikato-ufdl/ufdl-job-launcher
+   git clone https://github.com/waikato-ufdl/ufdl-annotations-plugin.git
+   git clone https://github.com/waikato-ufdl/ufdl-job-types.git
+   git clone https://github.com/waikato-ufdl/ufdl-job-contracts.git
 
 Change into the directory of the cloned *ufdl-job-launcher* repository and run the following script to set up
 the virtual environment:
@@ -396,7 +409,7 @@ Once this suits your system, you can start the job-launcher like this (from with
 
 .. code:: bash
 
-   ./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -C
+   ./venv.dev/bin/ufdl-joblauncher -C examples/job-launcher.conf -c
 
 
 Use the system
