@@ -385,6 +385,9 @@ On the worker node, clone the following repositories (within the same directory)
 * `ufdl-json-messages <JsonMessages_>`__
 * `ufdl-python-client <PythonClient_>`__
 * `ufdl-job-launcher <JobLauncher_>`__
+* `ufdl-annotations-plugin <AnnotationsPlugin>`__
+* `ufdl-job-types <JobTypes>`__
+* `ufdl-job-contracts <JobContracts>`__
 
 .. code:: bash
 
@@ -434,6 +437,9 @@ The following ADAMS flows are available to manage your datasets and run jobs (si
 .. _ADAMSFrontend: https://adams.cms.waikato.ac.nz/snapshots/ufdl/
 .. _HTMLFrontend: https://github.com/waikato-ufdl/ufdl-frontend-ts
 .. _JobLauncher: https://github.com/waikato-ufdl/ufdl-job-launcher
+.. _AnnotationsPlugin: https://github.com/waikato-ufdl/ufdl-annotations-plugin
+.. _JobTypes: https://github.com/waikato-ufdl/ufdl-job-types
+.. _JobContracts: https://github.com/waikato-ufdl/ufdl-job-contracts
 
 
 HTML Frontend
