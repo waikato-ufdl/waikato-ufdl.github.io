@@ -1,6 +1,6 @@
 .. title: Getting started
 .. slug: getting-started
-.. date: 2020-09-15 15:23:32 UTC+12:00
+.. date: 2023-03-22 13:23:32 UTC+13:00
 .. tags:
 .. category:
 .. link:
@@ -114,7 +114,7 @@ Run the image as a container:
 
 .. code:: bash
 
-   docker run \
+   docker run --rm \
     -p 5432:5432/tcp \
     -v ufdl-pg:/var/lib/postgresql/10/main \
     ufdl_postgres
@@ -135,7 +135,7 @@ To run the image, only the port needs exposing:
 
 .. code:: bash
 
-   docker run \
+   docker run --rm \
     -p 6379:6379 \
     ufdl_redis
 
@@ -166,7 +166,7 @@ Start the backend for normal operation as follows:
 
 .. code:: bash
 
-   docker run \
+   docker run --rm \
     -v ufdl-fs:/ufdl/ufdl-backend/fs \
     --name=ufdl_backend \
     --network=host \
@@ -192,8 +192,8 @@ Initialize
   basic environment (users, teams, projects).
 
 
-Worker node
-===========
+Worker node (CPU)
+=================
 
 If you are using the Docker-Compose setup, a worker node can be started alongside the server with the
 ``with-job-launcher`` profile (requires docker-compose 1.28 or later):
@@ -216,7 +216,7 @@ Then you can launch the worker node as follows:
 
 .. code:: bash
 
-   docker run \
+   docker run --rm \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf \
     -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher \
@@ -224,6 +224,46 @@ Then you can launch the worker node as follows:
     ufdl_job_launcher
 
 **NB:** 
+
+* If the backend and the database are both running via Docker on the same machine, a private Docker network can be created to allow the two services to communicate.
+* Since you are supplying the job launcher configuration to the docker container, make sure that the following directories are set to these values:
+
+  * ``work_dir``: ``/tmp/ufdl-job-launcher``
+  * ``cache_dir``: ``/tmp/ufdl-job-launcher/cache``
+
+
+Worker node (GPU)
+=================
+
+If you want to make use of the GPU, you need to use ``with-job-launcher-gpu`` profile (requires docker-compose 1.28 or later):
+
+.. code:: bash
+
+   docker-compose --profile with-job-launcher-gpu up
+
+A Docker image with a preconfigured worker node installation is also provided. To obtain the image, with the Docker
+daemon running:
+
+.. code:: bash
+
+   docker pull public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher-gpu:latest
+   docker tag public.aml-repo.cms.waikato.ac.nz:443/ufdl/ufdl_job_launcher-gpu:latest ufdl_job_launcher-gpu
+
+Download the `job-launcher-docker.conf <https://raw.githubusercontent.com/waikato-ufdl/ufdl-job-launcher/master/examples/job-launcher-docker.conf>`__
+template and save it as something like ``/path/to/job-launcher.conf`` (you can adjust this path, of course).
+Then you can launch the worker node as follows:
+
+.. code:: bash
+
+   docker run --rm \
+    --gpus=all \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -v /path/to/job-launcher.conf:/ufdl/ufdl-job-launcher/examples/job-launcher-example.conf \
+    -v /tmp/ufdl-job-launcher:/tmp/ufdl-job-launcher \
+    --network=host \
+    ufdl_job_launcher-gpu
+
+**NB:**
 
 * If the backend and the database are both running via Docker on the same machine, a private Docker network can be created to allow the two services to communicate.
 * Since you are supplying the job launcher configuration to the docker container, make sure that the following directories are set to these values:
