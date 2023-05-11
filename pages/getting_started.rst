@@ -1,6 +1,6 @@
 .. title: Getting started
 .. slug: getting-started
-.. date: 2023-03-22 13:23:32 UTC+13:00
+.. date: 2023-05-12 10:00:32 UTC+12:00
 .. tags:
 .. category:
 .. link:
@@ -461,12 +461,22 @@ Use the system
 ADAMS
 =====
 
-The following ADAMS flows are available to manage your datasets and run jobs (simply execute them with the *Flow editor*):
+The following `ADAMS <ADAMSFrontend_>`__ flows (`snapshot download <ADAMSsnapshots_>`__) are available to manage
+your datasets and run jobs (simply execute them with the *Flow editor*):
 
-* ``adams-ufdl-core-manage_backend.flow`` - for managing the backend, starting jobs, etc.
-* ``adams-ufdl-image-manage_image_classification_datasets.flow`` - manages image classification datasets
-* ``adams-ufdl-image-manage_objected_detection_datasets.flow`` - manages object detection datasets
-* ``adams-ufdl-speech-manage_speech_datasets.flow`` - manages speech datasets
+* `adams-ufdl-core-manage_backend.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-core/src/main/flows/adams-ufdl-core-manage_backend.flow>`__ - for managing the backend, starting jobs, etc.
+* `adams-ufdl-image-manage_image_classification_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-image/src/main/flows/adams-ufdl-image-manage_image_classification_datasets.flow>`__ - manages image classification datasets
+* `adams-ufdl-image-manage_objected_detection_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-image/src/main/flows/adams-ufdl-image-manage_object_detection_datasets.flow>`__ - manages object detection datasets
+* `adams-ufdl-speech-manage_speech_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-audio/src/main/flows/adams-ufdl-speech-manage_speech_datasets.flow>`__ - manages speech datasets
+
+
+HTML Frontend
+=============
+
+Some of the functionality is available through a web-based frontend.
+By default, the interface is being served on the following URL:
+
+`http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
 
 
 .. _Backend: https://github.com/waikato-ufdl/ufdl-backend
@@ -474,18 +484,10 @@ The following ADAMS flows are available to manage your datasets and run jobs (si
 .. _PythonClient: https://github.com/waikato-ufdl/ufdl-python-client
 .. _JavaClient: https://github.com/waikato-ufdl/ufdl-java-client
 .. _TypeScriptClient: https://github.com/waikato-ufdl/ufdl-ts-client
-.. _ADAMSFrontend: https://adams.cms.waikato.ac.nz/snapshots/ufdl/
+.. _ADAMSsnapshots: https://adams.cms.waikato.ac.nz/snapshots/ufdl/
 .. _HTMLFrontend: https://github.com/waikato-ufdl/ufdl-frontend-ts
 .. _JobLauncher: https://github.com/waikato-ufdl/ufdl-job-launcher
 .. _AnnotationsPlugin: https://github.com/waikato-ufdl/ufdl-annotations-plugin
 .. _JobTypes: https://github.com/waikato-ufdl/ufdl-job-types
 .. _JobContracts: https://github.com/waikato-ufdl/ufdl-job-contracts
-
-
-HTML Frontend
-=============
-
-Some of the functionality is available through a web-based frontend. 
-By default, the interface is being served on the following URL:
-
-`http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
+.. _ADAMSFrontend: https://github.com/waikato-ufdl/ufdl-frontend-adams
