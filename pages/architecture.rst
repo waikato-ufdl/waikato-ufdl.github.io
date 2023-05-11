@@ -1,6 +1,6 @@
 .. title: Architecture
 .. slug: architecture
-.. date: 2020-09-15 15:14:32 UTC+12:00
+.. date: 2023-05-12 10:0:32 UTC+12:00
 .. tags:
 .. category:
 .. link:
@@ -14,8 +14,6 @@ The User-friendly Deep Learning architecture is comprised of three components:
 * backend
 * worker node(s)
 * client(s)
-
-.. image:: ../images/architecture.png
 
 
 Backend
