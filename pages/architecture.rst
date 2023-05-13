@@ -1,6 +1,6 @@
 .. title: Architecture
 .. slug: architecture
-.. date: 2023-05-12 10:0:32 UTC+12:00
+.. date: 2023-05-13 10:00:32 UTC+12:00
 .. tags:
 .. category:
 .. link:
@@ -43,16 +43,17 @@ potential error causes in case a job terminates unexpectedly.
 Client(s)
 =========
 
-At the time of writing, three low-level client libraries are available that fully encapsulate the `REST API <API_>`__:
+At the time of writing, three low-level client libraries are available that fully (or almost fully) encapsulate
+the `REST API <API_>`__:
 
 * `Python <PythonClient_>`__
-* `Java <JavaClient_>`__
 * `TypeScript <TypeScriptClient_>`__
+* `Java <JavaClient_>`__
 
-These client libraries can be used to build user-facing applications:
+These client libraries can be used to build user-facing applications. The following example implements are available:
 
-* `UFDL ADAMS Frontend <ADAMSFrontend_>`__
-* `UFDL HTML Frontend <HTMLFrontend_>`__
+* `UFDL HTML Frontend <HTMLFrontend_>`__ (TypeScript)
+* `UFDL ADAMS Frontend <ADAMSFrontend_>`__ (Java)
 
 
 .. _API: https://waikato-ufdl.github.io/ufdl-api/
