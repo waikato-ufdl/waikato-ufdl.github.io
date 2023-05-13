@@ -1,6 +1,6 @@
 .. title: Getting started
 .. slug: getting-started
-.. date: 2023-05-12 10:00:32 UTC+12:00
+.. date: 2023-05-13 10:00:32 UTC+12:00
 .. tags:
 .. category:
 .. link:
@@ -458,6 +458,14 @@ Once this suits your system, you can start the job-launcher like this (from with
 Use the system
 ++++++++++++++
 
+HTML Frontend
+=============
+
+Some of the functionality is available through a web-based frontend.
+By default, the interface is being served on the following URL:
+
+`http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
+
 ADAMS
 =====
 
@@ -468,15 +476,6 @@ your datasets and run jobs (simply execute them with the *Flow editor*):
 * `adams-ufdl-image-manage_image_classification_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-image/src/main/flows/adams-ufdl-image-manage_image_classification_datasets.flow>`__ - manages image classification datasets
 * `adams-ufdl-image-manage_objected_detection_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-image/src/main/flows/adams-ufdl-image-manage_object_detection_datasets.flow>`__ - manages object detection datasets
 * `adams-ufdl-speech-manage_speech_datasets.flow <https://github.com/waikato-ufdl/ufdl-frontend-adams/blob/master/adams-ufdl-audio/src/main/flows/adams-ufdl-speech-manage_speech_datasets.flow>`__ - manages speech datasets
-
-
-HTML Frontend
-=============
-
-Some of the functionality is available through a web-based frontend.
-By default, the interface is being served on the following URL:
-
-`http://localhost:8000/v1/html <http://localhost:8000/v1/html>`__
 
 
 .. _Backend: https://github.com/waikato-ufdl/ufdl-backend
