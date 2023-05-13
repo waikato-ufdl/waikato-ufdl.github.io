@@ -137,6 +137,7 @@ TRANSLATIONS_PATTERN = '{path}.{lang}.{ext}'
 #          with a ``/``, otherwise end them with ``/index.html`` — or
 #          else they won’t be highlighted when active.
 
+
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/news/", "News"),
@@ -147,40 +148,22 @@ NAVIGATION_LINKS = {
           ("/wai-annotations-manual/", "wai.annotations"),
           ), "Documentation"),
         ((
-          ("https://github.com/waikato-ufdl/", "Project"),
-          ("https://github.com/waikato-ufdl/simple-django-teams", "simple-django-teams"),
+          ("https://github.com/waikato-ufdl/", "All projects"),
           ("https://github.com/waikato-ufdl/wai-annotations", "wai.annotations"),
-          ("https://github.com/waikato-ufdl/ufdl-backend", "ufdl-backend"),
-          ("https://github.com/waikato-ufdl/ufdl-json-messages", "ufdl-json-messages"),
-          ("https://github.com/waikato-ufdl/ufdl-python-client", "ufdl-python-client"),
-          ("https://github.com/waikato-ufdl/ufdl-java-client", "ufdl-java-client"),
-          ("https://github.com/waikato-ufdl/ufdl-frontend-adams", "ufdl-frontend-adams"),
-          ("https://github.com/waikato-ufdl/ufdl-job-launcher", "ufdl-job-launcher"),
-          ("https://github.com/waikato-ufdl/ufdl-job-launcher-plugins", "ufdl-job-launcher-plugins"),
-          ("https://github.com/waikato-ufdl/wai-lazypip", "wai.lazypip"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/tfutils", "wai.tfutils"),
+          ("https://github.com/waikato-ufdl/ufdl-backend", "Backend"),
+          ("https://github.com/waikato-ufdl/ufdl-job-launcher", "Job launcher"),
+          ("https://github.com/waikato-ufdl/ufdl-python-client", "Python client"),
+          ("https://github.com/waikato-ufdl/ufdl-ts-client", "TypeScript client"),
+          ("https://github.com/waikato-ufdl/ufdl-java-client", "Java client"),
+          ("https://github.com/waikato-ufdl/ufdl-frontend-ts", "HTML frontend"),
+          ("https://github.com/waikato-ufdl/ufdl-frontend-adams", "ADAMS frontend"),
           ), "Code"),
-        ((
-          ("https://aml-repo.cms.waikato.ac.nz/", "Registry"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/coqui/stt", "Coqui STT"),
-          ("https://github.com/waikato-datamining/pytorch/tree/master/detectron2", "Detectron2"),
-          ("https://github.com/waikato-datamining/mmclassification", "MMClassification"),
-          ("https://github.com/waikato-datamining/mmdetection", "MMDetection"),
-          ("https://github.com/waikato-datamining/mmsegmentation", "MMSegmentation"),
-          ("https://github.com/waikato-datamining/pytorch/tree/master/segmentation_models", "Pytorch Image Segmentation Models"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/image_classification", "Tensorflow Image Classification"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/image_classification2", "Tensorflow 2 Image Classification"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/image-segmentation-keras", "Tensorflow Image Segmentation Keras"),
-          ("https://github.com/waikato-datamining/tensorflow/tree/master/object_detection", "Tensorflow Object Detection"),
-          ("https://github.com/waikato-datamining/pytorch/tree/master/yolov5", "Yolov5"),
-          ), "Docker"),
         ("/publications/", "Publications"),
         ("https://datasets.cms.waikato.ac.nz/ufdl/", "Datasets"),
         ("/people/", "People"),
         ("/rss.xml", "RSS"),
     ),
 }
-
 # Alternative navigation links. Works the same way NAVIGATION_LINKS does,
 # although themes may not always support them. (translatable)
 # (Bootstrap 4: right-side of navbar, Bootblog 4: right side of title)
