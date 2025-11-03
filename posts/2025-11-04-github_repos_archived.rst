@@ -1,6 +1,6 @@
 .. title: Github repositories archived
 .. slug: 2025-11-04-github-repos-archived
-.. date: 2025-11-04 15:38:00 UTC+13:00
+.. date: 2025-11-04 10:08:00 UTC+13:00
 .. tags:
 .. category:
 .. link: 
